@@ -4,39 +4,31 @@ import { useState } from "react";
 const coursesData = [
   {
     id: 1,
-    name: "React for Beginners",
-    category: "Web Development",
-    totalHours: 20,
-    price: 49,
-    imgUrl:
-      "https://th.bing.com/th/id/OIP.oVarNVPPixYqDzOTpMJmMgHaEK?w=274&h=180&c=7&r=0&o=5&pid=1.7",
+    name: "BEM10 - The Entrepreunial Mindset",
+    category: "Grade 9",
+    price: 435,
+    imgUrl: "/images/entrepreunial-mindset.jpg",
   },
   {
     id: 2,
-    name: "Node.js Masterclass",
-    category: "Web Development",
-    totalHours: 25,
-    price: 59,
-    imgUrl:
-      "https://th.bing.com/th/id/OIP.FiIduLgaAGVKIVZjLzQxlwHaEK?w=272&h=180&c=7&r=0&o=5&pid=1.7",
+    name: "ENL1W - English",
+    category: "Grade 9",
+    price: 435,
+    imgUrl: "/images/learn-english.jpg",
   },
   {
     id: 3,
-    name: "Python for Data Science ",
-    category: "Data Science",
-    totalHours: 30,
-    price: 69,
-    imgUrl:
-      "https://th.bing.com/th/id/OIP.BFhOHcQU2rYiaM-lg9-ATgAAAA?w=248&h=180&c=7&r=0&o=5&pid=1.7",
+    name: "BEP20 - Launching and Leading a Business",
+    category: "Grade 10",
+    price: 435,
+    imgUrl: "/images/launching-a-business.jpg",
   },
   {
     id: 4,
-    name: "UI/UX Design Fundamentals",
-    category: "Design",
-    totalHours: 15,
-    price: 39,
-    imgUrl:
-      "https://th.bing.com/th/id/OIP.GkIwoKD3kc2PsVwzkFUhLAHaEK?w=320&h=180&c=7&r=0&o=5&pid=1.7",
+    name: "TAS20 - Computer Technology",
+    category: "Grade 10",
+    price: 435,
+    imgUrl: "/images/computer-technology.jpg",
   },
 ];
 
@@ -58,7 +50,7 @@ export default function CourseSection() {
 
         {/* Tabs */}
         <div className="flex justify-center space-x-4 mb-10 hidden lg:flex">
-          {["All Courses", "Web Development", "Data Science", "Design"].map(
+          {["All Courses", "Grade 9", "Grade 10", "Grade 11", "Grade 12"].map(
             (tab) => (
               <button
                 key={tab}
@@ -90,15 +82,12 @@ export default function CourseSection() {
                 <h2 className="text-xl font-semibold text-gray-900">
                   {course.name}
                 </h2>
-                <p className="text-gray-600 text-sm mt-1">
+                {/* <p className="text-gray-600 text-sm mt-1">
                   Learn and master this skill.
-                </p>
+                </p> */}
 
                 {/* Course Details */}
                 <div className="flex justify-between text-gray-700 my-5">
-                  <span className="font-medium">
-                    Total Hours: {course.totalHours}h
-                  </span>
                   <span className="font-medium">Price: ${course.price}</span>
                 </div>
 
