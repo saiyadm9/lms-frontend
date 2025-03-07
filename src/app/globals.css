@@ -64,3 +64,30 @@
     @apply bg-background text-foreground;
   }
 }
+
+/* Ensure the first level dropdown appears on hover */
+.group:hover > .group-hover\:block {
+  display: block !important;
+  opacity: 1;
+}
+
+/* Smooth transition for dropdown visibility */
+.group-hover\:block {
+  display: none;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Styling for Learning Methods dropdown (3rd-level) */
+.learning-methods-dropdown {
+  left: 100%; /* Make the dropdown open on the right */
+  visibility: hidden;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* When hovering over Learning Methods, show the dropdown */
+.group:hover .learning-methods-dropdown {
+  visibility: visible;
+  opacity: 1;
+}

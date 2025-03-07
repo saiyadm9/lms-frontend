@@ -1,6 +1,7 @@
 import Link from "next/link";
 
 import withHero from "@/components/hoc/withHero";
+import Image from "next/image";
 
 const courses = [
   {
@@ -50,10 +51,12 @@ const CreditCoursesOSSD = () => {
                 className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col"
               >
                 <figure>
-                  <img
+                  <Image
                     src={course.thumbnail}
                     alt={course.title}
                     className="w-full h-48 object-cover rounded-t-lg"
+                    width={500}
+                    height={750}
                   />
                 </figure>
                 <div className="card-body">
@@ -69,7 +72,7 @@ const CreditCoursesOSSD = () => {
                       Enroll Now
                     </Link>
                     <Link
-                      href={`/credit-courses/${course.id}`} // Link to the dynamic course page
+                      href={`/credit-course-ossd/${course.id}`} // Link to the dynamic course page
                       className="w-full bg-warning font-medium py-2 rounded-lg hover:bg-amber-500 transition text-center"
                     >
                       view details

@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link"; // Import Link from next/link
 import { FaAngleDown } from "react-icons/fa";
 import Image from "next/image";
+import "../ui/ui.css";
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
 
@@ -20,7 +21,7 @@ const Navbar = () => {
       <div
         className={`navbar container mx-auto px-2 md:px-6 transition-all duration-300 ${
           scrolling
-            ? "bg-[#1E40AF] shadow-lg text-white mt-5"
+            ? "bg-[#1E40AF] shadow-lg text-black lg:text-white mt-5"
             : "bg-transparent text-black lg:text-white"
         }`}
         style={{ borderRadius: "0.5rem" }}
@@ -50,7 +51,7 @@ const Navbar = () => {
             </div>
             <ul
               tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-[100vw] mx-auto p-2 shadow"
             >
               <li>
                 <Link
@@ -60,13 +61,123 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
+              <li>
+                <Link
+                  href="/about"
+                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                >
+                  About us
+                </Link>
+                <ul className="p-2">
+                  <li>
+                    <Link
+                      href="/about/our-story"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Our story
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/about/university-success-story"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      University success story
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/about/our-team"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Our team
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/about/contact-us"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Contact us
+                    </Link>
+                  </li>
+                </ul>
+              </li>
 
               <li>
                 <Link
-                  href="/credit-courses"
+                  href="/credit-course-ossd"
                   className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                 >
-                  Credit Courses & OSSD
+                  Credit Course and OSSD
+                </Link>
+                <ul className="p-2">
+                  <li>
+                    <Link
+                      href="/credit-course-ossd/description"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Description
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/credit-course-ossd/available-course"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Available course
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/credit-course-ossd/learning-methods"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Learning methods
+                    </Link>
+                    <ul className="p-2">
+                      <li>
+                        <Link
+                          href="/credit-course-ossd/learning-methods/virtual-learning"
+                          className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                        >
+                          Virtual learning
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href="/credit-course-ossd/learning-methods/online-learning"
+                          className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                        >
+                          Online learning
+                        </Link>
+                      </li>
+                    </ul>
+                  </li>
+                  <li>
+                    <Link
+                      href="/credit-course-ossd/credit-course-ossd-admission-process"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Credit course & OSSD admission process
+                    </Link>
+                  </li>
+                  <li>
+                    <Link
+                      href="/credit-course-ossd/tuition-fees"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Tuition & fees
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+              <li>
+                <Link
+                  href="/international-students-ossd"
+                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                >
+                  International students for OSSD
                 </Link>
               </li>
               <li>
@@ -93,39 +204,15 @@ const Navbar = () => {
                       STEM
                     </Link>
                   </li>
+                  <li>
+                    <Link
+                      href="/tutoring/fees-admission"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+                    >
+                      Fees & admission
+                    </Link>
+                  </li>
                 </ul>
-              </li>
-              <li>
-                <Link
-                  href="/international-students"
-                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
-                >
-                  International Students
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/core-members"
-                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
-                >
-                  Core Members
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/contact-us"
-                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
-                >
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
-                >
-                  About Us
-                </Link>
               </li>
             </ul>
           </div>
@@ -151,15 +238,132 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
+            {/* about us  */}
+            <li className="group relative">
+              <Link
+                href="/about"
+                className="flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+              >
+                About us
+                <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180" />
+              </Link>
+              <ul className="absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block">
+                <li>
+                  <Link
+                    href="/about/our-story"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Our story
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about/university-success-story"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    University success story
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about/our-team"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Our team
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/about/contact-us"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Contact us
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            {/* credit courses */}
+            <li className="group relative">
+              <Link
+                href="/credit-course-ossd"
+                className="flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+              >
+                Credit course and OSSD
+                <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180" />
+              </Link>
+              <ul className="absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block">
+                <li>
+                  <Link
+                    href="/credit-course-ossd/description"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Description
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/credit-course-ossd/available-course"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Available course
+                  </Link>
+                </li>
+                <li className="navArrow relative">
+                  <Link
+                    href="/credit-course-ossd/learning-methods"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Learning methods
+                    <FaAngleDown className="transition-transform duration-300 navArrow-rotate" />
+                  </Link>
+                  <ul className="absolute left-[90%] hidden credit-course-dropdown w-52 p-2 bg-white rounded text-black">
+                    <li>
+                      <Link
+                        href="/credit-course-ossd/learning-methods/virtual-learning"
+                        className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                      >
+                        Virtual learning
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href="/credit-course-ossd/learning-methods/online-learning"
+                        className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                      >
+                        Online learning
+                      </Link>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <Link
+                    href="/credit-course-ossd/credit-course-ossd-admission-process"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Credit course & OSSD admission process
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    href="/credit-course-ossd/tuition-fees"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Tuition & fees
+                  </Link>
+                </li>
+              </ul>
+            </li>
+            {/* credit course end */}
 
             <li>
               <Link
-                href="/credit-courses"
+                href="/international-students-ossd"
                 className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
               >
-                Credit Courses & OSSD
+                International Students for OSSD
               </Link>
             </li>
+
             <li className="group relative">
               <Link
                 href="/tutoring"
@@ -185,54 +389,26 @@ const Navbar = () => {
                     STEM
                   </Link>
                 </li>
+                <li>
+                  <Link
+                    href="/tutoring/fees-admission"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
+                  >
+                    Fees & admission
+                  </Link>
+                </li>
               </ul>
-            </li>
-
-            <li>
-              <Link
-                href="/international-students"
-                className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
-              >
-                International Students
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/core-members"
-                className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
-              >
-                Core Members
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/about"
-                className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
-              >
-                About Us
-              </Link>
-            </li>
-            <li>
-              <Link
-                href="/contact-us"
-                className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
-              >
-                Contact Us
-              </Link>
             </li>
           </ul>
         </div>
 
         <div className="navbar-end ">
-          <Link
-            href="/login"
-            className="btn btn-accent px-3 sm:px-5 me-4 btn-sm lg:btn-md  "
-          >
+          <Link href="/login" className="btn btn-accent px-3 sm:px-5 me-4   ">
             Log in
           </Link>
           <Link
             href="/register"
-            className="btn btn-warning px-3 sm:px-5 me-4 btn-sm lg:btn-md hidden md:btn"
+            className="btn btn-warning px-3 sm:px-5 me-4 hidden md:btn"
           >
             Register
           </Link>

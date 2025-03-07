@@ -14,8 +14,8 @@ const Breadcrumbs = () => {
   const pathSegments = pathname.split("/").filter((segment) => segment);
 
   return (
-    <nav className="text-sm text-gray-600 mb-5 px-8 container mx-auto mt-[-40px]">
-      <ul className="flex items-center space-x-2">
+    <nav className="text-sm text-gray-600 mb-5 px-4 container mx-auto mt-[-40px] overflow-x-auto">
+      <ul className="flex items-center space-x-2 whitespace-nowrap overflow-x-auto">
         <li>
           <Link href="/" className="hover:text-blue-600 flex items-center">
             <FaHome className="mr-1" /> Home
