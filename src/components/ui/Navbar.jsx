@@ -4,9 +4,15 @@ import Link from "next/link"; // Import Link from next/link
 import { FaAngleDown } from "react-icons/fa";
 import Image from "next/image";
 import "../ui/ui.css";
+import { useDispatch, useSelector } from "react-redux";
+import { userSignOut } from "@/redux/slices/userSlice";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
-
+  const { currentUser } = useSelector((state) => state.user);
+  const router = useRouter();
+  const dispatch = useDispatch();
   useEffect(() => {
     const handleScroll = () => {
       setScrolling(window.scrollY > 50);
@@ -15,7 +21,22 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+  const handleLogOut = async () => {
+    try {
+      const response = await axios.post(
+        "http://localhost:5000/api/auth/signout",
+        {}, // Send an empty request body or null
+        { withCredentials: true } // Correct placement of withCredentials
+      );
 
+      if (response.status === 200) {
+        dispatch(userSignOut());
+        router.push("/login");
+      }
+    } catch (error) {
+      console.error("Logout error:", error);
+    }
+  };
   return (
     <div className="fixed left-0 right-0 z-50 mx-2 md:mx-8">
       <div
@@ -403,47 +424,71 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end ">
-          <Link href="/login" className="btn  px-3 sm:px-5 me-4   ">
-            Log in
-          </Link>
-          <Link
-            href="/register"
-            className="btn btn-warning px-3 sm:px-5 me-4 hidden md:btn"
-          >
-            Register
-          </Link>
+          {currentUser ? (
+            <div className="dropdown dropdown-end">
+              <div
+                tabIndex={0}
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
+              >
+                <div className="w-10 rounded-full">
+                  <img
+                    alt="User Profile"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
+                  />
+                </div>
+              </div>
+              <ul
+                tabIndex={0}
+                className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box z-[1] mt-3 w-52 p-2 shadow"
+              >
+                <li key="name" className="mx-3 font-semibold">
+                  {currentUser?.name}
+                </li>
+                <li key="email" className="mx-3 text-sm text-gray-600">
+                  {currentUser?.email}
+                </li>
+                <hr className="my-3" />
+                {currentUser && (
+                  <li key="/admin">
+                    <Link href="/admin" className="justify-between">
+                      Admin Dashboard
+                    </Link>
+                  </li>
+                )}
+                <li key="/profile">
+                  <Link href="/profile" className="justify-between">
+                    Profile <span className="badge">New</span>
+                  </Link>
+                </li>
+                <li key="/settings">
+                  <Link href="/settings">Settings</Link>
+                </li>
+                <li key="/logout">
+                  <button onClick={handleLogOut} className="text-red-500">
+                    Logout
+                  </button>
+                </li>
+              </ul>
+            </div>
+          ) : (
+            <>
+              <Link
+                href="/login"
+                className="btn btn-accent px-3 sm:px-5 me-4   "
+              >
+                Log in
+              </Link>
+              <Link
+                href="/register"
+                className="btn btn-warning px-3 sm:px-5 me-4 hidden md:btn"
+              >
+                Register
+              </Link>
+            </>
+          )}
 
           {/* Profile Dropdown */}
-          <div className="dropdown dropdown-end">
-            <div
-              tabIndex={0}
-              role="button"
-              className="btn btn-ghost btn-circle avatar"
-            >
-              <div className="w-10 rounded-full">
-                <img
-                  alt="User Profile"
-                  src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
-                />
-              </div>
-            </div>
-            <ul
-              tabIndex={0}
-              className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box z-[1] mt-3 w-52 p-2 shadow"
-            >
-              <li>
-                <a className="justify-between">
-                  Profile <span className="badge">New</span>
-                </a>
-              </li>
-              <li>
-                <a>Settings</a>
-              </li>
-              <li>
-                <a>Logout</a>
-              </li>
-            </ul>
-          </div>
         </div>
       </div>
     </div>
