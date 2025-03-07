@@ -44,6 +44,20 @@ const coursesData = [
     price: 565,
     imgUrl: "/images/marketing-course.jpg",
   },
+  {
+    id: 7,
+    name: "MHF4U - Advanced Functions",
+    category: "Grade 12",
+    price: 565,
+    imgUrl: "/images/advanced-function.jpg",
+  },
+  {
+    id: 8,
+    name: "MCV4U - Calculus",
+    category: "Grade 12",
+    price: 565,
+    imgUrl: "/images/calculus.jpg",
+  },
 ];
 
 export default function CourseSection() {
