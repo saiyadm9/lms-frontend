@@ -31,7 +31,7 @@ const Navbar = () => {
 
       if (response.status === 200) {
         dispatch(userSignOut());
-        router.push("/login");
+        router.push("/");
       }
     } catch (error) {
       console.error("Logout error:", error);
@@ -475,7 +475,7 @@ const Navbar = () => {
             <>
               <Link
                 href="/login"
-                className="btn btn-accent px-3 sm:px-5 me-4   "
+                className="btn btn-white px-3 sm:px-5 me-4   "
               >
                 Log in
               </Link>
