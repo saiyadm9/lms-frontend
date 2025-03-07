@@ -3,8 +3,7 @@ const LMSStats = () => {
     <section
       className="bg-cover bg-center py-16 px-6 relative"
       style={{
-        backgroundImage:
-          "url('https://img.freepik.com/free-photo/still-life-books-versus-technology_23-2150063081.jpg?t=st=1740930481~exp=1740934081~hmac=9acbdce8e6373697671f209a5a4055a135b0e4175980b6d6295a9d586f5fecd5&w=1060')",
+        backgroundImage: "url('/images/study-bg.jpg')",
         backgroundAttachment: "fixed",
       }}
     >

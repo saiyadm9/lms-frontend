@@ -6,26 +6,20 @@ const MeetTheTeam = () => {
     {
       name: "Masum Mustafa",
       role: "P.Eng (Electrical Engineering), CSM, PMP",
-      image: "/images/masum_mustafa.jpg",
+      image: "/images/masum-mustofa.jpg",
       bio: "Experienced electrical engineer and project manager.",
+    },
+    {
+      name: "Zannatul Moiet Hasib",
+      role: "Principal",
+      image: "/images/jannatul-moet.jpeg",
+      bio: "P.Eng, PMP , MBA",
     },
     {
       name: "WEI (Shirley) LIU",
       role: "Marketing Director of International Student (China)",
       image: "/images/shirley.jpg",
       bio: "Marketing expert specializing in international student outreach.",
-    },
-    {
-      name: "Jane Smith",
-      role: "Lead Developer",
-      image: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7",
-      bio: "Full-stack developer passionate about scalable applications.",
-    },
-    {
-      name: "Michael Brown",
-      role: "UI/UX Designer",
-      image: "https://images.unsplash.com/photo-1580489944761-15a19d654956",
-      bio: "Creative designer with a love for user-centric design.",
     },
   ];
 
@@ -42,7 +36,7 @@ const MeetTheTeam = () => {
             we do and dedicated to delivering the best results.
           </p>
         </div>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
           {teamMembers.map((member, index) => (
             <div key={index} className="group">
               <div className="relative overflow-hidden rounded-xl mb-4">
