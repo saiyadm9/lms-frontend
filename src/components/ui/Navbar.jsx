@@ -403,7 +403,7 @@ const Navbar = () => {
         </div>
 
         <div className="navbar-end ">
-          <Link href="/login" className="btn btn-accent px-3 sm:px-5 me-4   ">
+          <Link href="/login" className="btn  px-3 sm:px-5 me-4   ">
             Log in
           </Link>
           <Link

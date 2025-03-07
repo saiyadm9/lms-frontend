@@ -1,5 +1,5 @@
 .navArrow:hover .navArrow-rotate {
-  transform: rotate(180deg);
+  transform: rotate(-90deg);
 }
 .navArrow:hover .credit-course-dropdown {
   display: block;

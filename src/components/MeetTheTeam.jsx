@@ -27,10 +27,10 @@ const MeetTheTeam = () => {
     <section className="bg-white py-20 px-4">
       <div className="container mx-auto max-w-7xl">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-gradient-to-r from-indigo-600 to-purple-600 bg-clip-text text-transparent">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4 bg-clip-text">
             Meet Our Talented Team
           </h2>
-          <div className="h-1 w-20 bg-gradient-to-r from-indigo-600 to-purple-600 mx-auto mb-6 rounded-full"></div>
+          <div className="h-1 w-20 bg-warning mx-auto mb-6 rounded-full"></div>
           <p className="text-gray-600 text-lg">
             We're a dynamic group of individuals who are passionate about what
             we do and dedicated to delivering the best results.
