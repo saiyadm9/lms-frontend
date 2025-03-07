@@ -30,6 +30,20 @@ const coursesData = [
     price: 435,
     imgUrl: "/images/computer-technology.jpg",
   },
+  {
+    id: 5,
+    name: "BAF3M - Financial Accounting Fundamentals",
+    category: "Grade 11",
+    price: 565,
+    imgUrl: "/images/financial-accounting-fundamentals.jpg",
+  },
+  {
+    id: 6,
+    name: "BMI3C - Marketing",
+    category: "Grade 11",
+    price: 565,
+    imgUrl: "/images/marketing-course.jpg",
+  },
 ];
 
 export default function CourseSection() {

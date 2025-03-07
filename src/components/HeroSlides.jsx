@@ -66,9 +66,9 @@ export default function HeroSlides() {
               style={{ backgroundImage: `url(${slide.image})` }}
             ></div>
             <div className="absolute inset-0 bg-black bg-opacity-50 flex flex-col justify-center items-center text-center px-6">
-              <h1 className="text-3xl md:text-6xl font-bold text-white mb-4">
+              <div className="text-3xl md:text-6xl font-bold text-white mb-4">
                 {slide.title}
-              </h1>
+              </div>
               <p className="text-lg md:text-xl text-gray-200 mb-6">
                 {slide.description}
               </p>
