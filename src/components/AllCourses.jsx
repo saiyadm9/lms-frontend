@@ -120,9 +120,12 @@ export default function CourseSection() {
                 </div>
 
                 {/* CTA Button (Stays at Bottom) */}
-                <div className="mt-auto">
-                  <button className="w-full bg-[#1E40AF] text-white font-medium py-2 rounded-lg hover:bg-[#374FD2] transition">
+                <div className="mt-auto flex gap-5">
+                  <button className="w-full bg-warning  font-medium py-2 rounded-lg transition">
                     Enroll Now
+                  </button>
+                  <button className="w-full bg-amber-200  font-medium py-2 rounded-lg transition">
+                    View details
                   </button>
                 </div>
               </div>

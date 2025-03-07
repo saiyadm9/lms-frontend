@@ -1,7 +1,6 @@
 "use client";
 import Link from "next/link";
 import React from "react";
-import { FaGoogle, FaFacebook, FaGithub } from "react-icons/fa";
 
 const LoginPage = () => {
   return (

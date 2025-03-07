@@ -6,6 +6,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import Link from "next/link";
 
 const slides = [
   {
@@ -14,7 +15,7 @@ const slides = [
     title: "Learn Anytime, Anywhere",
     description: "Access top-quality courses and expand your knowledge.",
     buttonText: "Explore Courses",
-    buttonLink: "/courses",
+    buttonLink: "/about",
   },
   {
     id: 2,
@@ -22,7 +23,7 @@ const slides = [
     title: "Boost Your Career",
     description: "Enhance your skills with expert-led courses.",
     buttonText: "Get Started",
-    buttonLink: "/signup",
+    buttonLink: "/login",
   },
   {
     id: 3,
@@ -37,7 +38,6 @@ const slides = [
 export default function HeroSlides() {
   const progressCircle = useRef(null);
   const progressContent = useRef(null);
-
   const onAutoplayTimeLeft = (s, time, progress) => {
     if (progressCircle.current) {
       progressCircle.current.style.setProperty("--progress", 1 - progress);
@@ -60,7 +60,11 @@ export default function HeroSlides() {
         onAutoplayTimeLeft={onAutoplayTimeLeft}
       >
         {slides.map((slide) => (
-          <SwiperSlide key={slide.id} className="relative">
+          <SwiperSlide
+            key={slide.id}
+            className="relative"
+            style={{ pointerEvents: "auto" }}
+          >
             <div
               className="absolute inset-0 bg-cover"
               style={{ backgroundImage: `url(${slide.image})` }}
@@ -72,12 +76,12 @@ export default function HeroSlides() {
               <p className="text-lg md:text-xl text-gray-200 mb-6">
                 {slide.description}
               </p>
-              <a
+              <Link
                 href={slide.buttonLink}
-                className="bg-blue-600 text-white px-6 py-3 rounded-lg text-lg font-medium hover:bg-blue-700 transition"
+                className="btn btn-warning px-6 rounded-lg text-lg font-medium transition"
               >
                 {slide.buttonText}
-              </a>
+              </Link>
             </div>
           </SwiperSlide>
         ))}
