@@ -4,27 +4,19 @@ import { FaFileInvoiceDollar } from "react-icons/fa6";
 const Categories = ({ categories }) => {
   const categoryIcons = {
     "Credit Courses": (
-      <FaFileInvoiceDollar className="text-4xl text-blue-500 transition-transform duration-300 ease-in-out group-hover:scale-110" />
+      <FaFileInvoiceDollar className="text-5xl text-yellow-500 transition-transform duration-300 ease-in-out group-hover:scale-110" />
     ),
     Tutoring: (
-      <PiStudentDuotone className="text-4xl text-purple-500 transition-transform duration-300 ease-in-out group-hover:scale-110" />
+      <PiStudentDuotone className="text-5xl text-yellow-500 transition-transform duration-300 ease-in-out group-hover:scale-110" />
     ),
   };
 
   return (
     <div className="relative overflow-hidden">
-      <div
-        className="absolute inset-0 bg-cover bg-center"
-        // style={{
-        //   backgroundImage:
-        //     "url('/images/beautiful-young-woman-studying-using-laptop.jpg')",
-        //   backgroundAttachment: "scroll",
-        //   backgroundRepeat: "no-repeat",
-        // }}
-      ></div>
-      <div className="absolute inset-0 bg-black bg-opacity-50 clip-path-polygon"></div>
+      <div className="absolute inset-0 bg-cover bg-center"></div>
+      <div className="absolute inset-0 bg-[#FFBF54] bg-opacity-25 clip-path-polygon"></div>
 
-      <section className="relative container mx-auto py-12 px-10 text-white">
+      <section className="relative container mx-auto py-12 px-10 ">
         <h2 className="text-4xl font-bold text-center mb-8">
           Explore Our Categories
         </h2>

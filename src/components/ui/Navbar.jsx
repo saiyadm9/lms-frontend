@@ -42,7 +42,7 @@ const Navbar = () => {
       <div
         className={`navbar container mx-auto px-2 md:px-6 transition-all duration-300 ${
           scrolling
-            ? "bg-[#1E40AF] shadow-lg text-black lg:text-white mt-5"
+            ? "bg-[#333] shadow-lg text-black lg:text-white mt-5"
             : "bg-transparent text-black lg:text-white"
         }`}
         style={{ borderRadius: "0.5rem" }}

@@ -1,7 +1,5 @@
 import {
   FaUniversity,
-  FaSchool,
-  FaGlobeAmericas,
   FaChalkboardTeacher,
   FaGraduationCap,
   FaUsers,
@@ -32,7 +30,7 @@ const LMSStats = () => {
             {/* Year Founded */}
             <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="flex items-center">
-                <FaUniversity className="mr-4 text-4xl text-blue-600" />
+                <FaUniversity className="mr-4 text-4xl text-yellow-600" />
                 <div>
                   <div className="stat-title text-gray-700 font-medium">
                     Year Founded
@@ -42,7 +40,6 @@ const LMSStats = () => {
               </div>
             </div>
 
-            {/* Average Class Size */}
             <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="flex items-center">
                 <FaChalkboardTeacher className="mr-4 text-4xl text-yellow-600" />
@@ -50,20 +47,19 @@ const LMSStats = () => {
                   <div className="stat-title text-gray-700 font-medium">
                     Average Students <br /> Per Class
                   </div>
-                  <div className="stat-value text-yellow-600 text-2xl">4-6</div>
+                  <div className="stat-value text-2xl">4-6</div>
                 </div>
               </div>
             </div>
 
-            {/* University Acceptance Rate */}
             <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="flex items-center">
-                <FaGraduationCap className="mr-4 text-4xl text-red-600" />
+                <FaGraduationCap className="mr-4 text-4xl text-yellow-600" />
                 <div>
                   <div className="stat-title text-gray-700 font-medium">
                     University <br /> Acceptance Rate
                   </div>
-                  <div className="stat-value text-red-600 text-2xl">98%</div>
+                  <div className="stat-value  text-2xl">98%</div>
                 </div>
               </div>
             </div>
@@ -71,12 +67,12 @@ const LMSStats = () => {
             {/* Students */}
             <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="flex items-center">
-                <FaUsers className="mr-4 text-5xl text-teal-600" />
+                <FaUsers className="mr-4 text-5xl text-yellow-600" />
                 <div>
                   <div className="stat-title text-gray-700 font-medium">
                     Total Students
                   </div>
-                  <div className="stat-value text-teal-600 text-2xl">52</div>
+                  <div className="stat-value  text-2xl">52</div>
                 </div>
               </div>
             </div>
