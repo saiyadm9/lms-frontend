@@ -17,12 +17,9 @@ export async function middleware(req) {
   if (adminRoutes.includes(path)) {
     if (!token) {
       console.error("No token found for admin route");
-      return NextResponse.redirect(
-        new URL("/login", req.nextUrl.origin).toString()
-      );
+      return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
     }
 
-    // Call the API route to verify the token
     const response = await fetch(
       new URL(
         "http://localhost:5000/api/auth/verify-admin",
