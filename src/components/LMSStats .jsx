@@ -28,7 +28,7 @@ const LMSStats = () => {
         </p>
 
         <div className="stats p-10 sm:p-8 rounded-xl">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16">
             {/* Year Founded */}
             <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="flex items-center">
@@ -42,39 +42,13 @@ const LMSStats = () => {
               </div>
             </div>
 
-            {/* Schools */}
-            <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div className="flex items-center">
-                <FaSchool className="mr-4 text-4xl text-green-600" />
-                <div>
-                  <div className="stat-title text-gray-700 font-medium">
-                    Schools
-                  </div>
-                  <div className="stat-value  text-2xl">10</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Nationalities */}
-            <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
-              <div className="flex items-center">
-                <FaGlobeAmericas className="mr-4 text-4xl text-indigo-600" />
-                <div>
-                  <div className="stat-title text-gray-700 font-medium">
-                    Nationalities
-                  </div>
-                  <div className="stat-value text-indigo-600 text-2xl">30+</div>
-                </div>
-              </div>
-            </div>
-
             {/* Average Class Size */}
             <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
               <div className="flex items-center">
                 <FaChalkboardTeacher className="mr-4 text-4xl text-yellow-600" />
                 <div>
                   <div className="stat-title text-gray-700 font-medium">
-                    Average Students Per Class
+                    Average Students <br /> Per Class
                   </div>
                   <div className="stat-value text-yellow-600 text-2xl">4-6</div>
                 </div>
@@ -87,7 +61,7 @@ const LMSStats = () => {
                 <FaGraduationCap className="mr-4 text-4xl text-red-600" />
                 <div>
                   <div className="stat-title text-gray-700 font-medium">
-                    University Acceptance Rate
+                    University <br /> Acceptance Rate
                   </div>
                   <div className="stat-value text-red-600 text-2xl">98%</div>
                 </div>
