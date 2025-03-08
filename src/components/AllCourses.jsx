@@ -124,9 +124,6 @@ export default function CourseSection() {
                   <button className="w-full bg-warning  font-medium py-2 rounded-lg transition">
                     Enroll Now
                   </button>
-                  <button className="w-full bg-amber-200  font-medium py-2 rounded-lg transition">
-                    View details
-                  </button>
                 </div>
               </div>
             </div>

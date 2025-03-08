@@ -15,12 +15,12 @@ const Categories = ({ categories }) => {
     <div className="relative overflow-hidden">
       <div
         className="absolute inset-0 bg-cover bg-center"
-        style={{
-          backgroundImage:
-            "url('/images/beautiful-young-woman-studying-using-laptop.jpg')",
-          backgroundAttachment: "scroll",
-          backgroundRepeat: "no-repeat",
-        }}
+        // style={{
+        //   backgroundImage:
+        //     "url('/images/beautiful-young-woman-studying-using-laptop.jpg')",
+        //   backgroundAttachment: "scroll",
+        //   backgroundRepeat: "no-repeat",
+        // }}
       ></div>
       <div className="absolute inset-0 bg-black bg-opacity-50 clip-path-polygon"></div>
 
@@ -36,6 +36,7 @@ const Categories = ({ categories }) => {
             >
               <div className="mb-4">{categoryIcons[category.name]}</div>
               <h3 className="text-xl font-semibold mb-2">{category.name}</h3>
+              <p className="text-center">{category.description}</p>
             </div>
           ))}
         </div>

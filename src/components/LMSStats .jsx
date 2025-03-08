@@ -12,22 +12,22 @@ const LMSStats = () => {
     <section
       className="bg-cover bg-center py-16 px-6 relative"
       style={{
-        backgroundImage: "url('/images/study-bg.jpg')",
-        backgroundAttachment: "fixed",
+        backgroundImage: "url('/images/students-in-classroom.jpg')",
+        backgroundAttachment: "scroll",
       }}
     >
-      <div className="absolute inset-0 bg-black opacity-50"></div>
+      <div className="absolute inset-0 bg-black opacity-70"></div>
 
       <div className="container mx-auto text-center relative z-5">
         <h2 className="text-4xl font-semibold mb-6 text-white sm:text-3xl">
-          Why Choose Our LMS?
+          Why Choose Academy of Scholars?
         </h2>
         <p className="text-lg max-w-2xl mx-auto mb-12 text-white sm:text-base">
           Elevate your learning experience with top-tier courses, expert
           guidance, and a supportive community.
         </p>
 
-        <div className="stats shadow-lg backdrop-blur-md bg-opacity-70 p-12 sm:p-8 rounded-xl">
+        <div className="stats p-10 sm:p-8 rounded-xl">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
             {/* Year Founded */}
             <div className="stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300">
@@ -37,7 +37,7 @@ const LMSStats = () => {
                   <div className="stat-title text-gray-700 font-medium">
                     Year Founded
                   </div>
-                  <div className="stat-value text-blue-600 text-2xl">2010</div>
+                  <div className="stat-value  text-2xl">2021</div>
                 </div>
               </div>
             </div>
@@ -50,7 +50,7 @@ const LMSStats = () => {
                   <div className="stat-title text-gray-700 font-medium">
                     Schools
                   </div>
-                  <div className="stat-value text-green-600 text-2xl">10</div>
+                  <div className="stat-value  text-2xl">10</div>
                 </div>
               </div>
             </div>
@@ -74,9 +74,9 @@ const LMSStats = () => {
                 <FaChalkboardTeacher className="mr-4 text-4xl text-yellow-600" />
                 <div>
                   <div className="stat-title text-gray-700 font-medium">
-                    Average Class Size
+                    Average Students Per Class
                   </div>
-                  <div className="stat-value text-yellow-600 text-2xl">12</div>
+                  <div className="stat-value text-yellow-600 text-2xl">4-6</div>
                 </div>
               </div>
             </div>
@@ -100,9 +100,9 @@ const LMSStats = () => {
                 <FaUsers className="mr-4 text-5xl text-teal-600" />
                 <div>
                   <div className="stat-title text-gray-700 font-medium">
-                    Students
+                    Total Students
                   </div>
-                  <div className="stat-value text-teal-600 text-2xl">5500</div>
+                  <div className="stat-value text-teal-600 text-2xl">52</div>
                 </div>
               </div>
             </div>
