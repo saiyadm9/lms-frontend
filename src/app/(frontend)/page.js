@@ -7,6 +7,7 @@ import LmsFaq from "@/components/LmsFaq";
 import Reviews from "@/components/Reviews";
 import AfterHero from "@/components/AfterHero";
 import HeroSlides from "@/components/HeroSlides";
+import UniversitiesLogo from "@/components/UniversitiesLogo";
 
 const Home = () => {
   return (
@@ -17,6 +18,7 @@ const Home = () => {
       <Categories categories={categoriesData} />
       <AllCourses />
       <MeetTheTeam />
+      <UniversitiesLogo />
       {/* <LmsFaq /> */}
       <Reviews />
     </div>

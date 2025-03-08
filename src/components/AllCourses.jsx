@@ -72,9 +72,9 @@ export default function CourseSection() {
     <section className="bg-[#F3F4F6]">
       {/* Centered Content Container */}
       <div className="container mx-auto  py-12 px-10 ">
-        <h1 className="text-3xl font-bold text-center text-gray-900 mb-8">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
           Explore Our Courses
-        </h1>
+        </h2>
 
         {/* Tabs */}
         <div className="flex justify-center space-x-4 mb-10 hidden lg:flex">
