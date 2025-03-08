@@ -40,47 +40,44 @@ const Reviews = () => {
       {/* Content */}
       <div className="container mx-auto text-center relative">
         <div className="absolute inset-y-0 left-[-2] w-24 bg-gradient-to-r from-white to-[#ffffff00] bg-transparent z-20 hidden md:block"></div>
-        <div className="absolute inset-y-0 right-[-2] w-24 bg-gradient-to-l from-white to-[#ffffff00] bg-transparent z-20 hidden md:block"></div>
+        <div className="absolute inset-y-0 right-[-2] w-24 bg-gradient-to-l  from-white to-[#ffffff00] bg-transparent z-20 hidden md:block"></div>
         <h2 className="text-5xl font-semibold mb-12 text-gray-900">
           User Reviews
         </h2>
         <div className="relative w-full overflow-hidden">
-          <div className="scroll-wrapper">
-            <div className="scroll-content">
-              {/* Duplicate reviews for seamless effect */}
-              {[...reviews, ...reviews].map((review, index) => (
-                <div
-                  key={`${review.name}-${review.date}-${index}`}
-                  className="bg-white shadow-lg rounded-xl border-2 border-dashed p-8 text-center relative w-96 m-4 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-xl"
-                >
-                  <div className="absolute top-0 left-0 text-black text-4xl font-bold p-2">
-                    <Quote size={40} className="rotate-180 opacity-20" />
-                  </div>
-                  <div className="absolute bottom-0 right-0 text-black text-4xl font-bold p-2">
-                    <Quote size={40} className="opacity-20" />
-                  </div>
-                  <div className="flex justify-center mb-4">
-                    {[...Array(5)].map((_, idx) => (
-                      <Star
-                        key={idx}
-                        className={`h-6 w-6 ${
-                          idx < review.rating
-                            ? "text-yellow-500 fill-yellow-500"
-                            : "text-gray-300"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                  <p className="text-gray-700 text-lg mb-6 leading-relaxed font-medium">
-                    "{review.text}"
-                  </p>
-                  <hr className="border-t-2 border-yellow-500 w-20 mx-auto mb-3" />
-                  <h3 className="text-xl font-semibold text-gray-900 italic">
-                    {review.name}
-                  </h3>
+          <div className="flex space-x-10 animate-scroll">
+            {[...reviews, ...reviews].map((review, index) => (
+              <div
+                key={`${review.name}-${review.date}-${index}`}
+                className="bg-white shadow-lg rounded-xl border-2 border-dashed p-8 text-center relative w-96 m-4 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-xl"
+              >
+                <div className="absolute top-0 left-0 text-black text-4xl font-bold p-2">
+                  <Quote size={40} className="rotate-180 opacity-20" />
                 </div>
-              ))}
-            </div>
+                <div className="absolute bottom-0 right-0 text-black text-4xl font-bold p-2">
+                  <Quote size={40} className="opacity-20" />
+                </div>
+                <div className="flex justify-center mb-4">
+                  {[...Array(5)].map((_, idx) => (
+                    <Star
+                      key={idx}
+                      className={`h-6 w-6 ${
+                        idx < review.rating
+                          ? "text-yellow-500 fill-yellow-500"
+                          : "text-gray-300"
+                      }`}
+                    />
+                  ))}
+                </div>
+                <p className="text-gray-700 text-lg mb-6 leading-relaxed font-medium">
+                  "{review.text}"
+                </p>
+                <hr className="border-t-2 border-yellow-500 w-20 mx-auto mb-3" />
+                <h3 className="text-xl font-semibold text-gray-900 italic">
+                  {review.name}
+                </h3>
+              </div>
+            ))}
           </div>
         </div>
       </div>
@@ -92,16 +89,9 @@ const Reviews = () => {
             0% { transform: translateX(0); }
             100% { transform: translateX(-50%); }
           }
-          
-          .scroll-wrapper {
-            width: 100%;
-            overflow: hidden;
-          }
-
-          .scroll-content {
+          .animate-scroll {
             display: flex;
-            gap: 40px;
-            animation: scroll 30s linear infinite;
+            animation: scroll 30s linear infinite; /* Adjust duration */
             width: max-content;
           }
         `}
