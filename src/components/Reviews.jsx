@@ -41,9 +41,9 @@ const Reviews = () => {
       <div className="container mx-auto text-center relative">
         <div className="absolute inset-y-0 left-[-2] w-24 bg-gradient-to-r from-white to-[#ffffff00] bg-transparent z-20 hidden md:block"></div>
         <div className="absolute inset-y-0 right-[-2] w-24 bg-gradient-to-l  from-white to-[#ffffff00] bg-transparent z-20 hidden md:block"></div>
-        <h2 className="text-5xl font-semibold mb-12 text-gray-900">
-          User Reviews
-        </h2>
+        <h3 className="text-3xl font-semibold mb-8 text-gray-900">
+          See Our Reviews
+        </h3>
         <div className="relative w-full overflow-hidden">
           <div className="flex space-x-10 animate-scroll">
             {reviews.map((review, index) => (
