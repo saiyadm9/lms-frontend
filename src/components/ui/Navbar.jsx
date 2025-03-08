@@ -31,7 +31,7 @@ const Navbar = () => {
 
       if (response.status === 200) {
         dispatch(userSignOut());
-        router.push("/login");
+        router.push("/");
       }
     } catch (error) {
       console.error("Logout error:", error);
@@ -449,13 +449,14 @@ const Navbar = () => {
                   {currentUser?.email}
                 </li>
                 <hr className="my-3" />
-                {currentUser && (
+                {currentUser && currentUser?.role === "admin" && (
                   <li key="/admin">
                     <Link href="/admin" className="justify-between">
                       Admin Dashboard
                     </Link>
                   </li>
                 )}
+
                 <li key="/profile">
                   <Link href="/profile" className="justify-between">
                     Profile <span className="badge">New</span>
