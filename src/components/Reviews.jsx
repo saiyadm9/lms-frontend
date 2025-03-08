@@ -46,9 +46,9 @@ const Reviews = () => {
         </h3>
         <div className="relative w-full overflow-hidden">
           <div className="flex space-x-10 animate-scroll">
-            {reviews.map((review, index) => (
+            {[...reviews, ...reviews].map((review, index) => (
               <div
-                key={`${review.name}-${review.date}`}
+                key={`${review.name}-${review.date}-${index}`}
                 className="bg-white shadow-lg rounded-xl border-2 border-dashed p-8 text-center relative w-96 m-4 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-xl"
               >
                 <div className="absolute top-0 left-0 text-black text-4xl font-bold p-2">
@@ -91,7 +91,7 @@ const Reviews = () => {
           }
           .animate-scroll {
             display: flex;
-            animation: scroll 20s linear infinite; /* Adjust duration */
+            animation: scroll 30s linear infinite; /* Adjust duration */
             width: max-content;
           }
         `}
