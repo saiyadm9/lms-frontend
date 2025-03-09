@@ -5,6 +5,7 @@ import axios from "axios";
 import Link from "next/link";
 import { userSignInFailure, userSignInSuccess } from "@/redux/slices/userSlice";
 import { useRouter } from "next/navigation"; // Import useRouter
+import toast from "react-hot-toast";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -21,21 +22,22 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/login",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/login`,
         { email, password },
         { withCredentials: true }
       );
       console.log(response);
       if (response.status === 200) {
+        toast.success("Login successful!");
         const user = response.data;
         dispatch(userSignInSuccess(user));
-        router.push("/"); // Use router.push to navigate
+        router.push("/");
       } else if (response.status === 401) {
-        setError(response.data.message);
+        toast.error(response.data.message);
       }
     } catch (err) {
       console.log(err.message);
-      setError(
+      toast.error(
         err.response
           ? err.response.data.message
           : "An error occurred. Please try again."
