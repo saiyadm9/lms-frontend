@@ -3,13 +3,18 @@ import Reviews from '@/components/Reviews'
 import UniversitiesLogo from '@/components/UniversitiesLogo'
 import Image from 'next/image'
 
+export const metadata = {
+  title: 'About Academy of Scholars',
+  description: '',
+}
+
 const AboutUsPage = () => {
   return (
     <div>
       <section className='bg-[#F3F4F6] py-12 px-10'>
         <div className='container mx-auto flex flex-col md:flex-row items-center'>
           <div className='md:w-1/2'>
-            <h1 className='text-3xl font-bold mt-6'>
+            <h1 className='text-4xl font-bold mt-6'>
               About Academy of Scholars
             </h1>
             <p className='mt-4 text-gray-700'>
