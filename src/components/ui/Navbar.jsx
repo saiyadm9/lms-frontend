@@ -324,14 +324,51 @@ const Navbar = () => {
                     Description
                   </Link>
                 </li>
-                <li>
+
+                <li className='navArrow relative'>
                   <Link
                     href='/credit-course-ossd/available-course'
                     className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
                   >
                     Available course
+                    <FaAngleDown className='transition-transform duration-300 navArrow-rotate' />
                   </Link>
+                  <ul className='absolute left-[90%] hidden credit-course-dropdown w-52 p-2 bg-white rounded text-black'>
+                    <li>
+                      <Link
+                        href='/credit-course-ossd/available-course/grade-9'
+                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                      >
+                        Grade 9
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href='/credit-course-ossd/available-course/grade-10'
+                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                      >
+                        Grade 10
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href='/credit-course-ossd/available-course/grade-11'
+                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                      >
+                        Grade 11
+                      </Link>
+                    </li>
+                    <li>
+                      <Link
+                        href='/credit-course-ossd/available-course/grade-11'
+                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                      >
+                        Grade 12
+                      </Link>
+                    </li>
+                  </ul>
                 </li>
+
                 <li className='navArrow relative'>
                   <Link
                     href='/credit-course-ossd/learning-methods'
