@@ -1,5 +1,8 @@
-import React from 'react'
+'use client'
+import React, { useState } from 'react'
 import Image from 'next/image'
+import { Dialog } from '@headlessui/react'
+import { FaChevronLeft, FaChevronRight } from 'react-icons/fa'
 
 const Gallery = () => {
   const images = [
@@ -22,6 +25,18 @@ const Gallery = () => {
     { src: '/images/picnic.jpg', alt: 'Picnic' },
   ]
 
+  const [selectedIndex, setSelectedIndex] = useState(null)
+
+  const handleNext = () => {
+    setSelectedIndex((prevIndex) => (prevIndex + 1) % images.length)
+  }
+
+  const handlePrev = () => {
+    setSelectedIndex(
+      (prevIndex) => (prevIndex - 1 + images.length) % images.length
+    )
+  }
+
   return (
     <div className='py-12 bg-[#E4DBD0]'>
       <div className='container mx-auto px-4'>
@@ -32,7 +47,8 @@ const Gallery = () => {
           {images.map((img, index) => (
             <div
               key={index}
-              className='overflow-hidden rounded-lg shadow-lg group'
+              className='overflow-hidden rounded-lg shadow-lg group cursor-pointer'
+              onClick={() => setSelectedIndex(index)}
             >
               <figure className='relative w-full h-64'>
                 <Image
@@ -52,6 +68,42 @@ const Gallery = () => {
           ))}
         </div>
       </div>
+
+      {selectedIndex !== null && (
+        <Dialog
+          open={true}
+          onClose={() => setSelectedIndex(null)}
+          className='fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-75'
+        >
+          <div className='relative bg-white p-4 rounded-lg max-w-3xl mx-auto flex items-center justify-center'>
+            <button
+              className='absolute top-4 right-4 text-gray-800 text-3xl font-bold bg-white rounded-full w-10 h-10 flex items-center justify-center shadow-lg'
+              onClick={() => setSelectedIndex(null)}
+            >
+              &times;
+            </button>
+            <button
+              className='absolute left-4 text-white bg-gray-800 bg-opacity-50 rounded-full p-2'
+              onClick={handlePrev}
+            >
+              <FaChevronLeft className='w-6 h-6' />
+            </button>
+            <Image
+              src={images[selectedIndex].src}
+              alt={images[selectedIndex].alt}
+              width={800}
+              height={600}
+              className='rounded-lg'
+            />
+            <button
+              className='absolute right-4 text-white bg-gray-800 bg-opacity-50 rounded-full p-2'
+              onClick={handleNext}
+            >
+              <FaChevronRight className='w-6 h-6' />
+            </button>
+          </div>
+        </Dialog>
+      )}
     </div>
   )
 }
