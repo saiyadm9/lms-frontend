@@ -97,7 +97,9 @@ export default function CourseSection() {
         </div>
         <div className='grid justify-center items-center mt-10'>
           <button className='text-lg px-3 py-1 bg-[#FC9743] font-medium rounded-md transition'>
-            <Link href='/courses'>Show All Courses</Link>
+            <Link href='/credit-course-ossd/available-course'>
+              Show All Courses
+            </Link>
           </button>
         </div>
       </div>
