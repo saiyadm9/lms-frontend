@@ -1,79 +1,78 @@
-import React from "react";
-import { Star, Quote } from "lucide-react";
+import React from 'react'
+import { Star, Quote } from 'lucide-react'
 
 const Reviews = () => {
   const reviews = [
     {
-      name: "John Doe",
+      name: 'John Doe',
       rating: 5,
-      text: "This LMS is incredible! The courses are well-organized and the content is top-notch.",
-      date: "2025-02-28",
+      text: 'This LMS is incredible! The courses are well-organized and the content is top-notch.',
+      date: '2025-02-28',
     },
     {
-      name: "Jane Smith",
+      name: 'Jane Smith',
       rating: 4,
-      text: "I really enjoyed the learning experience. The user interface could use some improvements.",
-      date: "2025-01-15",
+      text: 'I really enjoyed the learning experience. The user interface could use some improvements.',
+      date: '2025-01-15',
     },
     {
-      name: "Michael Clark",
+      name: 'Michael Clark',
       rating: 5,
-      text: "Fantastic platform with excellent customer support. Highly recommend it!",
-      date: "2024-12-30",
+      text: 'Fantastic platform with excellent customer support. Highly recommend it!',
+      date: '2024-12-30',
     },
     {
-      name: "Michael Cl.",
+      name: 'Michael Cl.',
       rating: 5,
-      text: "Fantastic platform with excellent customer support. Highly recommend it!",
-      date: "2024-12-30",
+      text: 'Fantastic platform with excellent customer support. Highly recommend it! And I mean really awesome platform',
+      date: '2024-12-30',
     },
     {
-      name: "Clark",
+      name: 'Clark',
       rating: 5,
-      text: "Fantastic platform with excellent customer support. Highly recommend it!",
-      date: "2024-12-30",
+      text: 'Fantastic platform with excellent customer support. Highly recommend it! This is a really long text to check the overflow. SuperLongWordWithoutSpacesToTestOverflow',
+      date: '2024-12-30',
     },
-  ];
+  ]
 
   return (
-    <div className="py-20 px-6 overflow-hidden">
-      {/* Content */}
-      <div className="container mx-auto text-center relative">
-        <div className="absolute inset-y-0 left-[-2] w-24 bg-gradient-to-r from-white to-[#ffffff00] bg-transparent z-20 hidden md:block"></div>
-        <div className="absolute inset-y-0 right-[-2] w-24 bg-gradient-to-l  from-white to-[#ffffff00] bg-transparent z-20 hidden md:block"></div>
-        <h3 className="text-3xl font-semibold mb-8 text-gray-900">
+    <div className='py-20 px-6 overflow-hidden'>
+      <div className='container mx-auto text-center relative'>
+        <div className='absolute inset-y-0 left-[-2] w-24 bg-gradient-to-r from-white to-[#ffffff00] bg-transparent z-20 hidden md:block'></div>
+        <div className='absolute inset-y-0 right-[-2] w-24 bg-gradient-to-l  from-white to-[#ffffff00] bg-transparent z-20 hidden md:block'></div>
+        <h3 className='text-3xl font-semibold mb-8 text-gray-900'>
           See Our Reviews
         </h3>
-        <div className="relative w-full overflow-hidden">
-          <div className="flex space-x-10 animate-scroll">
+        <div className='relative w-full overflow-hidden'>
+          <div className='flex space-x-10 animate-scroll'>
             {[...reviews, ...reviews].map((review, index) => (
               <div
                 key={`${review.name}-${review.date}-${index}`}
-                className="bg-white shadow-lg rounded-xl border-2 border-dashed p-8 text-center relative w-96 m-4 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-xl"
+                className='bg-white shadow-lg rounded-xl border-2 border-dashed p-8 text-center relative w-96 m-4 flex-shrink-0 transition-transform transform hover:scale-105 hover:shadow-xl'
               >
-                <div className="absolute top-0 left-0 text-black text-4xl font-bold p-2">
-                  <Quote size={40} className="rotate-180 opacity-20" />
+                <div className='absolute top-0 left-0 text-black text-4xl font-bold p-2'>
+                  <Quote size={40} className='rotate-180 opacity-20' />
                 </div>
-                <div className="absolute bottom-0 right-0 text-black text-4xl font-bold p-2">
-                  <Quote size={40} className="opacity-20" />
+                <div className='absolute bottom-0 right-0 text-black text-4xl font-bold p-2'>
+                  <Quote size={40} className='opacity-20' />
                 </div>
-                <div className="flex justify-center mb-4">
+                <div className='flex justify-center mb-4'>
                   {[...Array(5)].map((_, idx) => (
                     <Star
                       key={idx}
                       className={`h-6 w-6 ${
                         idx < review.rating
-                          ? "text-yellow-500 fill-yellow-500"
-                          : "text-gray-300"
+                          ? 'text-yellow-500 fill-yellow-500'
+                          : 'text-gray-300'
                       }`}
                     />
                   ))}
                 </div>
-                <p className="text-gray-700 text-lg mb-6 leading-relaxed font-medium">
+                <p className='text-gray-700 text-lg mb-6 leading-relaxed font-medium overflow-wrap-break'>
                   "{review.text}"
                 </p>
-                <hr className="border-t-2 border-yellow-500 w-20 mx-auto mb-3" />
-                <h3 className="text-xl font-semibold text-gray-900 italic">
+                <hr className='border-t-2 border-yellow-500 w-20 mx-auto mb-3' />
+                <h3 className='text-xl font-semibold text-gray-900 italic'>
                   {review.name}
                 </h3>
               </div>
@@ -82,7 +81,6 @@ const Reviews = () => {
         </div>
       </div>
 
-      {/* Keyframes Animation */}
       <style>
         {`
           @keyframes scroll {
@@ -91,13 +89,16 @@ const Reviews = () => {
           }
           .animate-scroll {
             display: flex;
-            animation: scroll 30s linear infinite; /* Adjust duration */
+            animation: scroll 30s linear infinite;
             width: max-content;
+          }
+          .overflow-wrap-break {
+            overflow-wrap: break-word;
           }
         `}
       </style>
     </div>
-  );
-};
+  )
+}
 
-export default Reviews;
+export default Reviews

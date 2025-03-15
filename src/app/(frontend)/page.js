@@ -1,13 +1,14 @@
-import Categories from "@/components/CourseCategory";
-import categoriesData from "../../../data/categories";
-import AllCourses from "@/components/AllCourses";
-import MeetTheTeam from "@/components/MeetTheTeam";
-import LMSStats from "@/components/LMSStats ";
-import LmsFaq from "@/components/LmsFaq";
-import Reviews from "@/components/Reviews";
-import AfterHero from "@/components/AfterHero";
-import HeroSlides from "@/components/HeroSlides";
-import UniversitiesLogo from "@/components/UniversitiesLogo";
+import Categories from '@/components/CourseCategory'
+import categoriesData from '../../../data/categories'
+import AllCourses from '@/components/AllCourses'
+import MeetTheTeam from '@/components/MeetTheTeam'
+import LMSStats from '@/components/LMSStats '
+import LmsFaq from '@/components/LmsFaq'
+import Reviews from '@/components/Reviews'
+import AfterHero from '@/components/AfterHero'
+import HeroSlides from '@/components/HeroSlides'
+import UniversitiesLogo from '@/components/UniversitiesLogo'
+import Gallery from '@/components/Gallery'
 
 const Home = () => {
   return (
@@ -18,12 +19,13 @@ const Home = () => {
       <Categories categories={categoriesData} />
       <AllCourses />
       <MeetTheTeam />
+      <Gallery />
       <UniversitiesLogo />
       {/* <LmsFaq /> */}
       <Reviews />
     </div>
-  );
-};
+  )
+}
 
 // Wrap Home with withHero and pass hero data
-export default Home;
+export default Home
