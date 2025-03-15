@@ -13,20 +13,18 @@ const AboutUsPage = () => {
               About Academy of Scholars
             </h1>
             <p className='mt-4 text-gray-700'>
-              Founded in 2018 as a dedicated tutoring center, Academy of
-              Scholars began with a mission to support students in achieving
-              academic excellence through personalized learning. As our
-              commitment to education grew, we expanded in 2020 into an
-              inspected private school, offering Ontario Secondary School
-              Diploma (OSSD) credit courses approved by the Ministry of
-              Education. Recognizing the growing demand for quality Canadian
-              education beyond our borders, we now proudly offer the OSSD
-              program to international and overseas students, providing them
-              with a pathway to top universities in Canada and around the world.
-              Our journey reflects our dedication to innovation, accessibility,
-              and student success, ensuring that learners, no matter where they
-              are, receive the same high-quality education and opportunities to
-              achieve their academic and career goals.
+              At Academy of Scholars, we are committed to providing a
+              high-quality, student-centered education that fosters academic
+              excellence, personal growth, and lifelong success. As a private
+              school in Ontario, we offer a dynamic learning environment where
+              students receive individualized support, innovative teaching
+              methods, and a well-rounded curriculum that prepares them for
+              future academic and career opportunities. Our dedicated educators
+              inspire students to develop critical thinking skills, confidence,
+              and a strong sense of responsibility in a supportive and inclusive
+              community. At Academy of Scholars, we believe in nurturing each
+              student’s unique potential, ensuring they are well-equipped to
+              achieve their goals and thrive in an ever-changing world.
             </p>
           </div>
           <div className='md:w-1/2 flex justify-center mt-6 md:mt-0'>
