@@ -21,7 +21,6 @@ const Home = () => {
       <MeetTheTeam />
       <Gallery />
       <UniversitiesLogo />
-      {/* <LmsFaq /> */}
       <Reviews />
     </div>
   )
