@@ -1,7 +1,8 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
-const protectedRoutes = ["/login", "/register"];
+const loginProtectedRoutes = ["/login", "/register"];
+const logoutProtectedRoutes = ["/profile"];
 const adminRoutes = ["/admin"];
 
 export async function middleware(req) {
@@ -10,7 +11,11 @@ export async function middleware(req) {
   const token = cookieStore.get("access_token")?.value;
   const path = req.nextUrl.pathname;
 
-  if (token && protectedRoutes.includes(path)) {
+  if (token && loginProtectedRoutes.includes(path)) {
+    return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
+  }
+
+  if (!token && logoutProtectedRoutes.includes(path)) {
     return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
   }
 
@@ -22,7 +27,7 @@ export async function middleware(req) {
 
     const response = await fetch(
       new URL(
-        "http://localhost:5000/api/auth/verify-admin",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/verify-admin`,
         req.nextUrl.origin
       ),
       {
@@ -43,5 +48,5 @@ export async function middleware(req) {
 }
 
 export const config = {
-  matcher: ["/login", "/register", "/admin/:path*"],
+  matcher: ["/login", "/register", "/admin/:path*", "/profile"],
 };

@@ -1,126 +1,126 @@
-'use client'
-import React, { useState, useEffect } from 'react'
-import Link from 'next/link' // Import Link from next/link
-import { FaAngleDown } from 'react-icons/fa'
-import Image from 'next/image'
-import '../ui/ui.css'
-import { useDispatch, useSelector } from 'react-redux'
-import { userSignOut } from '@/redux/slices/userSlice'
-import axios from 'axios'
-import { useRouter } from 'next/navigation'
+"use client";
+import React, { useState, useEffect } from "react";
+import Link from "next/link"; // Import Link from next/link
+import { FaAngleDown } from "react-icons/fa";
+import Image from "next/image";
+import "../ui/ui.css";
+import { useDispatch, useSelector } from "react-redux";
+import { userSignOut } from "@/redux/slices/userSlice";
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 const Navbar = () => {
-  const [scrolling, setScrolling] = useState(false)
-  const { currentUser } = useSelector((state) => state.user)
-  const router = useRouter()
-  const dispatch = useDispatch()
+  const [scrolling, setScrolling] = useState(false);
+  const { currentUser } = useSelector((state) => state.user);
+  const router = useRouter();
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const handleScroll = () => {
-      setScrolling(window.scrollY > 50)
-    }
+      setScrolling(window.scrollY > 50);
+    };
 
-    window.addEventListener('scroll', handleScroll)
-    return () => window.removeEventListener('scroll', handleScroll)
-  }, [])
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   const handleLogOut = async () => {
     try {
       const response = await axios.post(
-        'http://localhost:5000/api/auth/signout',
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/signout`,
         {}, // Send an empty request body or null
         { withCredentials: true } // Correct placement of withCredentials
-      )
+      );
 
       if (response.status === 200) {
-        dispatch(userSignOut())
-        router.push('/')
+        dispatch(userSignOut());
+        router.push("/");
       }
     } catch (error) {
-      console.error('Logout error:', error)
+      console.error("Logout error:", error);
     }
-  }
+  };
 
   return (
-    <div className='fixed left-0 right-0 z-50'>
+    <div className="fixed left-0 right-0 z-50">
       <div
         className={`navbar px-2 md:px-6 transition-all duration-300 ${
           scrolling
-            ? 'bg-white shadow-lg text-black lg:text-black'
-            : 'bg-white text-black lg:text-black'
+            ? "bg-white shadow-lg text-black lg:text-black"
+            : "bg-white text-black lg:text-black"
         }`}
       >
-        <div className='navbar-start'>
+        <div className="navbar-start">
           {/* Mobile Menu */}
-          <div className='dropdown'>
+          <div className="dropdown">
             <div
               tabIndex={0}
-              role='button'
-              className='btn btn-ghost lg:hidden text-black sm:text-black'
+              role="button"
+              className="btn btn-ghost lg:hidden text-black sm:text-black"
             >
               <svg
-                xmlns='http://www.w3.org/2000/svg'
-                className='h-5 w-5'
-                fill='none'
-                viewBox='0 0 24 24'
-                stroke='currentColor'
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
               >
                 <path
-                  strokeLinecap='round'
-                  strokeLinejoin='round'
-                  strokeWidth='2'
-                  d='M4 6h16M4 12h8m-8 6h16'
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth="2"
+                  d="M4 6h16M4 12h8m-8 6h16"
                 />
               </svg>
             </div>
             <ul
               tabIndex={0}
-              className='menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-[100vw] mx-auto p-2 shadow'
+              className="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-[100vw] mx-auto p-2 shadow"
             >
               <li>
                 <Link
-                  href='/'
-                  className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                  href="/"
+                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                 >
                   Home
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/about'
-                  className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                  href="/about"
+                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                 >
                   About us
                 </Link>
-                <ul className='p-2'>
+                <ul className="p-2">
                   <li>
                     <Link
-                      href='/about/our-story'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/about/our-story"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Our story
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/about/university-success-story'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/about/university-success-story"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       University success story
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/about/our-team'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/about/our-team"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Our team
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/about/contact-us'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/about/contact-us"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Contact us
                     </Link>
@@ -130,48 +130,48 @@ const Navbar = () => {
 
               <li>
                 <Link
-                  href='/credit-course-ossd'
-                  className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                  href="/credit-course-ossd"
+                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                 >
                   Credit Course and OSSD
                 </Link>
-                <ul className='p-2'>
+                <ul className="p-2">
                   <li>
                     <Link
-                      href='/credit-course-ossd/description'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/credit-course-ossd/description"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Description
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/credit-course-ossd/available-course'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/credit-course-ossd/available-course"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Available course
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/credit-course-ossd/learning-methods'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/credit-course-ossd/learning-methods"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Learning methods
                     </Link>
-                    <ul className='p-2'>
+                    <ul className="p-2">
                       <li>
                         <Link
-                          href='/credit-course-ossd/learning-methods/virtual-learning'
-                          className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                          href="/credit-course-ossd/learning-methods/virtual-learning"
+                          className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                         >
                           Virtual learning
                         </Link>
                       </li>
                       <li>
                         <Link
-                          href='/credit-course-ossd/learning-methods/online-learning'
-                          className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                          href="/credit-course-ossd/learning-methods/online-learning"
+                          className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                         >
                           Online learning
                         </Link>
@@ -180,16 +180,16 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href='/credit-course-ossd/credit-course-ossd-admission-process'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/credit-course-ossd/credit-course-ossd-admission-process"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Credit course & OSSD admission process
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/credit-course-ossd/tuition-fees'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/credit-course-ossd/tuition-fees"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Tuition & fees
                     </Link>
@@ -198,40 +198,40 @@ const Navbar = () => {
               </li>
               <li>
                 <Link
-                  href='/international-students-ossd'
-                  className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                  href="/international-students-ossd"
+                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                 >
                   International students for OSSD
                 </Link>
               </li>
               <li>
                 <Link
-                  href='/tutoring'
-                  className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                  href="/tutoring"
+                  className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                 >
                   Tutoring
                 </Link>
-                <ul className='p-2'>
+                <ul className="p-2">
                   <li>
                     <Link
-                      href='/tutoring/regular-tutoring'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/tutoring/regular-tutoring"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Regular Tutoring
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/tutoring/stem'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/tutoring/stem"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       STEM
                     </Link>
                   </li>
                   <li>
                     <Link
-                      href='/tutoring/fees-admission'
-                      className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                      href="/tutoring/fees-admission"
+                      className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                     >
                       Fees & admission
                     </Link>
@@ -241,65 +241,65 @@ const Navbar = () => {
             </ul>
           </div>
 
-          <Link href='/' className='text-xl font-extrabold'>
+          <Link href="/" className="text-xl font-extrabold">
             <Image
-              src='/images/academy-of-scholars.png'
+              src="/images/academy-of-scholars.png"
               width={80}
               height={50}
-              alt='Academy of scholars logo'
+              alt="Academy of scholars logo"
             />
           </Link>
         </div>
 
         {/* Desktop Menu */}
-        <div className='navbar-center hidden lg:flex'>
-          <ul className='menu menu-horizontal px-1'>
+        <div className="navbar-center hidden lg:flex">
+          <ul className="menu menu-horizontal px-1">
             <li>
               <Link
-                href='/'
-                className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f] '
+                href="/"
+                className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f] "
               >
                 Home
               </Link>
             </li>
             {/* about us  */}
-            <li className='group relative'>
+            <li className="group relative">
               <Link
-                href='/about'
-                className='flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                href="/about"
+                className="flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
               >
                 About us
-                <FaAngleDown className='transition-transform duration-300 group-hover:rotate-180' />
+                <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180" />
               </Link>
-              <ul className='absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block'>
+              <ul className="absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block">
                 <li>
                   <Link
-                    href='/about/our-story'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/about/our-story"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Our story
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href='/about/university-success-story'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/about/university-success-story"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     University success story
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href='/about/our-team'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/about/our-team"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Our team
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href='/about/contact-us'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/about/contact-us"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Contact us
                   </Link>
@@ -307,61 +307,61 @@ const Navbar = () => {
               </ul>
             </li>
             {/* credit courses */}
-            <li className='group relative'>
+            <li className="group relative">
               <Link
-                href='/credit-course-ossd'
-                className='flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                href="/credit-course-ossd"
+                className="flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
               >
                 Credit course and OSSD
-                <FaAngleDown className='transition-transform duration-300 group-hover:rotate-180' />
+                <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180" />
               </Link>
-              <ul className='absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block'>
+              <ul className="absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block">
                 <li>
                   <Link
-                    href='/credit-course-ossd/description'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/credit-course-ossd/description"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Description
                   </Link>
                 </li>
 
-                <li className='navArrow relative'>
+                <li className="navArrow relative">
                   <Link
-                    href='/credit-course-ossd/available-course'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/credit-course-ossd/available-course"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Available course
-                    <FaAngleDown className='transition-transform duration-300 navArrow-rotate' />
+                    <FaAngleDown className="transition-transform duration-300 navArrow-rotate" />
                   </Link>
-                  <ul className='absolute left-[90%] hidden credit-course-dropdown w-52 p-2 bg-white rounded text-black'>
+                  <ul className="absolute left-[90%] hidden credit-course-dropdown w-52 p-2 bg-white rounded text-black">
                     <li>
                       <Link
-                        href='/credit-course-ossd/available-course/grade-9'
-                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                        href="/credit-course-ossd/available-course/grade-9"
+                        className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                       >
                         Grade 9
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href='/credit-course-ossd/available-course/grade-10'
-                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                        href="/credit-course-ossd/available-course/grade-10"
+                        className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                       >
                         Grade 10
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href='/credit-course-ossd/available-course/grade-11'
-                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                        href="/credit-course-ossd/available-course/grade-11"
+                        className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                       >
                         Grade 11
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href='/credit-course-ossd/available-course/grade-11'
-                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                        href="/credit-course-ossd/available-course/grade-11"
+                        className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                       >
                         Grade 12
                       </Link>
@@ -369,27 +369,27 @@ const Navbar = () => {
                   </ul>
                 </li>
 
-                <li className='navArrow relative'>
+                <li className="navArrow relative">
                   <Link
-                    href='/credit-course-ossd/learning-methods'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/credit-course-ossd/learning-methods"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Learning methods
-                    <FaAngleDown className='transition-transform duration-300 navArrow-rotate' />
+                    <FaAngleDown className="transition-transform duration-300 navArrow-rotate" />
                   </Link>
-                  <ul className='absolute left-[90%] hidden credit-course-dropdown w-52 p-2 bg-white rounded text-black'>
+                  <ul className="absolute left-[90%] hidden credit-course-dropdown w-52 p-2 bg-white rounded text-black">
                     <li>
                       <Link
-                        href='/credit-course-ossd/learning-methods/virtual-learning'
-                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                        href="/credit-course-ossd/learning-methods/virtual-learning"
+                        className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                       >
                         Virtual learning
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href='/credit-course-ossd/learning-methods/online-learning'
-                        className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                        href="/credit-course-ossd/learning-methods/online-learning"
+                        className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                       >
                         Online learning
                       </Link>
@@ -398,16 +398,16 @@ const Navbar = () => {
                 </li>
                 <li>
                   <Link
-                    href='/credit-course-ossd/credit-course-ossd-admission-process'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/credit-course-ossd/credit-course-ossd-admission-process"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Credit course & OSSD admission process
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href='/credit-course-ossd/tuition-fees'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/credit-course-ossd/tuition-fees"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Tuition & fees
                   </Link>
@@ -418,42 +418,42 @@ const Navbar = () => {
 
             <li>
               <Link
-                href='/international-students-ossd'
-                className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                href="/international-students-ossd"
+                className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
               >
                 International Students for OSSD
               </Link>
             </li>
 
-            <li className='group relative'>
+            <li className="group relative">
               <Link
-                href='/tutoring'
-                className='flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                href="/tutoring"
+                className="flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
               >
                 Tutoring
-                <FaAngleDown className='transition-transform duration-300 group-hover:rotate-180' />
+                <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180" />
               </Link>
-              <ul className='absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block'>
+              <ul className="absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block">
                 <li>
                   <Link
-                    href='/tutoring/regular-tutoring'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/tutoring/regular-tutoring"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Regular Tutoring
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href='/tutoring/stem'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/tutoring/stem"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     STEM
                   </Link>
                 </li>
                 <li>
                   <Link
-                    href='/tutoring/fees-admission'
-                    className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
+                    href="/tutoring/fees-admission"
+                    className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                   >
                     Fees & admission
                   </Link>
@@ -463,50 +463,50 @@ const Navbar = () => {
           </ul>
         </div>
 
-        <div className='navbar-end '>
+        <div className="navbar-end ">
           {currentUser ? (
-            <div className='dropdown dropdown-end'>
+            <div className="dropdown dropdown-end">
               <div
                 tabIndex={0}
-                role='button'
-                className='btn btn-ghost btn-circle avatar'
+                role="button"
+                className="btn btn-ghost btn-circle avatar"
               >
-                <div className='w-10 rounded-full'>
+                <div className="w-10 rounded-full">
                   <img
-                    alt='User Profile'
-                    src='https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp'
+                    alt="User Profile"
+                    src="https://img.daisyui.com/images/stock/photo-1534528741775-53994a69daeb.webp"
                   />
                 </div>
               </div>
               <ul
                 tabIndex={0}
-                className='menu menu-sm dropdown-content bg-base-100 text-black rounded-box z-[1] mt-3 w-52 p-2 shadow'
+                className="menu menu-sm dropdown-content bg-base-100 text-black rounded-box z-[1] mt-3 w-52 p-2 shadow"
               >
-                <li key='name' className='mx-3 font-semibold'>
+                <li key="name" className="mx-3 font-semibold">
                   {currentUser?.name}
                 </li>
-                <li key='email' className='mx-3 text-sm text-gray-600'>
+                <li key="email" className="mx-3 text-sm text-gray-600">
                   {currentUser?.email}
                 </li>
-                <hr className='my-3' />
-                {currentUser && currentUser?.role === 'admin' && (
-                  <li key='/admin'>
-                    <Link href='/admin' className='justify-between'>
+                <hr className="my-3" />
+                {currentUser && currentUser?.role === "admin" && (
+                  <li key="/admin">
+                    <Link href="/admin" className="justify-between">
                       Admin Dashboard
                     </Link>
                   </li>
                 )}
 
-                <li key='/profile'>
-                  <Link href='/profile' className='justify-between'>
-                    Profile <span className='badge'>New</span>
+                <li key="/profile">
+                  <Link href="/profile" className="justify-between">
+                    Profile <span className="badge">New</span>
                   </Link>
                 </li>
-                <li key='/settings'>
-                  <Link href='/settings'>Settings</Link>
+                <li key="/settings">
+                  <Link href="/settings">Settings</Link>
                 </li>
-                <li key='/logout'>
-                  <button onClick={handleLogOut} className='text-red-500'>
+                <li key="/logout">
+                  <button onClick={handleLogOut} className="text-red-500">
                     Logout
                   </button>
                 </li>
@@ -515,14 +515,14 @@ const Navbar = () => {
           ) : (
             <>
               <Link
-                href='/login'
-                className='btn btn-white px-3 sm:px-5 me-4   '
+                href="/login"
+                className="btn btn-white px-3 sm:px-5 me-4   "
               >
                 Log in
               </Link>
               <Link
-                href='/register'
-                className='btn btn-warning px-3 sm:px-5 me-4 hidden md:btn'
+                href="/register"
+                className="btn btn-warning px-3 sm:px-5 me-4 hidden md:btn"
               >
                 Register
               </Link>
@@ -533,7 +533,7 @@ const Navbar = () => {
         </div>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
