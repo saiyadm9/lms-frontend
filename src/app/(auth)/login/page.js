@@ -6,6 +6,7 @@ import Link from "next/link";
 import { userSignInFailure, userSignInSuccess } from "@/redux/slices/userSlice";
 import { useRouter } from "next/navigation"; // Import useRouter
 import toast from "react-hot-toast";
+import "../auth.css";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -90,9 +91,12 @@ const LoginPage = () => {
               required
             />
             <label className="label">
-              <a href="#" className="text-white text-sm link-hover">
+              <Link
+                href="forgot-password"
+                className="forgot_pass link link-hover"
+              >
                 Forgot password?
-              </a>
+              </Link>
             </label>
           </div>
 
