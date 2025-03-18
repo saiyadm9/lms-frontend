@@ -26,7 +26,7 @@ const LMSStats = () => {
         </p>
 
         <div className='stats p-10 sm:p-8 rounded-xl'>
-          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-16'>
+          <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-16'>
             {/* Year Founded */}
             <div className='stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300'>
               <div className='flex items-center'>
@@ -60,19 +60,6 @@ const LMSStats = () => {
                     University <br /> Acceptance Rate
                   </div>
                   <div className='stat-value  text-2xl'>84%</div>
-                </div>
-              </div>
-            </div>
-
-            {/* Students */}
-            <div className='stat flex items-center justify-center mb-6 bg-white p-6 rounded-xl shadow-lg hover:shadow-2xl transition-shadow duration-300'>
-              <div className='flex items-center'>
-                <FaUsers className='mr-4 text-5xl text-yellow-600' />
-                <div>
-                  <div className='stat-title text-gray-700 font-medium'>
-                    Total Students
-                  </div>
-                  <div className='stat-value  text-2xl'>52</div>
                 </div>
               </div>
             </div>

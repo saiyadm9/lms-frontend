@@ -1,4 +1,5 @@
 'use client'
+import Image from 'next/image'
 import Link from 'next/link'
 
 const coursesData = [
@@ -74,10 +75,12 @@ export default function CourseSection() {
               key={course.id}
               className='bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col'
             >
-              <img
+              <Image
                 src={course.imgUrl}
                 alt='Course'
                 className='w-full h-48 object-cover'
+                width={400}
+                height={300}
               />
               <div className='p-6 flex flex-col flex-grow gap-5'>
                 <h2 className='text-xl font-semibold text-gray-900'>
