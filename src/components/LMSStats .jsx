@@ -35,7 +35,7 @@ const LMSStats = () => {
                   <div className='stat-title text-gray-700 font-medium'>
                     Year Founded
                   </div>
-                  <div className='stat-value  text-2xl'>2021</div>
+                  <div className='stat-value  text-2xl'>2018</div>
                 </div>
               </div>
             </div>
