@@ -45,9 +45,7 @@ const GradeEleven = () => {
           </div>
         ))}
       </div>
-
       <UniversitiesLogo />
-      <Reviews />
     </div>
   );
 };

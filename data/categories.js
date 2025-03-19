@@ -1,4 +1,4 @@
-const categoriesData = [
+export const categoriesData = [
   {
     id: 1,
     name: "Credit Courses",
@@ -255,4 +255,3 @@ export const coursesData = [
     imgUrl: "/images/data-analysis-statistics-students.jpg", // Replace with appropriate image
   },
 ];
-export default categoriesData;
