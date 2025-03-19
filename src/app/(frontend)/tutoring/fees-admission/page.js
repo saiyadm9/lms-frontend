@@ -1,5 +1,5 @@
 import withHero from '@/components/hoc/withHero'
-import Reviews from '@/components/Reviews'
+
 import UniversitiesLogo from '@/components/UniversitiesLogo'
 
 export const metadata = {
@@ -39,7 +39,6 @@ const FeesAndAdmission = () => {
       </section>
 
       <UniversitiesLogo />
-      <Reviews />
     </div>
   )
 }

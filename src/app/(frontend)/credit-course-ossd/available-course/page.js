@@ -1,5 +1,5 @@
 import withHero from '@/components/hoc/withHero'
-import Reviews from '@/components/Reviews'
+
 import UniversitiesLogo from '@/components/UniversitiesLogo'
 import Image from 'next/image'
 
@@ -109,7 +109,6 @@ const AvailableCourses = () => {
       </section>
 
       <UniversitiesLogo />
-      <Reviews />
     </div>
   )
 }
