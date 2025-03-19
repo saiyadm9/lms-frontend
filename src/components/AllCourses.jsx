@@ -1,93 +1,33 @@
-'use client'
-import Link from 'next/link'
+"use client";
+import Link from "next/link";
 
-const coursesData = [
-  {
-    id: 1,
-    name: 'BEM10 - The Entrepreunial Mindset',
-    category: 'Grade 9',
-    price: 435,
-    imgUrl: '/images/entrepreunial-mindset.jpg',
-  },
-  {
-    id: 2,
-    name: 'ENL1W - English',
-    category: 'Grade 9',
-    price: 435,
-    imgUrl: '/images/learn-english.jpg',
-  },
-  {
-    id: 3,
-    name: 'BEP20 - Launching and Leading a Business',
-    category: 'Grade 10',
-    price: 435,
-    imgUrl: '/images/launching-a-business.jpg',
-  },
-  {
-    id: 4,
-    name: 'TAS20 - Computer Technology',
-    category: 'Grade 10',
-    price: 435,
-    imgUrl: '/images/computer-technology.jpg',
-  },
-  {
-    id: 5,
-    name: 'BAF3M - Financial Accounting Fundamentals',
-    category: 'Grade 11',
-    price: 565,
-    imgUrl: '/images/financial-accounting-fundamentals.jpg',
-  },
-  {
-    id: 6,
-    name: 'BMI3C - Marketing',
-    category: 'Grade 11',
-    price: 565,
-    imgUrl: '/images/marketing-course.jpg',
-  },
-  {
-    id: 7,
-    name: 'MHF4U - Advanced Functions',
-    category: 'Grade 12',
-    price: 565,
-    imgUrl: '/images/advanced-function.jpg',
-  },
-  {
-    id: 8,
-    name: 'MCV4U - Calculus',
-    category: 'Grade 12',
-    price: 565,
-    imgUrl: '/images/calculus.jpg',
-  },
-]
-
-export default function CourseSection() {
+export default function CourseSection({ categories }) {
   return (
-    <section className='bg-[#F3F4F6]'>
-      <div className='container mx-auto py-12 px-10'>
-        <h2 className='text-3xl font-bold text-center text-gray-900 mb-8'>
+    <section className="bg-[#F3F4F6]">
+      <div className="container mx-auto py-12 px-10">
+        <h2 className="text-3xl font-bold text-center text-gray-900 mb-8">
           Explore Our Courses
         </h2>
-
-        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-          {coursesData.map((course) => (
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {categories.map((course) => (
             <div
               key={course.id}
-              className='bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col'
+              className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col"
             >
               <img
                 src={course.imgUrl}
-                alt='Course'
-                className='w-full h-48 object-cover'
+                alt="Course"
+                className="w-full h-48 object-cover"
               />
-              <div className='p-6 flex flex-col flex-grow gap-5'>
-                <h2 className='text-xl font-semibold text-gray-900'>
+              <div className="p-6 flex flex-col flex-grow gap-5">
+                <h2 className="text-xl font-semibold text-gray-900">
                   {course.name}
                 </h2>
                 {/* <div className='flex justify-between text-gray-700 my-5'>
                   <span className='font-medium'>Price: ${course.price}</span>
                 </div> */}
-                <div className='mt-auto flex gap-5'>
-                  <button className='w-full bg-warning font-medium py-2 rounded-lg transition'>
+                <div className="mt-auto flex gap-5">
+                  <button className="w-full bg-warning font-medium py-2 rounded-lg transition">
                     Enroll Now
                   </button>
                 </div>
@@ -95,14 +35,14 @@ export default function CourseSection() {
             </div>
           ))}
         </div>
-        <div className='grid justify-center items-center mt-10'>
-          <button className='text-lg px-3 py-1 bg-[#FC9743] font-medium rounded-md transition'>
-            <Link href='/credit-course-ossd/available-course'>
+        <div className="grid justify-center items-center mt-10">
+          <button className="text-lg px-3 py-1 bg-[#FC9743] font-medium rounded-md transition">
+            <Link href="/credit-course-ossd/available-course">
               Show All Courses
             </Link>
           </button>
         </div>
       </div>
     </section>
-  )
+  );
 }

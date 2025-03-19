@@ -360,7 +360,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="/credit-course-ossd/available-course/grade-11"
+                        href="/credit-course-ossd/available-course/grade-12"
                         className="hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]"
                       >
                         Grade 12
