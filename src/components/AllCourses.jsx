@@ -10,14 +10,14 @@ export default function CourseSection({ categories }) {
           Explore Our Courses
         </h2>
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-          {categories.map((course) => (
+          {categories.slice(0, 8).map((course) => (
             <div
               key={course.id}
               className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col"
             >
               <Image
                 src={course.imgUrl}
-                alt="Course"
+                alt={course.name}
                 className="w-full h-48 object-cover"
                 width={400}
                 height={300}
@@ -26,9 +26,7 @@ export default function CourseSection({ categories }) {
                 <h2 className="text-xl font-semibold text-gray-900">
                   {course.name}
                 </h2>
-                {/* <div className='flex justify-between text-gray-700 my-5'>
-                  <span className='font-medium'>Price: ${course.price}</span>
-                </div> */}
+
                 <div className="mt-auto flex gap-5">
                   <button className="w-full bg-warning font-medium py-2 rounded-lg transition">
                     Enroll Now
