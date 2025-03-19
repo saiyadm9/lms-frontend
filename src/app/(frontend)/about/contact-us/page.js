@@ -1,16 +1,154 @@
-import withHero from "@/components/hoc/withHero";
-import React from "react";
+import withHero from '@/components/hoc/withHero'
+import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope } from 'react-icons/fa'
 
-const ContactUs = () => {
+export const metadata = {
+  title: 'Contact Us',
+  description: 'Get in touch with Academy of Scholars',
+}
+
+const Contact = () => {
   return (
-    <div className="container mx-auto px-4">
-      <h1 className="text-2xl font-bold text-gray-900">Contact Us</h1>
-    </div>
-  );
-};
+    <div className='bg-gradient-to-b from-[#F3F4F6] to-[#E5E7EB] py-16 px-6 sm:px-10'>
+      <div className='container mx-auto'>
+        <h1 className='text-5xl font-bold text-center text-gray-900 mb-12'>
+          Contact Us
+        </h1>
+        <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto'>
+          {/* Contact Information */}
+          <div className='bg-white p-8 rounded-xl shadow-lg space-y-6'>
+            <h2 className='text-2xl font-semibold text-gray-900 mb-6'>
+              Our Contact Details
+            </h2>
+            <div className='flex items-start space-x-4'>
+              <FaMapMarkerAlt className='text-indigo-600 text-2xl flex-shrink-0' />
+              <div>
+                <p className='font-bold text-lg text-gray-900'>Address</p>
+                <p className='text-gray-600'>
+                  3464 Kingston Rd., Scarborough, ON, Canada, M1M 1R5
+                </p>
+              </div>
+            </div>
 
-export default withHero(ContactUs, {
-  title: "Welcome to ContactUs",
-  description: "We provide top-notch services to help you grow.",
-  bgGradient: "linear-gradient(to top, #29DBD8, #141A6B)",
-});
+            <div className='flex items-start space-x-4'>
+              <FaMapMarkerAlt className='text-indigo-600 text-2xl flex-shrink-0' />
+              <div>
+                <p className='font-bold text-lg text-gray-900'>Service Area</p>
+                <p className='text-gray-600'>
+                  Scarborough, ON, Canada · Toronto, ON, Canada
+                </p>
+              </div>
+            </div>
+
+            <div className='flex items-start space-x-4'>
+              <FaPhoneAlt className='text-indigo-600 text-2xl flex-shrink-0' />
+              <div>
+                <p className='font-bold text-lg text-gray-900'>Mobile</p>
+                <p className='text-gray-600'>+1 647-862-6108</p>
+              </div>
+            </div>
+
+            <div className='flex items-start space-x-4'>
+              <FaEnvelope className='text-indigo-600 text-2xl flex-shrink-0' />
+              <div>
+                <p className='font-bold text-lg text-gray-900'>Email</p>
+                <p className='text-gray-600'>info@academyofsinc.ca</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Contact Form */}
+          <div className='bg-white p-8 rounded-xl shadow-lg'>
+            <h2 className='text-2xl font-semibold text-gray-900 mb-6'>
+              Send Us a Message
+            </h2>
+            <form className='space-y-6'>
+              <div>
+                <label
+                  className='block text-sm font-medium text-gray-700 mb-2'
+                  htmlFor='name'
+                >
+                  Name
+                </label>
+                <input
+                  type='text'
+                  id='name'
+                  name='name'
+                  placeholder='Your Full Name'
+                  className='w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors'
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  className='block text-sm font-medium text-gray-700 mb-2'
+                  htmlFor='email'
+                >
+                  Email
+                </label>
+                <input
+                  type='email'
+                  id='email'
+                  name='email'
+                  placeholder='Your Email Address'
+                  className='w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors'
+                  required
+                />
+              </div>
+
+              <div>
+                <label
+                  className='block text-sm font-medium text-gray-700 mb-2'
+                  htmlFor='message'
+                >
+                  Message
+                </label>
+                <textarea
+                  id='message'
+                  name='message'
+                  rows='4'
+                  placeholder='Your Message'
+                  className='w-full p-3 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors'
+                  required
+                ></textarea>
+              </div>
+
+              <div>
+                <button
+                  type='submit'
+                  className='w-full bg-indigo-600 text-white py-3 rounded-md hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 transition-colors'
+                >
+                  Send Message
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+
+        {/* Google Map */}
+        <div className='mt-12 max-w-6xl mx-auto'>
+          <h2 className='text-2xl font-semibold text-gray-900 mb-6'>
+            Our Location
+          </h2>
+          <div className='rounded-xl overflow-hidden shadow-lg'>
+            <iframe
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.091144836497!2d-79.24746668449999!3d43.76172617911879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d1a9d1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2s3464%20Kingston%20Rd%2C%20Scarborough%2C%20ON%20M1M%201R5%2C%20Canada!5e0!3m2!1sen!2sus!4v1633026000000!5m2!1sen!2sus'
+              width='100%'
+              height='450'
+              style={{ border: 0 }}
+              allowFullScreen
+              loading='lazy'
+              title='Academy of Scholars Location'
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  )
+}
+
+export default withHero(Contact, {
+  title: 'Get in Touch',
+  description: 'We’d love to hear from you.',
+  bgGradient: 'linear-gradient(to top, #29DBD8, #141A6B)',
+})

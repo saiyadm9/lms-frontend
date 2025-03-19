@@ -5,13 +5,13 @@ const MeetTheTeam = () => {
   const teamMembers = [
     {
       name: 'Masum Mustafa',
-      role: 'P.Eng (Electrical Engineering), CSM, PMP',
+      role: 'Founder & Program Director',
       image: '/images/masum-mustofa.jpg',
       bio: 'Experienced electrical engineer and project manager.',
     },
     {
       name: 'Zannatul Moiet Hasib',
-      role: 'Principal',
+      role: 'Principal & Program Director',
       image: '/images/jannatul-moet.jpg',
       bio: 'P.Eng, PMP , MBA',
     },
