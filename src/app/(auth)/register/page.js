@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
@@ -12,29 +12,9 @@ const RegisterPage = () => {
     email: "",
     password: "",
     confirmPassword: "",
-    location: "",
   });
   const [loading, setLoading] = useState(false);
   const router = useRouter();
-
-  // Fetch user's location (country code)
-  useEffect(() => {
-    const fetchLocation = async () => {
-      try {
-        const { data } = await axios.get("http://ip-api.com/json/");
-        console.log("Location data:", data);
-        if (data && data.countryCode) {
-          setFormData((prev) => ({ ...prev, location: data.countryCode }));
-        } else {
-          toast.error("Unable to fetch location.");
-        }
-      } catch (error) {
-        console.error("Location fetch failed", error);
-        toast.error("Location fetch failed. Please try again.");
-      }
-    };
-    fetchLocation();
-  }, []);
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
@@ -52,7 +32,7 @@ const RegisterPage = () => {
       setLoading(true);
       const { confirmPassword, ...submitData } = formData; // Exclude confirmPassword
       const { data } = await axios.post(
-        "http://localhost:5000/api/auth/register",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/register`,
         submitData
       );
       toast.success("Registration successful!");
