@@ -15,7 +15,6 @@ const Contact = () => {
           Contact Us
         </h1>
         <div className='grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto'>
-          {/* Contact Information */}
           <div className='bg-white p-8 rounded-xl shadow-lg space-y-6'>
             <h2 className='text-2xl font-semibold text-gray-900 mb-6'>
               Our Contact Details
@@ -43,8 +42,22 @@ const Contact = () => {
               <FaPhoneAlt className='text-indigo-600 text-2xl flex-shrink-0' />
               <div>
                 <p className='font-bold text-lg text-gray-900'>Mobile</p>
-                <p className='text-gray-600'>+16478626108</p>
-                <p className='text-gray-600'>+14165598127</p>
+                <p className='text-gray-600'>
+                  <a
+                    href='tel:+16478626108'
+                    className='text-indigo-600 hover:underline'
+                  >
+                    +1 (647) 862-6108
+                  </a>
+                </p>
+                <p className='text-gray-600'>
+                  <a
+                    href='tel:+14165598127'
+                    className='text-indigo-600 hover:underline'
+                  >
+                    +1 (416) 559-8127
+                  </a>
+                </p>
               </div>
             </div>
 
@@ -52,22 +65,35 @@ const Contact = () => {
               <FaEnvelope className='text-indigo-600 text-2xl flex-shrink-0' />
               <div>
                 <p className='font-bold text-lg text-gray-900'>Email</p>
-                <p className='text-gray-600'>info@academyofsinc.ca</p>
-                <p className='text-gray-600'>zhasib@academyofsinc.ca</p>
+                <p className='text-gray-600'>
+                  <a
+                    href='mailto:info@academyofsinc.ca'
+                    className='text-indigo-600 hover:underline'
+                  >
+                    info@academyofsinc.ca
+                  </a>
+                </p>
+                <p className='text-gray-600'>
+                  <a
+                    href='mailto:zhasib@academyofsinc.ca'
+                    className='text-indigo-600 hover:underline'
+                  >
+                    zhasib@academyofsinc.ca
+                  </a>
+                </p>
               </div>
             </div>
           </div>
           <ContactUsForm />
         </div>
 
-        {/* Google Map */}
         <div className='mt-12 max-w-6xl mx-auto'>
           <h2 className='text-2xl font-semibold text-gray-900 mb-6'>
             Our Location
           </h2>
           <div className='rounded-xl overflow-hidden shadow-lg'>
             <iframe
-              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.091144836497!2d-79.24746668449999!3d43.76172617911879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d1a9d1b1b1b1%3A0x1b1b1b1b1b1b1b1b!2s3464%20Kingston%20Rd%2C%20Scarborough%2C%20ON%20M1M%201R5%2C%20Canada!5e0!3m2!1sen!2sus!4v1633026000000!5m2!1sen!2sus'
+              src='https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2881.091144836497!2d-79.24746668449999!3d43.76172617911879!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89d4d1a9d1b1b1b1%3A0x1b1b1b1b1b1b1b!2s3464%20Kingston%20Rd%2C%20Scarborough%2C%20ON%20M1M%201R5%2C%20Canada!5e0!3m2!1sen!2sus!4v1633026000000!5m2!1sen!2sus'
               width='100%'
               height='450'
               style={{ border: 0 }}
