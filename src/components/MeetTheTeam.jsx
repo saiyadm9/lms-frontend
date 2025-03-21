@@ -7,7 +7,7 @@ const MeetTheTeam = () => {
       name: 'Masum Mustafa',
       role: 'Founder & Program Director',
       image: '/images/masum-mustofa.jpg',
-      bio: 'Experienced electrical engineer and project manager.',
+      bio: 'Experienced Electrical Engineer and Project Manager.',
     },
     {
       name: 'Zannatul Moiet Hasib',
@@ -19,7 +19,7 @@ const MeetTheTeam = () => {
       name: 'WEI (Shirley) LIU',
       role: 'Marketing Director of International Student (China)',
       image: '/images/shirley.jpg',
-      bio: 'Marketing expert specializing in international student outreach.',
+      bio: 'Marketing Expert Specializing in International Student Outreach.',
     },
   ]
 

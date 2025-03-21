@@ -148,7 +148,7 @@ const Navbar = () => {
 
               <li>
                 <Link
-                  href='/credit-course-ossd/description'
+                  href='#'
                   className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
                   onClick={toggleMobileMenu}
                 >
@@ -157,11 +157,11 @@ const Navbar = () => {
                 <ul className='p-2'>
                   <li>
                     <Link
-                      href='/credit-course-ossd/description'
+                      href='/credit-course-ossd/ossd-requirement'
                       className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
                       onClick={toggleMobileMenu}
                     >
-                      Description
+                      OSSD Requirement
                     </Link>
                   </li>
                   <li>
@@ -340,7 +340,7 @@ const Navbar = () => {
             {/* credit courses */}
             <li className='group relative'>
               <Link
-                href='/credit-course-ossd/description'
+                href='#'
                 className='flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
               >
                 Credit Course and OSSD
@@ -349,10 +349,10 @@ const Navbar = () => {
               <ul className='absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block'>
                 <li>
                   <Link
-                    href='/credit-course-ossd/description'
+                    href='/credit-course-ossd/ossd-requirement'
                     className='hover:text-red-500 focus:text-red-500 focus:bg-[#0000001f]'
                   >
-                    Description
+                    OSSD Requirement
                   </Link>
                 </li>
 
