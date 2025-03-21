@@ -1,6 +1,4 @@
 import withHero from '@/components/hoc/withHero'
-
-import UniversitiesLogo from '@/components/UniversitiesLogo'
 import Image from 'next/image'
 
 export const metadata = {
@@ -43,8 +41,6 @@ const OurStory = () => {
           </div>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

@@ -1,5 +1,4 @@
 import withHero from '@/components/hoc/withHero'
-import UniversitiesLogo from '@/components/UniversitiesLogo'
 import Image from 'next/image'
 
 export const metadata = {
@@ -35,31 +34,42 @@ const teamMembers = [
 const Team = () => {
   return (
     <div>
-      <section className='bg-[#F3F4F6] py-12 px-10'>
+      {/* Team Section */}
+      <section className='bg-[#F3F4F6] py-12 px-4 sm:px-6 lg:px-8'>
         <div className='container mx-auto'>
-          <h1 className='text-4xl font-bold my-6 text-center'>Meet Our Team</h1>
-          <div className='flex flex-wrap gap-8 justify-center mt-10'>
+          {/* Heading */}
+          <h1 className='text-4xl font-bold text-center text-gray-800 mb-8'>
+            Meet Our Team
+          </h1>
+
+          {/* Team Members Grid */}
+          <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8'>
             {teamMembers.map((member, index) => (
               <div
                 key={index}
-                className='rounded-xl shadow-lg overflow-hidden flex w-full max-w-3xl'
+                className='bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-2xl transition-shadow duration-300'
               >
-                <div className='w-1/3'>
+                {/* Image */}
+                <div className='w-full h-64 relative'>
                   <Image
                     src={member.image}
                     alt={member.name}
-                    width={500}
-                    height={750}
-                    className='w-full h-full object-cover object-center'
+                    layout='fill'
+                    objectFit='cover'
+                    className='w-full h-full'
                   />
                 </div>
-                <div className='w-2/3 text-center p-4 flex-grow'>
-                  <h3 className='text-xl font-bold text-gray-800'>
+
+                {/* Content */}
+                <div className='p-6 text-center'>
+                  <h3 className='text-2xl font-bold text-gray-800'>
                     {member.name}
                   </h3>
-                  <p className='text-indigo-600 font-medium'>{member.role}</p>
-                  <p className='text-gray-600 mt-2'>{member.bio}</p>
-                  <p className='text-blue-600 font-semibold mt-2'>
+                  <p className='text-indigo-600 font-medium mt-2'>
+                    {member.role}
+                  </p>
+                  <p className='text-gray-600 mt-4'>{member.bio}</p>
+                  <p className='text-blue-600 font-semibold mt-4'>
                     {member.contact}
                   </p>
                 </div>
@@ -68,14 +78,12 @@ const Team = () => {
           </div>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }
 
 export default withHero(Team, {
   title: 'Meet The Team',
-  description: ' ',
+  description: 'The Team Will Guide & Teach You',
   bgGradient: 'linear-gradient(to top, #29DBD8, #141A6B)',
 })

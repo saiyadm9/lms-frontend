@@ -11,7 +11,7 @@ const MeetTheTeam = () => {
     },
     {
       name: 'Zannatul Moiet Hasib',
-      role: 'Principal & Program Director',
+      role: 'Principal',
       image: '/images/jannatul-moet.jpg',
       bio: 'P.Eng, PMP , MBA',
     },

@@ -14,7 +14,7 @@ const HeroSection = ({ title, description, bgImage, bgColor, bgGradient }) => {
 
   return (
     <div
-      className='hero bg-cover bg-center min-h-[70vh]'
+      className='hero bg-cover bg-center min-h-[50vh] pt-28'
       style={backgroundStyle}
     >
       <div className='hero-content text-neutral-content text-center'>

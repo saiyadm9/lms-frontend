@@ -43,8 +43,6 @@ const AboutUsPage = () => {
           </div>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }
