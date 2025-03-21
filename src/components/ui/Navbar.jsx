@@ -148,7 +148,7 @@ const Navbar = () => {
 
               <li>
                 <Link
-                  href='/credit-course-ossd'
+                  href='/credit-course-ossd/description'
                   className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
                   onClick={toggleMobileMenu}
                 >
@@ -340,7 +340,7 @@ const Navbar = () => {
             {/* credit courses */}
             <li className='group relative'>
               <Link
-                href='/credit-course-ossd'
+                href='/credit-course-ossd/description'
                 className='flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
               >
                 Credit Course and OSSD
