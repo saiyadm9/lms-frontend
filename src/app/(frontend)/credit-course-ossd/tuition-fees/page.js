@@ -1,7 +1,5 @@
 import withHero from '@/components/hoc/withHero'
 
-import UniversitiesLogo from '@/components/UniversitiesLogo'
-
 export const metadata = {
   title: 'Tution Fees of Academy of Scholars',
   description: '',
@@ -11,10 +9,8 @@ const TutionFees = () => {
   return (
     <div>
       <section className='bg-[#F3F4F6] py-12 px-10'>
-        <div className='container mx-auto text-center'>
-          <h1 className='text-4xl font-bold mt-6'>
-            Academy of Scholar&apos;s Tution Fees
-          </h1>
+        <div className='container mx-auto'>
+          <h1 className='text-4xl font-bold mt-6'>Tution Fees</h1>
           <p className='mt-4 text-gray-700'>
             At Academy of Scholars, we offer competitive pricing for credit
             courses and the Ontario Secondary School Diploma (OSSD), ensuring
@@ -44,6 +40,6 @@ const TutionFees = () => {
 
 export default withHero(TutionFees, {
   title: 'Tution Fees',
-  description: 'Tution of Academy of Scholars',
+  description: ' ',
   bgGradient: 'linear-gradient(to top, #29DBD8, #141A6B)',
 })

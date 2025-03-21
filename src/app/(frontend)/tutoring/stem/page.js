@@ -15,7 +15,7 @@ const STEM = () => {
         <div className='container mx-auto flex flex-col md:flex-row items-center'>
           <div className='md:w-1/2'>
             <h1 className='text-4xl font-bold mt-6'>
-              Academy of Scholar&apos;s STEM
+              Science Technology Engineering and Mathematics
             </h1>
             <p className='mt-4 text-gray-700'>
               At Academy of Scholars, STEM tutoring provides students with a

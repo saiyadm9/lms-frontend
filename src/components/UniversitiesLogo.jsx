@@ -99,7 +99,7 @@ export default function UniversitiesLogo() {
           {logos.map((logo, index) => (
             <div
               key={index}
-              className='flex justify-center items-center bg-white p-4 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 w-full h-24'
+              className='flex justify-center items-center bg-white p-5 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 w-full h-24 overflow-hidden'
             >
               <Image
                 src={logo.src}
@@ -107,7 +107,7 @@ export default function UniversitiesLogo() {
                 width={logo.width}
                 height={logo.height}
                 objectFit='contain'
-                className='w-full h-auto'
+                className='w-full h-auto max-w-full max-h-full'
               />
             </div>
           ))}

@@ -13,7 +13,7 @@ const FeesAndAdmission = () => {
       <section className='bg-[#F3F4F6] py-12 px-10'>
         <div className='container mx-auto text-center'>
           <h1 className='text-4xl font-bold mt-6'>
-            Academy of Scholar&apos;s Fees and Admission Process
+            Fees and Admission Process
           </h1>
           <p className='mt-4 text-gray-700'>
             At Academy of Scholars, we offer competitive pricing for our
@@ -43,6 +43,6 @@ const FeesAndAdmission = () => {
 
 export default withHero(FeesAndAdmission, {
   title: 'Fees and Admission Process',
-  description: 'Fees and admission process of Academy of Scholars',
+  description: ' ',
   bgGradient: 'linear-gradient(to top, #29DBD8, #141A6B)',
 })

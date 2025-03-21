@@ -14,9 +14,7 @@ const RegularTutoring = () => {
       <section className='bg-[#F3F4F6] py-12 px-10'>
         <div className='container mx-auto flex flex-col md:flex-row items-center'>
           <div className='md:w-1/2'>
-            <h1 className='text-4xl font-bold mt-6'>
-              Academy of Scholar&apos;s Regular Tutoring
-            </h1>
+            <h1 className='text-4xl font-bold mt-6'>Regular Tutoring</h1>
             <p className='mt-4 text-gray-700'>
               At Academy of Scholars, regular tutoring is an essential part of
               the academic support system, offering both online and virtual
