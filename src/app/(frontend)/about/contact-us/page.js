@@ -19,14 +19,17 @@ const Contact = () => {
             <h2 className='text-2xl font-semibold text-gray-900 mb-6'>
               Our Contact Details
             </h2>
+
+            {/* Canada Office Address */}
             <div className='flex items-start space-x-4'>
               <FaMapMarkerAlt className='text-indigo-600 text-2xl flex-shrink-0' />
               <div>
-                <p className='font-bold text-lg text-gray-900'>Address</p>
+                <p className='font-bold text-lg text-gray-900'>Canada Office</p>
                 <p className='text-gray-600'>Toronto, ON. Canada.</p>
               </div>
             </div>
 
+            {/* Service Area */}
             <div className='flex items-start space-x-4'>
               <FaMapMarkerAlt className='text-indigo-600 text-2xl flex-shrink-0' />
               <div>
@@ -38,6 +41,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Phone Numbers */}
             <div className='flex items-start space-x-4'>
               <FaPhoneAlt className='text-indigo-600 text-2xl flex-shrink-0' />
               <div>
@@ -61,6 +65,7 @@ const Contact = () => {
               </div>
             </div>
 
+            {/* Email Addresses */}
             <div className='flex items-start space-x-4'>
               <FaEnvelope className='text-indigo-600 text-2xl flex-shrink-0' />
               <div>
@@ -79,6 +84,29 @@ const Contact = () => {
                     className='text-indigo-600 hover:underline'
                   >
                     zhasib@academyofsinc.ca
+                  </a>
+                </p>
+              </div>
+            </div>
+
+            {/* China Office Address */}
+            <div className='flex items-start space-x-4'>
+              <FaMapMarkerAlt className='text-indigo-600 text-2xl flex-shrink-0' />
+              <div>
+                <p className='font-bold text-lg text-gray-900'>China Office</p>
+                <p className='text-gray-600'>
+                  <a
+                    href='tel:+6478382245'
+                    className='text-indigo-600 hover:underline'
+                  >
+                    647-838-2245
+                  </a>
+                  <br />
+                  <a
+                    href='mailto:shirleyliu25@hotmail.com'
+                    className='text-indigo-600 hover:underline'
+                  >
+                    shirleyliu25@hotmail.com
                   </a>
                 </p>
               </div>
