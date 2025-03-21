@@ -91,3 +91,18 @@
   visibility: visible;
   opacity: 1;
 }
+
+/* Ensure main content doesn't overlap with navbar */
+main {
+  margin-top: 128px; /* Adjust based on navbar height */
+}
+
+/* Ensure dropdowns are above other content */
+.dropdown-content {
+  z-index: 100;
+}
+
+/* Ensure mobile menu takes full height */
+.menu-sm {
+  height: calc(100vh - 5rem); /* Adjust based on navbar height */
+}
