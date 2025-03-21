@@ -98,6 +98,7 @@ const Navbar = () => {
                   Home
                 </Link>
               </li>
+              {/* About Us */}
               <li>
                 <Link
                   href='/about'
@@ -145,7 +146,7 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-
+              {/* Credit Course and OSSD */}
               <li>
                 <Link
                   href='#'
@@ -170,8 +171,46 @@ const Navbar = () => {
                       className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
                       onClick={toggleMobileMenu}
                     >
-                      Available course
+                      Available Course
                     </Link>
+                    <ul className='p-2'>
+                      <li>
+                        <Link
+                          href='/credit-course-ossd/available-course/grade-9'
+                          className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                          onClick={toggleMobileMenu}
+                        >
+                          Grade 9
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href='/credit-course-ossd/available-course/grade-10'
+                          className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                          onClick={toggleMobileMenu}
+                        >
+                          Grade 10
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href='/credit-course-ossd/available-course/grade-11'
+                          className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                          onClick={toggleMobileMenu}
+                        >
+                          Grade 11
+                        </Link>
+                      </li>
+                      <li>
+                        <Link
+                          href='/credit-course-ossd/available-course/grade-12'
+                          className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
+                          onClick={toggleMobileMenu}
+                        >
+                          Grade 12
+                        </Link>
+                      </li>
+                    </ul>
                   </li>
                   <li>
                     <Link
@@ -204,11 +243,11 @@ const Navbar = () => {
                   </li>
                   <li>
                     <Link
-                      href='/credit-course-ossd/credit-course-ossd-admission-process'
+                      href='/credit-course-ossd/admission-process'
                       className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
                       onClick={toggleMobileMenu}
                     >
-                      Credit course & OSSD admission process
+                      Admission Process
                     </Link>
                   </li>
                   <li>
@@ -222,15 +261,17 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
+              {/* International Students for OSSD */}
               <li>
                 <Link
                   href='/international-students-ossd'
                   className='hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
                   onClick={toggleMobileMenu}
                 >
-                  International students for OSSD
+                  International Students for OSSD
                 </Link>
               </li>
+              {/* Tutoring */}
               <li>
                 <Link
                   href='/tutoring'
@@ -293,7 +334,7 @@ const Navbar = () => {
                 Home
               </Link>
             </li>
-            {/* about us  */}
+            {/* About Us */}
             <li className='group relative'>
               <Link
                 href='/about'
@@ -337,7 +378,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            {/* credit courses */}
+            {/* Credit Course and OSSD */}
             <li className='group relative'>
               <Link
                 href='#'
@@ -355,7 +396,6 @@ const Navbar = () => {
                     OSSD Requirement
                   </Link>
                 </li>
-
                 <li className='navArrow relative'>
                   <Link
                     href='/credit-course-ossd/available-course'
@@ -399,7 +439,6 @@ const Navbar = () => {
                     </li>
                   </ul>
                 </li>
-
                 <li className='navArrow relative'>
                   <Link
                     href='/credit-course-ossd/learning-methods'
@@ -445,8 +484,7 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            {/* credit course end */}
-
+            {/* International Students for OSSD */}
             <li>
               <Link
                 href='/international-students-ossd'
@@ -455,7 +493,7 @@ const Navbar = () => {
                 International Students for OSSD
               </Link>
             </li>
-
+            {/* Tutoring */}
             <li className='group relative'>
               <Link
                 href='/tutoring'
@@ -559,8 +597,6 @@ const Navbar = () => {
               </Link>
             </>
           )}
-
-          {/* Profile Dropdown */}
         </div>
       </div>
     </div>
