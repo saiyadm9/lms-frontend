@@ -47,8 +47,6 @@ const RegularTutoring = () => {
           </div>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

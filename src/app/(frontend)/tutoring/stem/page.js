@@ -48,8 +48,6 @@ const STEM = () => {
           </div>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

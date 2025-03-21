@@ -37,8 +37,6 @@ const FeesAndAdmission = () => {
           </p>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

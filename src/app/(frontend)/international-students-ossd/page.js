@@ -32,8 +32,6 @@ const InterNationalStudents = () => {
           </p>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

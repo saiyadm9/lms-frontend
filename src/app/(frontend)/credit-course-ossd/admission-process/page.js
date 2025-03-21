@@ -45,8 +45,6 @@ const AdmissionProcess = () => {
           </div>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

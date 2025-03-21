@@ -36,8 +36,6 @@ const OnlineLearning = () => {
           </p>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

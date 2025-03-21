@@ -31,8 +31,6 @@ const Tutoring = () => {
           </p>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

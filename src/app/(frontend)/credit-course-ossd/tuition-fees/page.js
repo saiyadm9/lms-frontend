@@ -38,8 +38,6 @@ const TutionFees = () => {
           </p>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

@@ -34,8 +34,6 @@ const VirtualLearning = () => {
           </p>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }

@@ -35,8 +35,6 @@ const LearningMethods = () => {
           </p>
         </div>
       </section>
-
-      <UniversitiesLogo />
     </div>
   )
 }
