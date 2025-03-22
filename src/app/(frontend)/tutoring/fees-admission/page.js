@@ -11,7 +11,7 @@ const FeesAndAdmission = () => {
   return (
     <div>
       <section className='bg-[#F3F4F6] py-12 px-10'>
-        <div className='container mx-auto text-center'>
+        <div className='container mx-auto'>
           <h1 className='text-4xl font-bold mt-6'>
             Fees and Admission Process
           </h1>
