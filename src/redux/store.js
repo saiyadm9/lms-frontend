@@ -1,5 +1,6 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import userReducer from "./slices/userSlice";
+import courseReducer from "./slices/courseSlice";
 import { persistStore, persistReducer } from "redux-persist";
 
 const storage =
@@ -9,6 +10,7 @@ const storage =
 
 const rootReducer = combineReducers({
   user: userReducer,
+  courses: courseReducer,
 });
 
 let persistedReducer;
@@ -16,6 +18,7 @@ if (storage !== null) {
   const persistConfig = {
     key: "root",
     storage: storage,
+    whitelist: ["user", "courses"], // Persist both user and courses
   };
   persistedReducer = persistReducer(persistConfig, rootReducer);
 } else {
