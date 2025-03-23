@@ -1,10 +1,16 @@
+import Head from "next/head";
 import React from "react";
 
 const AdminDashboard = () => {
   return (
-    <div>
-      <h1>admin</h1>
-    </div>
+    <>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div>
+        <h1>admin</h1>
+      </div>
+    </>
   );
 };
 
