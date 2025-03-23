@@ -12,14 +12,14 @@ const teamMembers = [
     role: 'P.Eng (Electrical Engineering), CSM, PMP',
     image: '/images/masum-mustofa.jpg',
     bio: 'Masum Mustafa is an Electrical Engineer with a deep passion for education. He began teaching Mathematics in 2013 at a private school and, in 2018, founded the Academy of Scholars. Currently, he serves as both the Program Director and a Math Teacher.',
-    contact: 'Tel: (Domestic) 647-997-6108 | E-mail: info@academyofsin.ca',
+    contact: 'Tel: (Domestic) 647-997-6108 | E-mail: info@academyofsinc.ca',
   },
   {
     name: 'Zannatul Moiet Hasib',
     role: 'Principal',
     image: '/images/jannatul-moet.jpg',
     bio: 'Zannatul serves as the principal of the Academy of Scholars. He holds a master’s degree in Mechanical Engineering and an MBA in Finance. With two decades of teaching experience, he has taught at various private schools and colleges in Toronto. He also previously worked as an instructor at a renowned university in Toronto. Specializing in curriculum development, Zannatul focuses on delivering high school education aligned with the Ontario curriculum (OSSD).',
-    contact: 'Tel: (Domestic) 416-559-8127 | E-mail: zhasib@academyofsin.ca',
+    contact: 'Tel: (Domestic) 416-559-8127 | E-mail: zhasib@academyofsinc.ca',
   },
   {
     name: 'WEI (Shirley) LIU',
@@ -27,7 +27,7 @@ const teamMembers = [
     image: '/images/shirley.jpg',
     bio: 'WEI (Shirley) has extensive teaching experience and holds a certified teaching qualification in the People’s Republic of China (PRC). She was a former lecturer at a prominent educational institution in China. Currently, she is working as a partner with a renowned educational institution, specializing in international student recruitment, offering precise and effective guidance and strategic solutions.',
     contact:
-      'Tel: (Domestic) 647-838-2245 | Tel: (International) 86-13817004888 | E-mail: shirleyliu25@hotmail.com',
+      'Tel: (Domestic) 647-838-8245 | Tel: (International) 86-13817004868 | E-mail: shirleyliu25@hotmail.com',
   },
 ]
 
