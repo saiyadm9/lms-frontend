@@ -152,18 +152,15 @@ export default function UsersPage() {
                         )}
                       </td>
                       <td>
-                        <div className="text-sm mt-2 space-y-1">
+                        <div className="text-sm  space-y-1">
                           {user.role === "admin" ? null : userAssigned?.courses
                               ?.length > 0 ? (
                             userAssigned?.courses?.map((course) => (
                               <span
                                 key={course._id}
-                                className="inline-block bg-gray-100 text-gray-800 px-2 py-1 rounded"
+                                className="inline-block bg-gray-100 text-gray-800 px-2 py-1 mx-1 rounded"
                               >
                                 {course.name}{" "}
-                                <span className="text-blue-700 font-bold text-lg">
-                                  ,
-                                </span>
                               </span>
                             ))
                           ) : (
