@@ -561,7 +561,7 @@ const Navbar = () => {
                 <hr className="my-3" />
                 {currentUser && currentUser?.role === "admin" && (
                   <li key="/admin">
-                    <Link href="/admin" className="justify-between">
+                    <Link href="/admin/users" className="justify-between">
                       Admin Dashboard
                     </Link>
                   </li>

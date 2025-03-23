@@ -7,6 +7,7 @@ import { userSignInFailure, userSignInSuccess } from "@/redux/slices/userSlice";
 import { useRouter } from "next/navigation"; // Import useRouter
 import toast from "react-hot-toast";
 import "../auth.css";
+import Head from "next/head";
 
 const LoginPage = () => {
   const dispatch = useDispatch();
@@ -49,74 +50,79 @@ const LoginPage = () => {
     }
   };
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      <div className="card w-full max-w-md shadow-lg bg-white/10 backdrop-blur-lg rounded-xl p-8 flex flex-col">
-        <h2 className="text-3xl font-bold text-white text-center">
-          Welcome Back!
-        </h2>
-        <p className="text-white/80 text-center mt-2">Login to continue</p>
+    <>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div className="min-h-screen flex items-center justify-center bg-gray-900">
+        <div className="card w-full max-w-md shadow-lg bg-white/10 backdrop-blur-lg rounded-xl p-8 flex flex-col">
+          <h2 className="text-3xl font-bold text-white text-center">
+            Welcome Back!
+          </h2>
+          <p className="text-white/80 text-center mt-2">Login to continue</p>
 
-        {/* Error Message Area */}
-        {error && (
-          <div className="text-red-500  mt-2 text-center">
-            <p>{error}</p>
-          </div>
-        )}
+          {/* Error Message Area */}
+          {error && (
+            <div className="text-red-500  mt-2 text-center">
+              <p>{error}</p>
+            </div>
+          )}
 
-        <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text text-white">Email</span>
-            </label>
-            <input
-              type="email"
-              placeholder="Enter your email"
-              className="input input-bordered bg-white/20 text-white focus:ring-2 focus:ring-blue-400"
-              value={email}
-              onChange={(e) => setEmail(e.target.value)}
-              required
-            />
-          </div>
+          <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-white">Email</span>
+              </label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="input input-bordered bg-white/20 text-white focus:ring-2 focus:ring-blue-400"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+              />
+            </div>
 
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text text-white">Password</span>
-            </label>
-            <input
-              type="password"
-              placeholder="Enter your password"
-              className="input input-bordered bg-white/20 text-white focus:ring-2 focus:ring-blue-400"
-              value={password}
-              onChange={(e) => setPassword(e.target.value)}
-              required
-            />
-            <label className="label">
-              <Link
-                href="forgot-password"
-                className="forgot_pass link link-hover"
-              >
-                Forgot password?
-              </Link>
-            </label>
-          </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-white">Password</span>
+              </label>
+              <input
+                type="password"
+                placeholder="Enter your password"
+                className="input input-bordered bg-white/20 text-white focus:ring-2 focus:ring-blue-400"
+                value={password}
+                onChange={(e) => setPassword(e.target.value)}
+                required
+              />
+              <label className="label">
+                <Link
+                  href="forgot-password"
+                  className="forgot_pass link link-hover"
+                >
+                  Forgot password?
+                </Link>
+              </label>
+            </div>
 
-          <button
-            type="submit"
-            className={`btn btn-primary w-full mt-4 disabled:bg-slate-300 disabled:text-black`}
-            disabled={loading}
-          >
-            {loading ? "Logging in..." : "Login"}
-          </button>
-        </form>
+            <button
+              type="submit"
+              className={`btn btn-primary w-full mt-4 disabled:bg-slate-300 disabled:text-black`}
+              disabled={loading}
+            >
+              {loading ? "Logging in..." : "Login"}
+            </button>
+          </form>
 
-        <p className="text-white text-center mt-4">
-          Don't have an account?{" "}
-          <Link href="/register" className="link link-hover">
-            Sign up
-          </Link>
-        </p>
+          <p className="text-white text-center mt-4">
+            Don't have an account?{" "}
+            <Link href="/register" className="link link-hover">
+              Sign up
+            </Link>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

@@ -1,10 +1,10 @@
 "use client";
-
 import { useState } from "react";
 import Link from "next/link";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import { useRouter } from "next/navigation";
+import Head from "next/head";
 
 const RegisterPage = () => {
   const [formData, setFormData] = useState({
@@ -45,89 +45,96 @@ const RegisterPage = () => {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-gray-900">
-      <Toaster position="top-right" />
-      <div className="card w-full max-w-md shadow-lg bg-white/10 backdrop-blur-lg rounded-xl p-8">
-        <h2 className="text-3xl font-bold text-white text-center">
-          Create an Account
-        </h2>
-        <p className="text-white/80 text-center mt-2">Sign up to get started</p>
+    <>
+      <Head>
+        <meta name="robots" content="noindex, nofollow" />
+      </Head>
+      <div className="min-h-screen flex items-center justify-center bg-gray-900">
+        <Toaster position="top-right" />
+        <div className="card w-full max-w-md shadow-lg bg-white/10 backdrop-blur-lg rounded-xl p-8">
+          <h2 className="text-3xl font-bold text-white text-center">
+            Create an Account
+          </h2>
+          <p className="text-white/80 text-center mt-2">
+            Sign up to get started
+          </p>
 
-        <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text text-white">Name</span>
-            </label>
-            <input
-              type="text"
-              name="name"
-              value={formData.name}
-              onChange={handleChange}
-              placeholder="Enter your name"
-              className="input input-bordered bg-white/20 text-white"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text text-white">Email</span>
-            </label>
-            <input
-              type="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="Enter your email"
-              className="input input-bordered bg-white/20 text-white"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text text-white">Password</span>
-            </label>
-            <input
-              type="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="Enter your password"
-              className="input input-bordered bg-white/20 text-white"
-              required
-            />
-          </div>
-          <div className="form-control">
-            <label className="label">
-              <span className="label-text text-white">Confirm Password</span>
-            </label>
-            <input
-              type="password"
-              name="confirmPassword"
-              value={formData.confirmPassword}
-              onChange={handleChange}
-              placeholder="Confirm your password"
-              className="input input-bordered bg-white/20 text-white"
-              required
-            />
-          </div>
+          <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-white">Name</span>
+              </label>
+              <input
+                type="text"
+                name="name"
+                value={formData.name}
+                onChange={handleChange}
+                placeholder="Enter your name"
+                className="input input-bordered bg-white/20 text-white"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-white">Email</span>
+              </label>
+              <input
+                type="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter your email"
+                className="input input-bordered bg-white/20 text-white"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-white">Password</span>
+              </label>
+              <input
+                type="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Enter your password"
+                className="input input-bordered bg-white/20 text-white"
+                required
+              />
+            </div>
+            <div className="form-control">
+              <label className="label">
+                <span className="label-text text-white">Confirm Password</span>
+              </label>
+              <input
+                type="password"
+                name="confirmPassword"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                placeholder="Confirm your password"
+                className="input input-bordered bg-white/20 text-white"
+                required
+              />
+            </div>
 
-          <button
-            type="submit"
-            className="btn btn-primary w-full mt-4"
-            disabled={loading}
-          >
-            {loading ? "Registering..." : "Sign Up"}
-          </button>
-        </form>
+            <button
+              type="submit"
+              className="btn btn-primary w-full mt-4"
+              disabled={loading}
+            >
+              {loading ? "Registering..." : "Sign Up"}
+            </button>
+          </form>
 
-        <p className="text-white text-center mt-4">
-          Already have an account?{" "}
-          <Link href="/login" className="link link-hover">
-            Login
-          </Link>
-        </p>
+          <p className="text-white text-center mt-4">
+            Already have an account?{" "}
+            <Link href="/login" className="link link-hover">
+              Login
+            </Link>
+          </p>
+        </div>
       </div>
-    </div>
+    </>
   );
 };
 

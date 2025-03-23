@@ -61,14 +61,14 @@ export default function AdminLayout({ children }) {
         <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
           <nav className="flex flex-col gap-2">
             {[
-              { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
+              // { href: "/admin", label: "Dashboard", icon: LayoutDashboard },
 
               { href: "/admin/users", label: "Manage Users", icon: Users },
-              {
-                href: "/admin/courses",
-                label: "Manage Courses",
-                icon: BookOpen,
-              },
+              // {
+              //   href: "/admin/courses",
+              //   label: "Manage Courses",
+              //   icon: BookOpen,
+              // },
             ].map(({ href, label, icon: Icon }) => (
               <Link
                 key={href}
