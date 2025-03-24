@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5010/api/admin/getcourses";
+const API_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/getcourses`;
 
 export const fetchCourses = async () => {
   try {
