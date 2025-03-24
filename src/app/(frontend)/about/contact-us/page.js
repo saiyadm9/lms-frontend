@@ -48,10 +48,10 @@ const Contact = () => {
                 <p className="font-bold text-lg text-gray-900">Mobile</p>
                 <p className="text-gray-600">
                   <a
-                    href="tel:+16478626108"
+                    href="tel:+16479976108"
                     className="text-indigo-600 hover:underline"
                   >
-                    +1 (647) 862-6108
+                    +1 (647) 997 6108
                   </a>
                 </p>
                 <p className="text-gray-600">
@@ -59,7 +59,7 @@ const Contact = () => {
                     href="tel:+14165598127"
                     className="text-indigo-600 hover:underline"
                   >
-                    +1 (416) 559-8127
+                    +1 (416) 559 8127
                   </a>
                 </p>
               </div>
@@ -96,10 +96,10 @@ const Contact = () => {
                 <p className="font-bold text-lg text-gray-900">China Office</p>
                 <p className="text-gray-600">
                   <a
-                    href="tel:+6478382245"
+                    href="tel:+16478388245"
                     className="text-indigo-600 hover:underline"
                   >
-                    647-838-2245
+                    +1 (647) 838 8245
                   </a>
                   <br />
                   <a

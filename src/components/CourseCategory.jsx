@@ -3,7 +3,7 @@ import { FaFileInvoiceDollar } from "react-icons/fa6";
 
 const Categories = ({ categories }) => {
   const categoryIcons = {
-    "Credit Courses": (
+    "credit courses": (
       <FaFileInvoiceDollar className="text-5xl text-yellow-500 transition-transform duration-300 ease-in-out group-hover:scale-110" />
     ),
     Tutoring: (

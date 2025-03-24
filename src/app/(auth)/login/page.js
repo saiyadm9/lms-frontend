@@ -28,7 +28,6 @@ const LoginPage = () => {
         { email, password },
         { withCredentials: true }
       );
-      console.log(response);
       if (response.status === 200) {
         toast.success("Login successful!");
         const user = response.data;

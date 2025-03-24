@@ -146,14 +146,14 @@ const Navbar = () => {
                   </li>
                 </ul>
               </li>
-              {/* Credit Course and OSSD */}
+              {/* credit courses and OSSD */}
               <li>
                 <Link
-                  href="#"
+                  href="/credit-course-ossd"
                   className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
                   onClick={toggleMobileMenu}
                 >
-                  Credit Course and OSSD
+                  credit courses and OSSD
                 </Link>
                 <ul className="p-2">
                   <li>
@@ -378,13 +378,13 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            {/* Credit Course and OSSD */}
+            {/* credit courses and OSSD */}
             <li className="group relative">
               <Link
-                href="#"
+                href="/credit-course-ossd"
                 className="flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
               >
-                Credit Course and OSSD
+                credit courses and OSSD
                 <FaAngleDown className="transition-transform duration-300 group-hover:rotate-180" />
               </Link>
               <ul className="absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block">

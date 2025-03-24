@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const API_URL = "http://localhost:5010/api/getcourses";
+const API_URL = "http://localhost:5010/api/admin/getcourses";
 
 export const fetchCourses = async () => {
   try {

@@ -1,8 +1,8 @@
 export const categoriesData = [
   {
-    name: "Credit Courses",
+    name: "credit courses",
     description:
-      "Academy of Scholars is a private school accredited by the Ontario Ministry of Education (MoE). Credit course intakes follow the schedule below. We maintain high academic standards and provide a supportive learning environment to help students succeed.",
+      "Academy of Scholars is a private school accredited by the Ontario Ministry of Education (MoE). credit courses intakes follow the schedule below. We maintain high academic standards and provide a supportive learning environment to help students succeed.",
   },
   {
     name: "Tutoring",
