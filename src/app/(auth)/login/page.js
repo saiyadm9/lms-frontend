@@ -24,7 +24,7 @@ const LoginPage = () => {
 
     try {
       const response = await axios.post(
-        `http://162.0.222.218:5010/api/auth/login`,
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/login`,
         { email, password },
         { withCredentials: true }
       );
