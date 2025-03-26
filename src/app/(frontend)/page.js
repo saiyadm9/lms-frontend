@@ -12,15 +12,12 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { userSignInSuccess, userSignOut } from "@/redux/slices/userSlice";
 import { useRouter } from "next/navigation";
-import LMSStats from "@/components/LMSStats";
-import { cookies } from "next/headers";
+import LMSStats from "@/components/LMSStats ";
 
 const Home = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const { currentUser } = useSelector((state) => state.user);
-  const cookieStore = cookies();
-  const token = cookieStore.get("access_token")?.value;
 
   const handleLogOut = async () => {
     try {
@@ -41,7 +38,7 @@ const Home = () => {
 
   useEffect(() => {
     // Only verify token if no current user
-    if (!currentUser && token) {
+    if (!currentUser) {
       const verifyToken = async () => {
         try {
           const res = await axios.get(
@@ -61,7 +58,7 @@ const Home = () => {
 
       verifyToken();
     }
-  }, [currentUser, dispatch, token, router]);
+  }, [currentUser, dispatch, router]);
 
   return (
     <div>
