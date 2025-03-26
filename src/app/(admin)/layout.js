@@ -51,7 +51,6 @@ export default function AdminLayout({ children }) {
             collapsed ? "w-20" : "w-72"
           } bg-gray-900 text-white p-4 flex flex-col shadow-lg transition-all duration-300 h-screen`}
         >
-          {/* Sidebar Header */}
           <div className="flex items-center justify-between mb-4">
             {!collapsed && <h2 className="text-xl font-bold">Admin Panel</h2>}
             <button
@@ -62,7 +61,6 @@ export default function AdminLayout({ children }) {
             </button>
           </div>
 
-          {/* Navigation - Scrollable */}
           <div className="flex-1 overflow-y-auto scrollbar-thin scrollbar-thumb-gray-700 scrollbar-track-gray-900">
             <nav className="flex flex-col gap-2">
               {[
