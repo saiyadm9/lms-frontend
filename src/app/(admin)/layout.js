@@ -26,7 +26,7 @@ export default function AdminLayout({ children }) {
   const handleLogOut = async () => {
     try {
       const response = await axios.post(
-        "http://localhost:5000/api/auth/signout",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/signout`,
         {},
         { withCredentials: true }
       );
