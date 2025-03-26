@@ -2,13 +2,21 @@
 
 import React from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { useParams, usePathname } from "next/navigation";
 import { FaHome } from "react-icons/fa";
+import { useSelector } from "react-redux";
 
 const Breadcrumbs = () => {
   const pathname = usePathname();
+  const { id } = useParams();
+  const {
+    data: courses,
+    loading,
+    error,
+  } = useSelector((state) => state.courses);
 
-  // Hide Breadcrumbs on Home Page
+  const course = id ? courses.find((course) => course._id === id) : null;
+
   if (pathname === "/") return null;
 
   const pathSegments = pathname.split("/").filter((segment) => segment);
@@ -25,13 +33,17 @@ const Breadcrumbs = () => {
         {pathSegments.map((segment, index) => {
           const path = `/${pathSegments.slice(0, index + 1).join("/")}`;
           const isLast = index === pathSegments.length - 1;
+          const displayText =
+            isLast && course
+              ? course.name
+              : decodeURIComponent(segment.replace(/-/g, " "));
 
           return (
             <li key={index} className="flex items-center">
               <span className="me-1">/</span>
               {isLast ? (
                 <span className="text-gray-800 font-semibold capitalize">
-                  {decodeURIComponent(segment.replace(/-/g, " "))}
+                  {displayText}
                 </span>
               ) : (
                 <Link href={path} className="hover:text-blue-600 capitalize">

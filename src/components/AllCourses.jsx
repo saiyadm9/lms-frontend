@@ -18,7 +18,6 @@ export default function CourseSection() {
       dispatch(getCourses());
     }
   }, [dispatch, courses]);
-  console.log(courses);
 
   return (
     <section className="bg-[#F3F4F6]">
@@ -51,9 +50,12 @@ export default function CourseSection() {
                   </h2>
 
                   <div className="mt-auto flex gap-5">
-                    <button className="w-full bg-warning font-medium py-2 rounded-lg transition">
-                      Enroll Now
-                    </button>
+                    <Link
+                      href={`/credit-course-ossd/available-course/${course._id}`}
+                      className="text-center w-full bg-warning font-medium py-2 rounded-lg transition"
+                    >
+                      view details
+                    </Link>
                   </div>
                 </div>
               </div>

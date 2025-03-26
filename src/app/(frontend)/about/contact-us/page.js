@@ -103,6 +103,13 @@ const Contact = () => {
                   </a>
                   <br />
                   <a
+                    href="tel:8613817004868"
+                    className="text-indigo-600 hover:underline"
+                  >
+                    86-13817004868
+                  </a>
+                  <br />
+                  <a
                     href="mailto:shirleyliu25@hotmail.com"
                     className="text-indigo-600 hover:underline"
                   >

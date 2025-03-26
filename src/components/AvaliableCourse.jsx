@@ -1,14 +1,24 @@
 "use client";
-import React from "react";
-import { useSelector } from "react-redux";
+import React, { useEffect } from "react";
+import { useDispatch, useSelector } from "react-redux";
 import Image from "next/image";
+import Link from "next/link";
+import { getCourses } from "@/redux/slices/courseSlice";
 
 const AvaliableCourse = () => {
+  const dispatch = useDispatch();
   const {
     data: courses,
     loading,
     error,
   } = useSelector((state) => state.courses);
+
+  useEffect(() => {
+    if (courses.length === 0) {
+      dispatch(getCourses());
+    }
+  }, [dispatch, courses]);
+
   return (
     <div>
       {loading ? (
@@ -23,7 +33,7 @@ const AvaliableCourse = () => {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
           {courses.map((course) => (
             <div
-              key={course._id} // Ensure to use the correct identifier
+              key={course._id}
               className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col"
             >
               <Image
@@ -38,9 +48,12 @@ const AvaliableCourse = () => {
                   {course.name}
                 </h2>
                 <div className="mt-auto flex gap-5">
-                  <button className="w-full bg-warning font-medium py-2 rounded-lg transition">
-                    Enroll Now
-                  </button>
+                  <Link
+                    href={`/credit-course-ossd/available-course/${course._id}`}
+                    className="text-center w-full bg-warning font-medium py-2 rounded-lg transition"
+                  >
+                    view details
+                  </Link>
                 </div>
               </div>
             </div>

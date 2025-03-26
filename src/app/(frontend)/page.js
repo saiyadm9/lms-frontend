@@ -3,7 +3,6 @@ import { useEffect } from "react";
 import Categories from "@/components/CourseCategory";
 import AllCourses from "@/components/AllCourses";
 import MeetTheTeam from "@/components/MeetTheTeam";
-
 import AfterHero from "@/components/AfterHero";
 import HeroSlides from "@/components/HeroSlides";
 import UniversitiesLogo from "@/components/UniversitiesLogo";
@@ -13,12 +12,15 @@ import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
 import { userSignInSuccess, userSignOut } from "@/redux/slices/userSlice";
 import { useRouter } from "next/navigation";
-import LMSStats from "@/components/LMSStats ";
+import LMSStats from "@/components/LMSStats";
+import { cookies } from "next/headers";
 
 const Home = () => {
   const dispatch = useDispatch();
   const router = useRouter();
   const { currentUser } = useSelector((state) => state.user);
+  const cookieStore = cookies();
+  const token = cookieStore.get("access_token")?.value;
 
   const handleLogOut = async () => {
     try {
@@ -30,18 +32,16 @@ const Home = () => {
 
       if (response.status === 200) {
         dispatch(userSignOut());
-        router.push("/");
       }
     } catch (error) {
       console.error("Logout error:", error.message);
       dispatch(userSignOut());
-      router.push("/");
     }
   };
 
   useEffect(() => {
     // Only verify token if no current user
-    if (!currentUser) {
+    if (!currentUser && token) {
       const verifyToken = async () => {
         try {
           const res = await axios.get(
@@ -61,7 +61,7 @@ const Home = () => {
 
       verifyToken();
     }
-  }, [currentUser, dispatch, router]);
+  }, [currentUser, dispatch, token, router]);
 
   return (
     <div>
