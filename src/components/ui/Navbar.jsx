@@ -384,7 +384,7 @@ const Navbar = () => {
                 href='/credit-course-ossd/ossd-requirement'
                 className='flex items-center gap-1 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]'
               >
-                Credit courses and OSSD
+                Credit Courses and OSSD
                 <FaAngleDown className='transition-transform duration-300 group-hover:rotate-180' />
               </Link>
               <ul className='absolute left-0 mt-[2.2rem] hidden w-52 p-2 bg-white rounded text-black shadow-lg group-hover:block'>
