@@ -13,11 +13,27 @@ const RegisterPage = () => {
     password: "",
     confirmPassword: "",
   });
+  const [classroomLinks, setClassroomLinks] = useState([""]);
   const [loading, setLoading] = useState(false);
   const router = useRouter();
 
   const handleChange = (e) => {
     setFormData({ ...formData, [e.target.name]: e.target.value });
+  };
+
+  const handleClassroomLinkChange = (index, value) => {
+    const updatedLinks = [...classroomLinks];
+    updatedLinks[index] = value;
+    setClassroomLinks(updatedLinks);
+  };
+
+  const addNewClassroomLink = () => {
+    setClassroomLinks([...classroomLinks, ""]);
+  };
+
+  const removeClassroomLink = (index) => {
+    const updatedLinks = classroomLinks.filter((_, i) => i !== index);
+    setClassroomLinks(updatedLinks);
   };
 
   const handleSubmit = async (e) => {
@@ -30,7 +46,11 @@ const RegisterPage = () => {
 
     try {
       setLoading(true);
-      const { confirmPassword, ...submitData } = formData; // Exclude confirmPassword
+      const { confirmPassword, ...submitData } = formData;
+      submitData.classroomLinks = classroomLinks.filter(
+        (link) => link.trim() !== ""
+      );
+
       const { data } = await axios.post(
         `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/register`,
         submitData
@@ -60,6 +80,7 @@ const RegisterPage = () => {
           </p>
 
           <form className="mt-6 space-y-4" onSubmit={handleSubmit}>
+            {/* Name */}
             <div className="form-control">
               <label className="label">
                 <span className="label-text text-white">Name</span>
@@ -74,6 +95,8 @@ const RegisterPage = () => {
                 required
               />
             </div>
+
+            {/* Email */}
             <div className="form-control">
               <label className="label">
                 <span className="label-text text-white">Email</span>
@@ -88,6 +111,8 @@ const RegisterPage = () => {
                 required
               />
             </div>
+
+            {/* Password */}
             <div className="form-control">
               <label className="label">
                 <span className="label-text text-white">Password</span>
@@ -102,6 +127,8 @@ const RegisterPage = () => {
                 required
               />
             </div>
+
+            {/* Confirm Password */}
             <div className="form-control">
               <label className="label">
                 <span className="label-text text-white">Confirm Password</span>
@@ -117,6 +144,45 @@ const RegisterPage = () => {
               />
             </div>
 
+            {/* Google Classroom Links */}
+            <div>
+              <label className="label">
+                <span className="label-text text-white">
+                  Google Classroom Links
+                </span>
+              </label>
+              {classroomLinks.map((link, index) => (
+                <div key={index} className="flex gap-2 mb-2">
+                  <input
+                    type="url"
+                    value={link}
+                    onChange={(e) =>
+                      handleClassroomLinkChange(index, e.target.value)
+                    }
+                    placeholder={`Classroom Link #${index + 1}`}
+                    className="input input-bordered bg-white/20 text-white w-full"
+                  />
+                  {index > 0 && (
+                    <button
+                      type="button"
+                      className="btn btn-sm btn-error text-white"
+                      onClick={() => removeClassroomLink(index)}
+                    >
+                      ✕
+                    </button>
+                  )}
+                </div>
+              ))}
+              <button
+                type="button"
+                className="btn btn-sm btn-outline text-white mt-2"
+                onClick={addNewClassroomLink}
+              >
+                + Add More
+              </button>
+            </div>
+
+            {/* Submit */}
             <button
               type="submit"
               className="btn btn-primary w-full mt-4"
@@ -125,13 +191,6 @@ const RegisterPage = () => {
               {loading ? "Registering..." : "Sign Up"}
             </button>
           </form>
-
-          <p className="text-white text-center mt-4">
-            Already have an account?{" "}
-            <Link href="/login" className="link link-hover">
-              Login
-            </Link>
-          </p>
         </div>
       </div>
     </>

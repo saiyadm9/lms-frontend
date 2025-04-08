@@ -1,9 +1,9 @@
 import { NextResponse } from "next/server";
 import { cookies } from "next/headers";
 
-const loginProtectedRoutes = ["/login", "/register"];
+const loginProtectedRoutes = ["/login"];
 const logoutProtectedRoutes = ["/profile"];
-const adminRoutes = ["/admin"];
+const adminRoutes = ["/admin", "/register"];
 
 export async function middleware(req) {
   // Await the cookies() function
