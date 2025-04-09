@@ -56,7 +56,6 @@ const RegisterPage = () => {
         submitData
       );
       toast.success("Registration successful!");
-      router.push("/login");
     } catch (error) {
       toast.error(error.response?.data?.message || "Registration failed");
     } finally {

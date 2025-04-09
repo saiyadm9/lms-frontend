@@ -3,25 +3,25 @@ import { cookies } from "next/headers";
 
 const loginProtectedRoutes = ["/login"];
 const logoutProtectedRoutes = ["/profile"];
-const adminOnlyRoutes = ["/admin", "/register"]; // explicitly list only admin-protected routes
+const adminRoutes = ["/admin"];
 
 export async function middleware(req) {
   const cookieStore = cookies();
   const token = cookieStore.get("access_token")?.value;
   const path = req.nextUrl.pathname;
 
-  // Redirect logged-in users away from login page
+  // If logged in and visiting login page, redirect to home
   if (token && loginProtectedRoutes.includes(path)) {
     return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
   }
 
-  // Redirect unauthenticated users away from protected logout-only routes
+  // If not logged in and visiting profile page, redirect to home
   if (!token && logoutProtectedRoutes.includes(path)) {
     return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
   }
 
-  // Check if this route is strictly for admins (exact match)
-  if (adminOnlyRoutes.includes(path) || path.startsWith("/admin")) {
+  // Only allow admins to access /admin and /register
+  if (adminRoutes.includes(path)) {
     if (!token) {
       console.error("No token found for admin route");
       return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
@@ -53,7 +53,6 @@ export async function middleware(req) {
   return NextResponse.next();
 }
 
-// 🧠 Match admin routes, register, login, and profile
 export const config = {
-  matcher: ["/login", "/register", "/admin/:path*", "/profile"],
+  matcher: ["/login", "/admin/:path*", "/profile"],
 };

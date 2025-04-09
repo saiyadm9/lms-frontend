@@ -165,7 +165,7 @@ export default function UsersPage() {
             <h1 className="text-2xl font-semibold">
               Users and Course Management
             </h1>
-            <Link href="/register" className="btn btn-warning px-5">
+            <Link href="/admin/register" className="btn btn-warning px-5">
               Add new Student
             </Link>
           </div>
