@@ -3,25 +3,25 @@ import { cookies } from "next/headers";
 
 const loginProtectedRoutes = ["/login"];
 const logoutProtectedRoutes = ["/profile"];
-const adminRoutes = ["/admin", "/register"];
+const adminOnlyRoutes = ["/admin", "/register"]; // explicitly list only admin-protected routes
 
 export async function middleware(req) {
   const cookieStore = cookies();
   const token = cookieStore.get("access_token")?.value;
   const path = req.nextUrl.pathname;
 
-  // If logged in and visiting login page, redirect to home
+  // Redirect logged-in users away from login page
   if (token && loginProtectedRoutes.includes(path)) {
     return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
   }
 
-  // If not logged in and visiting profile page, redirect to home
+  // Redirect unauthenticated users away from protected logout-only routes
   if (!token && logoutProtectedRoutes.includes(path)) {
     return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
   }
 
-  // Only allow admins to access /admin and /register
-  if (adminRoutes.includes(path)) {
+  // Check if this route is strictly for admins (exact match)
+  if (adminOnlyRoutes.includes(path) || path.startsWith("/admin")) {
     if (!token) {
       console.error("No token found for admin route");
       return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
@@ -40,7 +40,9 @@ export async function middleware(req) {
 
       if (!response.ok) {
         console.error("JWT Verification Failed");
-        return NextResponse.redirect(new URL("/", req.nextUrl.origin).toString());
+        return NextResponse.redirect(
+          new URL("/", req.nextUrl.origin).toString()
+        );
       }
     } catch (error) {
       console.error("Admin verification error:", error);
@@ -51,6 +53,7 @@ export async function middleware(req) {
   return NextResponse.next();
 }
 
+// 🧠 Match admin routes, register, login, and profile
 export const config = {
   matcher: ["/login", "/register", "/admin/:path*", "/profile"],
 };
