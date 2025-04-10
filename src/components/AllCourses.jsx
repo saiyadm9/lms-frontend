@@ -51,11 +51,14 @@ export default function CourseSection() {
 
                   <div className="mt-auto flex gap-5">
                     <Link
-                      href={`/credit-course-ossd/available-course/${course._id}`}
-                      className="text-center w-full bg-warning font-medium py-2 rounded-lg transition"
-                    >
-                      view details
-                    </Link>
+                    href={`/credit-course-ossd/available-course/${course.name.replace(
+                      /\s+/g,
+                      ""
+                    )}`}
+                    className="text-center w-full bg-warning font-medium py-2 rounded-lg transition"
+                  >
+                    view details
+                  </Link>
                   </div>
                 </div>
               </div>
