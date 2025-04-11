@@ -44,7 +44,10 @@ const GradeTwelve = () => {
               {gradeNineCourses.map((course) => (
                 <Link
                   key={course._id} // Move key to the outermost element
-                  href={`/credit-course-ossd/available-course/${course._id}`}
+                  href={`/credit-course-ossd/available-course/${course.name.replace(
+                      /\s+/g,
+                      ""
+                    )}`}
                   className="block"
                 >
                   <div className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col">
