@@ -28,7 +28,7 @@ const Categories = ({ categories }) => {
             >
               <div className='mb-4'>{categoryIcons[category.name]}</div>
               <h3 className='text-xl font-semibold mb-2'>{category.name}</h3>
-              <p className='text-center'>{category.description}</p>
+              <p className='text-justify'>{category.description}</p>
             </div>
           ))}
         </div>

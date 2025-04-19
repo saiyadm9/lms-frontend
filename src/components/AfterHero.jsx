@@ -3,7 +3,7 @@ import Image from 'next/image'
 export default function AfterHero() {
   return (
     <section className='bg-white py-12 px-6 md:px-12'>
-      <div className='container mx-auto text-center max-w-3xl'>
+      <div className='container mx-auto text-justify max-w-3xl'>
         <h1 className='text-4xl font-bold text-gray-900 mb-4'>
           Distinguised Private School in Ontario
         </h1>

@@ -11,12 +11,10 @@ const OurStory = () => {
   return (
     <div>
       <section className='bg-[#F3F4F6] py-12 px-10'>
-        <div className='container mx-auto flex flex-col md:flex-row items-center'>
-          <div className='md:w-1/2'>
-            <h1 className='text-4xl font-bold mt-6'>
-              University Success Story
-            </h1>
-            <p className='mt-4 text-gray-700'>
+        <div className='container mx-auto flex flex-col md:flex-row items-center gap-x-1'>
+          <div className='md:w-2/3'>
+            <h1 className='text-4xl font-bold'>University Success Story</h1>
+            <p className='mt-4 text-gray-700 text-justify'>
               Academy of Scholars takes great pride in the outstanding
               achievements of our students, many of whom have been admitted to
               top programs at leading universities across Canada. Our commitment
@@ -27,10 +25,10 @@ const OurStory = () => {
               Toronto, Trent University, University of Waterloo, Western
               University and many more. These success stories reflect our
               dedication to preparing students for higher education and future
-              careers. We are happy to share more details upon request!
+              careers. We are happy to share more details upon request!
             </p>
           </div>
-          <div className='md:w-1/2 flex justify-center mt-6 md:mt-0'>
+          <div className='md:w-1/3 flex justify-center mt-6 md:mt-0'>
             <Image
               width={690}
               height={400}
@@ -49,5 +47,5 @@ const OurStory = () => {
 export default withHero(OurStory, {
   title: 'Success Story',
   description: ' ',
-  bgGradient: 'linear-gradient(to top, #29DBD8, #141A6B)',
+  bgGradient: 'rgb(0 33 38 / 55%)',
 })
