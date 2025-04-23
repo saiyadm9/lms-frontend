@@ -10,8 +10,7 @@ const InterNationalStudents = () => {
   return (
     <div>
       <section className='py-12 px-10'>
-        <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-x-1'>
-          {/* Left Column */}
+        <div className='container mx-auto grid grid-cols-1 md:grid-cols-3 items-center gap-x-6'>
           <div className='md:col-span-2'>
             <h1 className='text-4xl font-bold mt-6'>
               Earn Your OSSD from Anywhere in the World!
@@ -36,7 +35,6 @@ const InterNationalStudents = () => {
             </p>
           </div>
 
-          {/* Right Column (Image) */}
           <div className='md:col-span-1 flex justify-center mt-6 md:mt-0'>
             <Image
               src='/images/international-students.jpg'

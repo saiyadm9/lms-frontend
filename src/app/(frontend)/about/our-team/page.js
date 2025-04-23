@@ -42,7 +42,7 @@ const Team = () => {
           <h1 className='text-3xl sm:text-4xl font-bold my-6 text-center'>
             About Academy of Scholars
           </h1>
-          <div className='flex flex-wrap gap-8 justify-center mt-10'>
+          <div className='flex flex-wrap gap-8 justify-center mt-10 text-justify'>
             {teamMembers.map((member, index) => (
               <div
                 key={index}
@@ -58,19 +58,19 @@ const Team = () => {
                   />
                 </div>
                 <div className='w-full md:w-2/3 text-center p-4'>
-                  <h3 className='text-lg sm:text-xl font-bold text-gray-800'>
+                  <h3 className='text-lg sm:text-xl font-bold text-gray-800 text-left'>
                     {member.name}
                   </h3>
-                  <p className='text-indigo-600 font-normal italic text-sm sm:text-base'>
+                  <p className='text-indigo-600 font-normal italic text-sm sm:text-base text-left'>
                     {member.education}
                   </p>
-                  <p className='text-indigo-600 font-medium text-sm sm:text-base'>
+                  <p className='text-indigo-600 font-medium text-sm sm:text-base text-left'>
                     {member.role}
                   </p>
-                  <p className='text-gray-600 mt-2 text-sm sm:text-base'>
+                  <p className='text-gray-600 mt-2 text-sm sm:text-base text-justify'>
                     {member.bio}
                   </p>
-                  <p className='text-blue-600 font-semibold mt-2 text-sm sm:text-base'>
+                  <p className='text-blue-600 font-semibold mt-2 text-sm sm:text-base text-left'>
                     {member.contact}
                   </p>
                 </div>
