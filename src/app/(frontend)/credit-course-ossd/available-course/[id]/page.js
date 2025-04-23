@@ -64,7 +64,7 @@ const CourseDetails = () => {
             {courseDetail?.description}
           </p>
           <p
-            className='text-lg text-gray-700'
+            className='text-lg text-gray-700 text-justify'
             dangerouslySetInnerHTML={{
               __html: courseDetail?.fulfilsRequirement,
             }}
@@ -79,7 +79,7 @@ const CourseDetails = () => {
           <h2 className='text-2xl font-semibold'>
             Assessment & Evaluation for Student Achievement
           </h2>
-          <p className='text-lg text-gray-700'>
+          <p className='text-lg text-gray-700 text-justify'>
             As summarized in Growing Success 2010, the primary purpose of
             assessment and evaluation is to improve student learning.
             Information gathered through assessment helps teachers to determine
