@@ -60,25 +60,25 @@ const Footer = () => {
           <nav>
             <h6 className='footer-title'>Course Categories</h6>
             <Link
-              href='/credit-course-ossd/available-course/grade-9'
+              href='/credit-course-ossd/available-courses/grade-9'
               className='link link-hover'
             >
               Grade 9
             </Link>
             <Link
-              href='/credit-course-ossd/available-course/grade-10'
+              href='/credit-course-ossd/available-courses/grade-10'
               className='link link-hover'
             >
               Grade 10
             </Link>
             <Link
-              href='/credit-course-ossd/available-course/grade-11'
+              href='/credit-course-ossd/available-courses/grade-11'
               className='link link-hover'
             >
               Grade 11
             </Link>
             <Link
-              href='/credit-course-ossd/available-course/grade-12'
+              href='/credit-course-ossd/available-courses/grade-12'
               className='link link-hover'
             >
               Grade 12

@@ -43,7 +43,7 @@ const GradeEleven = () => {
               {gradeNineCourses.map((course) => (
                 <Link
                   key={course._id} // Move key to the outermost element
-                  href={`/credit-course-ossd/available-course/${course.name.replace(
+                  href={`/credit-course-ossd/available-courses/${course.name.replace(
                     /\s+/g,
                     ''
                   )}`}

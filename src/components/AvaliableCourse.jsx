@@ -1,59 +1,59 @@
-"use client";
-import React, { useEffect } from "react";
-import { useDispatch, useSelector } from "react-redux";
-import Image from "next/image";
-import Link from "next/link";
-import { getCourses } from "@/redux/slices/courseSlice";
+'use client'
+import React, { useEffect } from 'react'
+import { useDispatch, useSelector } from 'react-redux'
+import Image from 'next/image'
+import Link from 'next/link'
+import { getCourses } from '@/redux/slices/courseSlice'
 
 const AvaliableCourse = () => {
-  const dispatch = useDispatch();
+  const dispatch = useDispatch()
   const {
     data: courses,
     loading,
     error,
-  } = useSelector((state) => state.courses);
+  } = useSelector((state) => state.courses)
 
   useEffect(() => {
     if (courses.length === 0) {
-      dispatch(getCourses());
+      dispatch(getCourses())
     }
-  }, [dispatch, courses]);
+  }, [dispatch, courses])
 
   return (
     <div>
       {loading ? (
-        <p className="text-center text-gray-600">Loading courses...</p>
+        <p className='text-center text-gray-600'>Loading courses...</p>
       ) : error ? (
-        <p className="text-center text-red-600">{error}</p>
+        <p className='text-center text-red-600'>{error}</p>
       ) : courses.length === 0 ? (
-        <p className="text-center text-gray-600">
+        <p className='text-center text-gray-600'>
           No courses available at the moment.
         </p>
       ) : (
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+        <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
           {courses.map((course) => (
             <div
               key={course._id}
-              className="bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col"
+              className='bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col'
             >
               <Image
                 src={course.imgUrl}
                 width={400}
                 height={500}
-                alt="Course"
-                className="w-full h-48 object-cover"
+                alt='Course'
+                className='w-full h-48 object-cover'
               />
-              <div className="p-6 flex flex-col flex-grow gap-5">
-                <h2 className="text-xl font-semibold text-gray-900">
+              <div className='p-6 flex flex-col flex-grow gap-5'>
+                <h2 className='text-xl font-semibold text-gray-900'>
                   {course.name}
                 </h2>
-                <div className="mt-auto flex gap-5">
+                <div className='mt-auto flex gap-5'>
                   <Link
-                    href={`/credit-course-ossd/available-course/${course.name.replace(
+                    href={`/credit-course-ossd/available-courses/${course.name.replace(
                       /\s+/g,
-                      ""
+                      ''
                     )}`}
-                    className="text-center w-full bg-warning font-medium py-2 rounded-lg transition"
+                    className='text-center w-full bg-warning font-medium py-2 rounded-lg transition'
                   >
                     view details
                   </Link>
@@ -64,7 +64,7 @@ const AvaliableCourse = () => {
         </div>
       )}
     </div>
-  );
-};
+  )
+}
 
-export default AvaliableCourse;
+export default AvaliableCourse
