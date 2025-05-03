@@ -17,13 +17,6 @@ const MeetTheTeam = () => {
       bio: 'P.Eng, PMP , MBA',
       email: 'zhasib@academyofsinc.ca',
     },
-    {
-      name: 'WEI (Shirley) LIU',
-      role: 'Marketing Director of International Student (China)',
-      image: '/images/shirley.png',
-      bio: 'Marketing Expert Specializing in International Student Outreach.',
-      email: 'shirleyliu25@hotmail.com',
-    },
   ]
 
   return (
