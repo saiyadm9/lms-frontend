@@ -23,15 +23,6 @@ const teamMembers = [
     bio: 'Zannatul serves as the principal of the Academy of Scholars. He holds a master’s degree in Mechanical Engineering and an MBA in Finance. With two decades of teaching experience, he has taught at various private schools and colleges in Toronto. He also previously worked as an instructor at a renowned university in Toronto. Specializing in curriculum development, Zannatul focuses on delivering high school education aligned with the Ontario curriculum (OSSD).',
     contact: 'Tel: (Domestic) 416-559-8127 | E-mail: zhasib@academyofsinc.ca',
   },
-  {
-    name: 'WEI (Shirley) LIU',
-    role: 'Marketing Director of International Student (China)',
-    education: '',
-    image: '/images/shirley.png',
-    bio: 'WEI (Shirley) has extensive teaching experience and holds a certified teaching qualification in the People’s Republic of China (PRC). She was a former lecturer at a prominent educational institution in China. Currently, she is working as a partner with a renowned educational institution, specializing in international student recruitment, offering precise and effective guidance and strategic solutions.',
-    contact:
-      'Tel: (Domestic) 647-838-8245 | Tel: (International) 86-13817004868 | E-mail: shirleyliu25@hotmail.com',
-  },
 ]
 
 const Team = () => {

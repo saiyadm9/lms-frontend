@@ -93,27 +93,27 @@ const Contact = () => {
             <div className='flex items-start space-x-4'>
               <FaMapMarkerAlt className='text-indigo-600 text-2xl flex-shrink-0' />
               <div>
-                <p className='font-bold text-lg text-gray-900'>China Office</p>
+                <p className='font-bold text-lg text-gray-900'>BD Office</p>
                 <p className='text-gray-600'>
                   <a
-                    href='tel:+16478388245'
+                    href='tel:+880 1911 09 20 99'
                     className='text-indigo-600 hover:underline'
                   >
-                    +1 (647) 838 8245
+                    +8801911092099
                   </a>
                   <br />
                   <a
-                    href='tel:8613817004868'
+                    href='tel:+880 1891 15 03 70'
                     className='text-indigo-600 hover:underline'
                   >
-                    86-13817004868
+                    +8801891150370
                   </a>
                   <br />
                   <a
-                    href='mailto:shirleyliu25@hotmail.com'
+                    href='mailto:zia@modularhomesltd.com'
                     className='text-indigo-600 hover:underline'
                   >
-                    shirleyliu25@hotmail.com
+                    zia@modularhomesltd.com
                   </a>
                 </p>
               </div>
