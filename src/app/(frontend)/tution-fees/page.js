@@ -104,5 +104,5 @@ const TutionFees = () => {
 export default withHero(TutionFees, {
   title: "Tution Fees",
   description: " ",
-  bgGradient: "linear-gradient(to top, #29DBD8, #141A6B)",
+  bgGradient: "rgb(0 33 38 / 55%)",
 });

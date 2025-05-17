@@ -242,7 +242,7 @@ const Navbar = () => {
 
           <Link href="/" className="text-xl font-extrabold">
             <Image
-              src="/images/academy-of-scholars.png"
+              src="/images/academy-of-scholars-logo.png"
               width={140}
               height={50}
               alt="Academy of scholars logo"
