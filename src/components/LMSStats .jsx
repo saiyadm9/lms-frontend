@@ -46,7 +46,7 @@ const LMSStats = () => {
                 <div className='stat-title text-gray-700 font-medium text-xl'>
                   Average Students <br /> Per Class
                 </div>
-                <div className='stat-value text-2xl'>4-6</div>
+                <div className='stat-value text-2xl'>15</div>
               </div>
             </div>
           </div>
@@ -59,7 +59,7 @@ const LMSStats = () => {
                 <div className='stat-title text-gray-700 font-medium text-xl'>
                   University <br /> Acceptance Rate
                 </div>
-                <div className='stat-value text-2xl'>95%</div>
+                <div className='stat-value text-2xl'>100%</div>
               </div>
             </div>
           </div>
@@ -85,7 +85,7 @@ const LMSStats = () => {
             <h3 className='text-2xl text-justify font-semibold  text-gray-800'>
               Flexible Learning Options
             </h3>
-            <p className='text-gray-600 text-justify'>
+            <p className='text-gray-600'>
               With interactive online learning, students enjoy 24/7 access to
               course materials and continuous teaching support. Self-paced study
               options empower students to learn at their own pace and
