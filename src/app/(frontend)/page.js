@@ -68,7 +68,7 @@ const Home = () => {
       <Categories categories={categoriesData} />
       <AllCourses />
       <MeetTheTeam />
-      <Gallery />
+
       <UniversitiesLogo />
     </div>
   );

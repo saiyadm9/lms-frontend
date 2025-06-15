@@ -1,13 +1,10 @@
-import axios from "axios";
-
-const API_URL = `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/getcourses`;
+import localCourses from '../../../data/courses';
 
 export const fetchCourses = async () => {
-  try {
-    const response = await axios.get(API_URL);
-    return response.data;
-  } catch (error) {
-    console.error("Error fetching courses:", error);
-    throw new Error("Failed to fetch courses");
-  }
+  // Simulate a slight delay like API call
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve(localCourses);
+    }, 500); // optional: simulate delay
+  });
 };
