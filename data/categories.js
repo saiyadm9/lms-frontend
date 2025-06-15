@@ -18,7 +18,7 @@ export const courseDetails = [
 							</li>
 							<li>
 								<strong>ENG4U Prerequisite: </strong>
-								<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/ENG3U-Grade11English" class="text-blue-600">ENG3U – Grade 11 English</a>
+								<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/ENG3U-Grade11English" class="text-blue-600">ENG3U – Grade 11 English</a>
 							</li>
 							<li>
 								<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" class="text-blue-600">NCAA Approved Course</a>
@@ -32,9 +32,6 @@ export const courseDetails = [
 						</p>
 						<p class="text-gray-700 mt-2">
 							Within this ENG4U course an important focus will be on using academic language coherently and confidently, selecting the reading strategies best suited to particular texts and particular purposes for reading, and developing greater control in writing. The ENG4U course is intended to prepare students for university, college, or the workplace.
-						</p>
-						<p class="mt-2">
-							<a href="https://oeshighschool.b-cdn.net/wp-content/uploads/2024/09/ENG4U-Course-Outline_2024.docx.pdf" class="text-blue-600">ENG4U Course Outline</a>
 						</p>
 					</div>
 					<div>
@@ -229,12 +226,12 @@ export const courseDetails = [
 					<li><strong>Course Type:</strong> University Preparation</li>
 					<li><strong>Credit:</strong> 1.0</li>
 					<li>
-						<strong>Ontario Curriculum:</strong>
-						<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/grade-11" class="text-blue-600">SPH4U Grade 12 Science</a>
+						<strong>Ontario Curriculum: </strong>
+						<a href="https://www.edu.gov.on.ca/eng/curriculum/secondary/2009science11_12.pdf#page=196" class="text-blue-600">SPH4U Grade 12 Science</a>
 					</li>
 					<li>
-						<strong>Prerequisite:</strong>
-						<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/SPH3U-Grade11Physics" class="text-blue-600">SPH3U – Grade 11 Physics</a>
+						<strong>Prerequisite: </strong>
+						<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/SPH3U-Grade11Physics" class="text-blue-600">SPH3U – Grade 11 Physics</a>
 					</li>
 					<li>
 						<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" class="text-blue-600">NCAA Approved Course</a>
@@ -249,9 +246,6 @@ export const courseDetails = [
 				</p>
 				<p class="text-gray-700 mt-2">
 					In this SPH4U course, they will further develop their scientific investigation skills, learning how to analyse data related to a variety of physics concepts and principles. Students will also consider the impact of technological applications of physics on society and the environment.
-				</p>
-				<p class="mt-2">
-					<a href="https://oeshighschool.b-cdn.net/wp-content/uploads/2024/09/SPH4U-Course-Outline_2024.docx.pdf" class="text-blue-600">SPH4U Course Outline</a>
 				</p>
 			</div>
 
@@ -481,7 +475,7 @@ export const courseDetails = [
       </li>
       <li>
         <strong>MCV4U Prerequisite:</strong>
-        The <a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/MHF4U-Grade12AdvancedFunction" className="text-blue-600">Advanced Functions course MHF4U</a> must be taken prior to or concurrently with Calculus and Vectors MCV4U.
+        The <a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MHF4U-Grade12AdvancedFunction" className="text-blue-600">Advanced Functions course MHF4U</a> must be taken prior to or concurrently with Calculus and Vectors MCV4U.
       </li>
       <li>
         <a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" className="text-blue-600">NCAA Approved Course</a>
@@ -493,9 +487,6 @@ export const courseDetails = [
     <h2 className="text-xl font-semibold text-gray-800">COURSE DESCRIPTION FOR MCV4U</h2>
     <p className="text-gray-700 mt-2">
       MCV4U – Calculus and Vectors Grade 12 course builds on students’ previous experience with functions and their developing understanding of rates of change. Students in MCV4U will solve problems involving geometric and algebraic representations of vectors and representations of lines and planes in three-dimensional space; broaden their understanding of rates of change to include the derivatives of polynomial, sinusoidal, exponential, rational, and radical functions; and apply these concepts and skills to the modelling of real-world relationships. Students will also refine their use of the mathematical processes necessary for success in senior mathematics. This MCV4U course is intended for students who choose to pursue careers in fields such as science, engineering, economics, and some areas of business, including those students who will be required to take a university-level calculus, linear algebra, or physics course.
-    </p>
-    <p className="text-blue-600">
-      <a href="https://oeshighschool.com/mcv4u-course-outline_2024-docx/">MCV4U Course Outline</a>
     </p>
   </div>
 
@@ -711,11 +702,6 @@ export const courseDetails = [
 					</p>
 					<ul className="list-disc list-inside text-blue-600 mt-3 space-y-1">
 						<li>
-							<a href="https://oeshighschool.b-cdn.net/wp-content/uploads/2024/09/BOH4M-Course-Outline_2024.docx.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline">
-								BOH4M Course Outline
-							</a>
-						</li>
-						<li>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/business1112currb.pdf" target="_blank" rel="noopener noreferrer" className="hover:underline">
 								The Ontario Curriculum, BOH4M Grade 12: Business
 							</a>
@@ -780,16 +766,6 @@ export const courseDetails = [
 						This BBB4M course provides an overview of the importance of international business and trade in the global economy and explores the factors that influence success in international markets. Students in BBB4M will learn about the techniques and strategies associated with marketing, distribution, and managing international business effectively. BBB4M course prepares students for postsecondary programs in business, including international business, marketing, and management.
 					</p>
 					<ul className="list-disc list-inside text-blue-600 mt-3 space-y-1">
-						<li>
-							<a
-								href="https://oeshighschool.b-cdn.net/wp-content/uploads/2024/09/BBB4M-Course-Outline_2024.docx.pdf"
-								target="_blank"
-								rel="noopener noreferrer"
-								className="hover:underline"
-							>
-								BBB4M Course Outline
-							</a>
-						</li>
 						<li>
 							<a
 								href="http://www.edu.gov.on.ca/eng/curriculum/secondary/business1112currb.pdf"
@@ -878,8 +854,8 @@ export const courseDetails = [
 					</li>
 					<li>
 						<strong>MDM4U Prerequisite:</strong>
-						<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/MCR3U-Grade11Function" class="text-blue-600">MCR3U – Grade 11 Functions</a> or
-						<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/MCF3M-Grade11FunctionsandApplications" class="text-blue-600">MCF3M – Grade 11 Functions and Applications</a>
+						<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MCR3U-Grade11Function" class="text-blue-600">MCR3U – Grade 11 Functions</a> or
+						<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MCF3M-Grade11FunctionsandApplications" class="text-blue-600">MCF3M – Grade 11 Functions and Applications</a>
 					</li>
 					<li>
 						<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" class="text-blue-600">NCAA Approved Course</a>
@@ -893,9 +869,6 @@ export const courseDetails = [
 				</p>
 				<p class="text-gray-700 mt-2">
 					MDM4U stands out for its practical approach to mathematics, making it an important course for students aiming to navigate the data-centric areas of higher education and professional careers, bridging the gap between theoretical math and its real-world applications.
-				</p>
-				<p class="mt-2">
-					<a href="https://oeshighschool.com/mdm4u-course-outline_2024-docx/" class="text-blue-600">MDM4U Course Outline</a>
 				</p>
 			</div>
 			<div>
@@ -951,49 +924,49 @@ export const courseDetails = [
 				<h2 className="text-xl font-semibold text-gray-800">TEACHING &amp; LEARNING STRATEGIES FOR MDM4U</h2>
 				<div className="text-gray-700 space-y-2 mt-2">
 					<p><strong>In this course, students will experience the following activities.</strong></p>
-					<p><strong>Presentations with embedded videos</strong> are utilized to outline concepts, explain theory with the use of<br />
-					examples and practice questions, and incorporate multi-media opportunities for students to learn more (e.g.<br />
+					<p><strong>Presentations with embedded videos</strong> are utilized to outline concepts, explain theory with the use of
+					examples and practice questions, and incorporate multi-media opportunities for students to learn more (e.g.
 					online simulations, quizzes, etc.).</p>
-					<p><strong>End of unit conversations and Poodlls</strong> are opportunities for students to express their ideas, problem solving,<br />
+					<p><strong>End of unit conversations and Poodlls</strong> are opportunities for students to express their ideas, problem solving,
 					and thought processes with a teacher who provides timely feedback.</p>
-					<p><strong>Reflection</strong> is an opportunity for students to look back at concepts and theories with new eyes, to relate<br />
+					<p><strong>Reflection</strong> is an opportunity for students to look back at concepts and theories with new eyes, to relate
 					theory to practice, and to align learning with their own values and beliefs.</p>
-					<p><strong>Discussions with the instructor</strong> are facilitated through video conferencing, discussing the concepts and skills<br />
-					being studied. This enables two-way communication between the student and the instructor, to share ideas<br />
+					<p><strong>Discussions with the instructor</strong> are facilitated through video conferencing, discussing the concepts and skills
+					being studied. This enables two-way communication between the student and the instructor, to share ideas
 					and ask questions in dialogue. This also helps to build a relationship between the student and instructor.</p>
-					<p><strong>Instructor demonstrations</strong> (research skills, etc.) are opportunities for the instructor to lead a student through<br />
+					<p><strong>Instructor demonstrations</strong> (research skills, etc.) are opportunities for the instructor to lead a student through
 					a concept or skill through video conferencing, videos, or emailing with the student.</p>
-					<p><strong>Discussion forums</strong> are an opportunity for students to summarize and share their ideas and perspectives with<br />
-					their peers, which deepens understanding through expression. It also provides an opportunity for<br />
+					<p><strong>Discussion forums</strong> are an opportunity for students to summarize and share their ideas and perspectives with
+					their peers, which deepens understanding through expression. It also provides an opportunity for
 					peer-to-peer feedback.</p>
-					<p><strong>Practical extension and application</strong> of knowledge are integrated throughout the course. The goal is to help<br />
-					students make connections between what they learn in the classroom and how they understand and relate to<br />
+					<p><strong>Practical extension and application</strong> of knowledge are integrated throughout the course. The goal is to help
+					students make connections between what they learn in the classroom and how they understand and relate to
 					the world around them and their own lives. Learning becomes a dynamic opportunity for students to be<br />
 					more aware that their learning is all around them and enable them to create more meaning in their lives.</p>
-					<p><strong>Individual activities/assignments</strong> assessments are completed individually at a student’s own pace and are<br />
-					intended to expand and consolidate the learning in each lesson. Individual activities allow the teacher to<br />
-					accommodate interests and needs and to assess the progress of individual students. For this reason, students<br />
+					<p><strong>Individual activities/assignments</strong> assessments are completed individually at a student’s own pace and are
+					intended to expand and consolidate the learning in each lesson. Individual activities allow the teacher to
+					accommodate interests and needs and to assess the progress of individual students. For this reason, students
 					are encouraged to discuss IEPs (Individual Education Plans) with their teacher and to ask to modify<br />
-					assessments if they have a unique interest that they feel could be pursued in the assessment. The teacher<br />
-					plays an important role in supporting these activities by providing ongoing feedback to students, both orally<br />
+					assessments if they have a unique interest that they feel could be pursued in the assessment. The teacher
+					plays an important role in supporting these activities by providing ongoing feedback to students, both orally
 					and in writing.</p>
-					<p><strong>Research</strong> is an opportunity to apply inquiry skills to a practical problem or question. Students perform<br />
-					research to gather information, evaluate quality sources, analyse findings, evaluate their analysis, and<br />
-					synthesize their findings into conclusions. Throughout, students apply both creative thinking and critical<br />
+					<p><strong>Research</strong> is an opportunity to apply inquiry skills to a practical problem or question. Students perform
+					research to gather information, evaluate quality sources, analyse findings, evaluate their analysis, and
+					synthesize their findings into conclusions. Throughout, students apply both creative thinking and critical
 					thinking. New questions are also developed to further learning.</p>
-					<p><strong>Writing</strong> as a learning tool helps students to think critically about course material while grasping, organizing,<br />
-					and integrating prior knowledge with new concepts. Good communication skills are important both in and<br />
+					<p><strong>Writing</strong> as a learning tool helps students to think critically about course material while grasping, organizing,
+					and integrating prior knowledge with new concepts. Good communication skills are important both in and
 					out of the classroom.</p>
-					<p><strong>Virtual simulations</strong> are interactive websites that provide students with an opportunity to ask questions, relate<br />
+					<p><strong>Virtual simulations</strong> are interactive websites that provide students with an opportunity to ask questions, relate
 					variables, and examine relationships.</p>
-					<p><strong>Diagrams</strong> are visual representations of mathematical ideas and concepts. They provide another perspective<br />
-					to organize ideas. Visuals are thought to promote cognitive plasticity &#8211; meaning, they can help us change our<br />
+					<p><strong>Diagrams</strong> are visual representations of mathematical ideas and concepts. They provide another perspective
+					to organize ideas. Visuals are thought to promote cognitive plasticity &#8211; meaning, they can help us change our
 					minds or help us to remember an idea.</p>
-					<p><strong>Graphs and charts</strong> are visual representations of math concepts and analysis. This helps us to see the<br />
+					<p><strong>Graphs and charts</strong> are visual representations of math concepts and analysis. This helps us to see the
 					relationships within and between sets of data.</p>
-					<p><strong>Tables</strong> involve organizing information in terms of categories (rows and columns). This helps us to understand<br />
+					<p><strong>Tables</strong> involve organizing information in terms of categories (rows and columns). This helps us to understand
 					the relationships between ideas and data, as well as highlight trends.</p>
-					<p><strong>Practice problems</strong> provide students with a scenario/problem to solve by applying concepts and skills learned<br />
+					<p><strong>Practice problems</strong> provide students with a scenario/problem to solve by applying concepts and skills learne
 					in a context. This helps students to understand the relevance of their learning.</p>
 				</div>
 			</div>
@@ -1018,14 +991,14 @@ export const courseDetails = [
 					</ul>
 					<p>The final grade will be determined as follows:</p>
 					<ul className="list-disc list-inside space-y-1">
-						<li>❑ 70% of the grade will be based on evaluation conducted throughout the course. This<br />
-						portion of the grade should reflect the student’s most consistent level of achievement<br />
-						throughout the course, although special consideration will be given to more recent<br />
+						<li> 70% of the grade will be based on evaluation conducted throughout the course. This
+						portion of the grade should reflect the student’s most consistent level of achievement
+						throughout the course, although special consideration will be given to more recent
 						evidence of achievement.</li>
-						<li>❑ 30% of the grade will be based on a final evaluation administered at or towards the end of<br />
-						the course. This evaluation will be based on evidence from one or a combination of the<br />
-						following: an examination, a performance, and/or another method of evaluation suitable to<br />
-						the course content. The final evaluation allows the student an opportunity to demonstrate<br />
+						<li> 30% of the grade will be based on a final evaluation administered at or towards the end of
+						the course. This evaluation will be based on evidence from one or a combination of the
+						following: an examination, a performance, and/or another method of evaluation suitable to
+						the course content. The final evaluation allows the student an opportunity to demonstrate
 						comprehensive achievement of the overall expectations for the course.</li>
 					</ul>
 					<p>(<a href="https://www.edu.gov.on.ca/eng/policyfunding/growsuccess.pdf" className="text-blue-600">Growing Success: Assessment, Evaluation and Reporting in Ontario Schools</a>. Ontario<br />
@@ -1064,13 +1037,10 @@ export const courseDetails = [
 						</ul>
 						<li>
 							<strong>MHF4U Prerequisites:</strong>&nbsp;
-							<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/MCR3U-Grade11Function" className="text-blue-600">
+							<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MCR3U-Grade11Function" className="text-blue-600">
 								MCR3U – Functions, Grade 11
 							</a> &nbsp;
-							or &nbsp;
-							<a href="#" className="text-blue-600">
-								MCT4C – Mathematics for College Technology, Grade 12
-							</a>
+							or &nbsp;	MCT4C – Mathematics for College Technology, Grade 12
 						</li>
 						<li>
 							<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" className="text-blue-600">
@@ -1084,11 +1054,6 @@ export const courseDetails = [
 					<h2 className="text-xl font-semibold text-gray-800">COURSE DESCRIPTION FOR MHF4U</h2>
 					<p className="text-gray-700 mt-2">
 						MHF4U Advanced Functions Grade 12 course extends students’ experience with functions. Students will investigate the properties of polynomial, rational, logarithmic, and trigonometric functions; develop techniques for combining functions; broaden their understanding of rates of change; and develop facility in applying these concepts and skills. Students in MHF4U will also refine their use of the mathematical processes necessary for success in senior mathematics. This MHF4U course is intended both for students taking the Calculus and Vectors course as a prerequisite for a university program and for those wishing to consolidate their understanding of mathematics before proceeding to any one of a variety of university programs.
-					</p>
-					<p className="mt-2">
-						<a href="https://oeshighschool.b-cdn.net/wp-content/uploads/2024/09/MHF4U-Course-Outline_2024.docx.pdf" className="text-blue-600">
-							MHF4U Course Outline
-						</a>
 					</p>
 				</div>
 
@@ -1361,7 +1326,7 @@ export const courseDetails = [
 						</li>
 						<li>
 							<strong>SCH4U Prerequisite: </strong>
-							<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/SCH3U-Grade11Chemistry" className="text-blue-600">SCH3U – Grade 11 Chemistry</a>
+							<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/SCH3U-Grade11Chemistry" className="text-blue-600">SCH3U – Grade 11 Chemistry</a>
 						</li>
 						<li>
 							<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" className="text-blue-600">NCAA Approved Course</a>
@@ -1373,9 +1338,6 @@ export const courseDetails = [
 					<h2 className="text-xl font-semibold text-gray-800">COURSE DESCRIPTION FOR SCH4U</h2>
 					<p className="text-gray-700 mt-2">
 						SCH4U course enables students to deepen their understanding of chemistry through the study of organic chemistry, the structure and properties of matter, energy changes and rates of reaction, equilibrium in chemical systems, and electrochemistry. Students will further develop their problem-solving and investigation skills as they explore chemical processes and refine their ability to communicate scientific information. Emphasis is placed on the importance of chemistry in everyday life and evaluating the impact of chemical technology on the environment.
-					</p>
-					<p className="mt-2">
-						<a href="https://oeshighschool.b-cdn.net/wp-content/uploads/2024/09/SCH4U-Course-Outline_2024.docx.pdf" className="text-blue-600">SCH4U Course Outline</a>
 					</p>
 				</div>
 
@@ -1518,7 +1480,7 @@ export const courseDetails = [
 						</p>
 						<p>
 							<strong>SBI4U Prerequisite:</strong> 
-							<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/SBI3U-Grade11Biology" className="text-blue-600">SBI3U &#8211; Grade 11 Biology</a>
+							<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/SBI3U-Grade11Biology" className="text-blue-600">SBI3U &#8211; Grade 11 Biology</a>
 						</p>
 						<p>
 							<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" className="text-blue-600">
@@ -1533,11 +1495,6 @@ export const courseDetails = [
 					<div className="mt-2">
 						<p>
 							Diving into the SBI4U course online provides an opportunity for students to explore the intricate workings of biological systems at an advanced level. With a curriculum that navigates through the core areas of biochemistry, metabolic processes, molecular genetics, homeostasis, and population dynamics, SBI4U is designed to blend theoretical knowledge with practical application seamlessly. Students engaging with SBI4U are tasked with not only understanding these complex subjects but also applying them in investigative scenarios. The course sets a clear path towards building the skills and knowledge essential for further studies in life sciences and adjacent fields, positioning SBI4U participants for future inquiry and innovation in the field of biology.
-						</p>
-						<p className="mt-2">
-							<a href="https://oeshighschool.b-cdn.net/wp-content/uploads/2024/09/SBI4U-Course-Outline_2024.docx.pdf" className="text-blue-600">
-								SBI4U Course Outline
-							</a>
 						</p>
 					</div>
 				</div>
@@ -1857,18 +1814,12 @@ export const courseDetails = [
 							In the MCR3U course online, students embark on a deep dive into mathematical functions, transitioning from linear and quadratic basics to the complexities of trigonometric and exponential functions. MCR3U’s curriculum is designed to challenge students with real-life problem-solving, pushing them to enhance their critical thinking and communication. As MCR3U learners engage with a variety of representations—numerical, algebraic, and graphical—they tackle complex problems, fostering an appreciation for mathematics’ role in real-world applications. This comprehensive approach ensures that students in MCR3U not only build a robust mathematical foundation but are also prepared for further academic pursuits and professional success.
 						</p>
 						<p>
-							<a href="https://oeshighschool.b-cdn.net/wp-content/uploads/2024/09/MCR3U-Course-Outline_2024.docx.pdf" className="text-blue-600">
-								MCR3U Course Outline
-							</a>
-						</p>
-						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/math1112currb.pdf" className="text-blue-600">
 								Ontario Ministry Curriculum for Grade 11 Math
 							</a>
 						</p>
 						<p>
-							<strong>MCR3U Prerequisite: </strong> 
-							<a href="#" className="text-blue-600">Principles of Mathematics, Grade 10, Academic</a>
+							<strong>MCR3U Prerequisite: </strong> Principles of Mathematics, Grade 10, Academic
 						</p>
 						<p>
 							<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" className="text-blue-600">
@@ -1926,11 +1877,7 @@ export const courseDetails = [
 						<p>
 							This ICS3U online course provides a foundational understanding of computer science with a focus on practical application. Students in ICS3U will design software using industry-standard programming tools and apply the software development life-cycle model. ICS3U emphasizes the development of programming skills, including writing and using subprograms to create effective solutions for various types of problems. The ICS3U curriculum also explores environmental and ergonomic issues, emerging research in computer science, and global career trends in related fields.
 						</p>
-						<p>
-							<a href="#">
-								ICS3U Course Outline
-							</a>
-						</p>
+						<p>ICS3U Course Outline</p>
 						<p>
 							<a href="https://www.dcp.edu.gov.on.ca/en/course-descriptions-and-prerequisites/computer-studies" className="text-blue-600">
 								The Ontario Curriculum, ICS3U Grade 11: Computer Studies
@@ -1996,11 +1943,7 @@ export const courseDetails = [
 								here
 							</a> 
 						</p>
-						<p>
-							<a href="#">
-								ICS3U Course Outline
-							</a>
-						</p>
+						<p>ICS3U Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/business1112currb.pdf" className="text-blue-600">
 								The Ontario Curriculum, Grade 11 and 12, Business Studies
@@ -2060,11 +2003,7 @@ export const courseDetails = [
 						<p>
 							SCH3U online course enables students to deepen their understanding of chemistry through the study of the properties of chemicals and chemical bonds; chemical reactions and quantitative relationships in those reactions; solutions and solubility; and atmospheric chemistry and the behaviour of gases. SCH3U explores the fascinating world of chemical bonds, the how and why of chemical reactions, and the quantitative relationships that govern them. Students in SCH3U will further develop their analytical skills and investigate the qualitative and quantitative properties of matter, as well as the impact of some common chemical reactions on society and the environment.
 						</p>
-						<p>
-							<a href="#">
-								SCH3U Course Outline
-							</a>
-						</p>
+						<p>ICS3U Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/2009science11_12.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: Chemistry
@@ -2124,11 +2063,7 @@ export const courseDetails = [
 						<p>
 							SBI3U furthers students’ understanding of the processes that occur in biological systems. Students in SBI3U will study theory and conduct investigations in the areas of biodiversity; evolution; genetic processes; the structure and function of animals; and the anatomy, growth, and function of plants. The SBI3U online course focuses on the theoretical aspects of the topics under study, and helps students refine skills related to scientific investigation. Through SBI3U, students will learn to design and conduct investigations, refining your abilities as a scientific thinker.
 						</p>
-						<p>
-							<a href="#" className="text-blue-600">
-								OES SBI3U Course Outline
-							</a>
-						</p>
+						<p>OES SBI3U Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/2009science11_12.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: Biology
@@ -2192,11 +2127,7 @@ export const courseDetails = [
 							will engage in marketing research, develop marketing strategies, and produce a marketing plan
 							for a product of their choice.
 						</p>
-						<p>
-							<a href="#" className="text-blue-600">
-								BMI3C_Course Outline
-							</a>
-						</p>
+						<p>BMI3C_Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/business1112currb.pdf" className="text-blue-600">
 								The Ontario Curriculum, BMI3C Grade 11: Marketing College
@@ -2256,11 +2187,7 @@ export const courseDetails = [
 						<p>
 							SPH3U course develops students’ understanding of the basic concepts of physics. Students in SPH3U will explore kinematics, with an emphasis on linear motion; different kinds of forces; energy transformations; the properties of mechanical waves and sound; and electricity and magnetism. SPH3U will enhance their scientific investigation skills as they test laws of physics. In addition, students in SPH3U will analyse the interrelationships between physics and technology, and consider the impact of technological applications of physics on society and the environment.
 						</p>
-						<p>
-							<a href="#" className="text-blue-600">
-								SPH3U Course Outline
-							</a>
-						</p>
+						<p>SPH3U Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/2009science11_12.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: Physics 
@@ -2320,11 +2247,7 @@ export const courseDetails = [
 						<p>
 							ENG3U emphasizes the development of literacy, communication, and critical and creative thinking skills necessary for success in academic and daily life. Students will analyse challenging literary texts from various periods, countries, and cultures, as well as a range of informational and graphic texts, and create oral, written, and media texts in a variety of forms. ENG3U equips students to think critically, communicate effectively, and navigate the complexities of text. An important focus in ENG3U will be on using language with precision and clarity and incorporating stylistic devices appropriately and effectively. The ENG3U online course is intended to prepare students for the compulsory Grade 12 university or college preparation course.
 						</p>
-						<p>
-							<a href="#" className="text-blue-600">
-								OES Course Outline ENG3U
-							</a>
-						</p>
+						<p>OES Course Outline ENG3U</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/english1112currb.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: English 
@@ -2384,11 +2307,7 @@ export const courseDetails = [
 						<p>
 							MCF3M introduces basic features of the function by extending students’ experiences with quadratic relations. Throughout MCF3M, students will explore three fundamental function types: quadratic, trigonometric, and exponential. Students will represent functions numerically, graphically, and algebraically; simplify expressions; solve equations; and solve problems relating to applications. Students in MCF3M will reason mathematically and communicate their thinking as they solve multi-step problems.
 						</p>
-						<p>
-							<a href="#" className="text-blue-600">
-								MCF3M Course Outline
-							</a>
-						</p>
+						<p>MCF3M Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/math1112currb.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: Math

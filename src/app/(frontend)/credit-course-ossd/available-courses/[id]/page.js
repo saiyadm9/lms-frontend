@@ -60,9 +60,7 @@ const CourseDetails = () => {
 
         {/* Course Description & Outline */}
         <section className='space-y-4 mt-4'>
-          <h2 className='text-2xl font-semibold'>
-            {courseCode} Course Description
-          </h2>
+					<p className='mt-10'></p>
           <p className='text-lg text-gray-700'>{courseDetail?.prerequisite}</p>
 					{courseDetail?.description}
         </section>
