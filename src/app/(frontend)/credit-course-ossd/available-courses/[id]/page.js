@@ -63,7 +63,6 @@ const CourseDetails = () => {
           <h2 className='text-2xl font-semibold'>
             {courseCode} Course Description
           </h2>
-          <h3 className='text-xl font-semibold mt-4'>Prerequisite</h3>
           <p className='text-lg text-gray-700'>{courseDetail?.prerequisite}</p>
 					{courseDetail?.description}
         </section>
