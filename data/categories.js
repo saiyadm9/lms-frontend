@@ -234,7 +234,7 @@ export const courseDetails = [
 					</li>
 					<li>
 						<strong>Prerequisite:</strong>
-						<a href="https://oeshighschool.com/course/sph3u-physics-grade-11/" class="text-blue-600">SPH3U – Grade 11 Physics</a>
+						<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/SPH3U-Grade11Physics" class="text-blue-600">SPH3U – Grade 11 Physics</a>
 					</li>
 					<li>
 						<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" class="text-blue-600">NCAA Approved Course</a>
@@ -1063,12 +1063,12 @@ export const courseDetails = [
 							<li>Interactive content</li>
 						</ul>
 						<li>
-							<strong>MHF4U Prerequisites:</strong>{" "}
+							<strong>MHF4U Prerequisites:</strong>&nbsp;
 							<a href="https://lms-frontend-one-silk.vercel.app/credit-course-ossd/available-courses/MCR3U-Grade11Function" className="text-blue-600">
 								MCR3U – Functions, Grade 11
-							</a>{" "}
-							or{" "}
-							<a href="https://oeshighschool.com/course/mct4c-math-for-college-tech-grade-12/" className="text-blue-600">
+							</a> &nbsp;
+							or &nbsp;
+							<a href="#" className="text-blue-600">
 								MCT4C – Mathematics for College Technology, Grade 12
 							</a>
 						</li>
