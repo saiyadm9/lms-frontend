@@ -1313,7 +1313,6 @@ export const courseDetails = [
     category: 'Grade 12',
 		prerequisite: null,
     description: (
-
 			<section className="space-y-4 mt-8">
 				<div>
 					<h2 className="text-xl font-semibold text-gray-800">SCH4U COURSE DETAILS</h2>
@@ -1877,7 +1876,6 @@ export const courseDetails = [
 						<p>
 							This ICS3U online course provides a foundational understanding of computer science with a focus on practical application. Students in ICS3U will design software using industry-standard programming tools and apply the software development life-cycle model. ICS3U emphasizes the development of programming skills, including writing and using subprograms to create effective solutions for various types of problems. The ICS3U curriculum also explores environmental and ergonomic issues, emerging research in computer science, and global career trends in related fields.
 						</p>
-						<p>ICS3U Course Outline</p>
 						<p>
 							<a href="https://www.dcp.edu.gov.on.ca/en/course-descriptions-and-prerequisites/computer-studies" className="text-blue-600">
 								The Ontario Curriculum, ICS3U Grade 11: Computer Studies
@@ -1943,7 +1941,6 @@ export const courseDetails = [
 								here
 							</a> 
 						</p>
-						<p>ICS3U Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/business1112currb.pdf" className="text-blue-600">
 								The Ontario Curriculum, Grade 11 and 12, Business Studies
@@ -2003,7 +2000,6 @@ export const courseDetails = [
 						<p>
 							SCH3U online course enables students to deepen their understanding of chemistry through the study of the properties of chemicals and chemical bonds; chemical reactions and quantitative relationships in those reactions; solutions and solubility; and atmospheric chemistry and the behaviour of gases. SCH3U explores the fascinating world of chemical bonds, the how and why of chemical reactions, and the quantitative relationships that govern them. Students in SCH3U will further develop their analytical skills and investigate the qualitative and quantitative properties of matter, as well as the impact of some common chemical reactions on society and the environment.
 						</p>
-						<p>ICS3U Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/2009science11_12.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: Chemistry
@@ -2063,7 +2059,6 @@ export const courseDetails = [
 						<p>
 							SBI3U furthers students’ understanding of the processes that occur in biological systems. Students in SBI3U will study theory and conduct investigations in the areas of biodiversity; evolution; genetic processes; the structure and function of animals; and the anatomy, growth, and function of plants. The SBI3U online course focuses on the theoretical aspects of the topics under study, and helps students refine skills related to scientific investigation. Through SBI3U, students will learn to design and conduct investigations, refining your abilities as a scientific thinker.
 						</p>
-						<p>OES SBI3U Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/2009science11_12.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: Biology
@@ -2127,7 +2122,6 @@ export const courseDetails = [
 							will engage in marketing research, develop marketing strategies, and produce a marketing plan
 							for a product of their choice.
 						</p>
-						<p>BMI3C_Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/business1112currb.pdf" className="text-blue-600">
 								The Ontario Curriculum, BMI3C Grade 11: Marketing College
@@ -2187,7 +2181,6 @@ export const courseDetails = [
 						<p>
 							SPH3U course develops students’ understanding of the basic concepts of physics. Students in SPH3U will explore kinematics, with an emphasis on linear motion; different kinds of forces; energy transformations; the properties of mechanical waves and sound; and electricity and magnetism. SPH3U will enhance their scientific investigation skills as they test laws of physics. In addition, students in SPH3U will analyse the interrelationships between physics and technology, and consider the impact of technological applications of physics on society and the environment.
 						</p>
-						<p>SPH3U Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/2009science11_12.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: Physics 
@@ -2247,7 +2240,6 @@ export const courseDetails = [
 						<p>
 							ENG3U emphasizes the development of literacy, communication, and critical and creative thinking skills necessary for success in academic and daily life. Students will analyse challenging literary texts from various periods, countries, and cultures, as well as a range of informational and graphic texts, and create oral, written, and media texts in a variety of forms. ENG3U equips students to think critically, communicate effectively, and navigate the complexities of text. An important focus in ENG3U will be on using language with precision and clarity and incorporating stylistic devices appropriately and effectively. The ENG3U online course is intended to prepare students for the compulsory Grade 12 university or college preparation course.
 						</p>
-						<p>OES Course Outline ENG3U</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/english1112currb.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: English 
@@ -2307,7 +2299,6 @@ export const courseDetails = [
 						<p>
 							MCF3M introduces basic features of the function by extending students’ experiences with quadratic relations. Throughout MCF3M, students will explore three fundamental function types: quadratic, trigonometric, and exponential. Students will represent functions numerically, graphically, and algebraically; simplify expressions; solve equations; and solve problems relating to applications. Students in MCF3M will reason mathematically and communicate their thinking as they solve multi-step problems.
 						</p>
-						<p>MCF3M Course Outline</p>
 						<p>
 							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/math1112currb.pdf" className="text-blue-600">
 								Ministry of Education Curriculum: Math
@@ -2321,7 +2312,7 @@ export const courseDetails = [
 				<div>
 					<h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
 					<div class="text-gray-700 space-y-4">
-						<p>As summarized in <i><a href="https://www.edu.gov.on.ca/eng/policyfunding/growsuccess.pdf" class="text-blue-600" target="_blank" rel="noopener noreferrer">Growing Success</a> 2010</i>, the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
+						<p>As summarized in <i>Growing Success 2010,</i> the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
 
 						<p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
 
@@ -2360,7 +2351,8 @@ export const courseDetails = [
 		category: 'Grade 10',
 		prerequisite: null,
 		description : (
-			<></>
+			<>
+			</>
 		)
 	},
 	{
@@ -2370,17 +2362,115 @@ export const courseDetails = [
 		category: 'Grade 10',
 		prerequisite: null,
 		description : (
-			<></>
+			<section className="space-y-6 mt-8 text-gray-700">
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">MPM2D COURSE DESCRIPTION</h2>
+					<div className="mt-2 space-y-2">
+						<p>
+							MPM2D enables students to broaden their understanding of relationships and extend their problem-solving and algebraic skills through investigation, the effective use of technology, and abstract reasoning. MPM2D students will explore quadratic relations and their applications; solve and apply linear systems; verify properties of geometric figures using analytic geometry; and investigate the trigonometry of right and acute triangles. MPM2D utilizes technology effectively, fostering abstract reasoning and a deeper understanding of mathematical concepts. Students in MPM2D will reason mathematically and communicate their thinking as they solve multi-step problems.
+						</p>
+						<p>
+							<a href="https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-mathematics" className="text-blue-600">
+								Ministry of Education Curriculum: Math
+							</a>
+						</p>
+						<p>
+							<strong>MPM2D Prerequisite: </strong> MTH1W, Mathematics, Grade 9, De-Streamed
+						</p>
+					</div>
+				</div>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
+					<div class="text-gray-700 space-y-4">
+						<p>As summarized in <i>Growing Success 2010,</i> the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
+
+						<p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
+
+						<p>In order to ensure that assessment and evaluation are valid and reliable, and that they lead to the improvement of student learning, teachers must use assessment and evaluation strategies that:</p>
+
+						<ul class="list-disc list-inside space-y-1">
+							<li>Address both what students learn and how well they learn;</li>
+							<li>Are based both on the categories of knowledge and skills and on the achievement level descriptions given in the achievement chart;</li>
+							<li>Are varied in nature, administered over a period of time, and designed to provide opportunities for students to demonstrate the full range of their learning;</li>
+							<li>Are appropriate for the learning activities used, the purposes of instruction, and the needs and experiences of the students;</li>
+							<li>Are fair to all students;</li>
+							<li>Accommodate students with special education needs, consistent with the strategies outlined in their Individual Education Plan;</li>
+							<li>Accommodate the needs of students who are learning the language of instruction;</li>
+							<li>Ensure that each student is given clear directions for improvement;</li>
+							<li>Promote students’ ability to assess their own learning and to set specific goals;</li>
+							<li>Include the use of samples of students’ work that provide evidence of their achievement;</li>
+							<li>Are communicated clearly to students and parents at the beginning of the school year and at other appropriate points throughout the school year.</li>
+						</ul>
+
+						<p>The achievement chart for mathematics outlines four categories of knowledge and skills. They include; knowledge and understanding, thinking, communication and application. Teachers will ensure that student work is assessed and/or evaluated in a balanced manner with respect to the four categories, and that achievement of particular expectations is considered within the appropriate categories.</p>
+
+						<p>A final grade is recorded for this course, and a credit is granted and recorded for this course if the student’s grade is 50% or higher. The final grade for this MCR 3U course will be determined as follows:</p>
+
+						<p>❑ 70% of the grade will be based on evaluations conducted throughout the MCR3U course. This portion of the grade should reflect the student’s most consistent level of achievement throughout the course, although special consideration should be given to more recent evidence of achievement. The seventy percent will be distributed in the following achievement chart categories: 25% Knowledge and understanding, 25% application, 25% communication and 25% thinking.</p>
+
+						<p>❑ 30% Thirty percent of the grade will be based on a final evaluation in the form of an examination administered towards the end of the course and a summative project which students can work on throughout the course.</p>
+					</div>
+				</div>
+			</section>
 		)
 	},
 	{
 		_id: '21',
 		name: 'ENG2D - Grade 10 English',
-		course_code: 'MPM2D',
+		course_code: 'ENG2D',
 		category: 'Grade 10',
 		prerequisite: null,
 		description : (
-			<></>
+			<section className="space-y-6 mt-8 text-gray-700">
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">ENG2D COURSE DESCRIPTION</h2>
+					<div className="mt-2 space-y-2">
+						<p>
+							ENG2D is designed to extend the range of oral communication, reading, writing, and media literacy skills that students need for success in their secondary school academic programs and in their daily lives. ENG2D students will analyse literary texts from contemporary and historical periods, interpret and evaluate informational and graphic texts, and create oral, written, and media texts in a variety of forms. In ENG2D an important focus will be on the selective use of strategies that contribute to effective communication. Additionally, ENG2D equips students to analyze and interpret not just literature but also informational and graphic texts, improving critical thinking skills. This course is intended to prepare students for the compulsory Grade 11 university or college preparation course.
+						</p>
+						<p>
+							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/english910currb.pdf" className="text-blue-600">
+								Ministry of Education Curriculum: English 
+							</a>
+						</p>
+						<p>
+							<strong>ENG2D Prerequisite: </strong> ENL1W, English, Grade 9
+						</p>
+					</div>
+				</div>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
+					<div class="text-gray-700 space-y-4">
+						<p>The primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
+
+						<p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
+
+						<p>In order to ensure that assessment and evaluation are valid and reliable, and that they lead to the improvement of student learning, teachers must use assessment and evaluation strategies that:</p>
+
+						<ul class="list-disc list-inside space-y-1">
+							<li>Address both what students learn and how well they learn;</li>
+							<li>Are based both on the categories of knowledge and skills and on the achievement level descriptions given in the achievement chart;</li>
+							<li>Are varied in nature, administered over a period of time, and designed to provide opportunities for students to demonstrate the full range of their learning;</li>
+							<li>Are appropriate for the learning activities used, the purposes of instruction, and the needs and experiences of the students;</li>
+							<li>Are fair to all students;</li>
+							<li>Accommodate students with special education needs, consistent with the strategies outlined in their Individual Education Plan;</li>
+							<li>Accommodate the needs of students who are learning the language of instruction;</li>
+							<li>Ensure that each student is given clear directions for improvement;</li>
+							<li>Promote students’ ability to assess their own learning and to set specific goals;</li>
+							<li>Include the use of samples of students’ work that provide evidence of their achievement;</li>
+							<li>Are communicated clearly to students and parents at the beginning of the school year and at other appropriate points throughout the school year.</li>
+						</ul>
+
+						<p>The achievement chart for mathematics outlines four categories of knowledge and skills. They include; knowledge and understanding, thinking, communication and application. Teachers will ensure that student work is assessed and/or evaluated in a balanced manner with respect to the four categories, and that achievement of particular expectations is considered within the appropriate categories.</p>
+
+						<p>A final grade is recorded for this course, and a credit is granted and recorded for this course if the student’s grade is 50% or higher. The final grade for this MCR 3U course will be determined as follows:</p>
+
+						<p>❑ Seventy percent of the grade will be based on evaluations conducted throughout the course. This portion of the grade should reflect the student’s most consistent level of achievement throughout the course, although special consideration should be given to more recent evidence of achievement.</p>
+
+						<p>❑ The final 30% will be broken up into 20% final exam and 10% Final Summative Presentation , which will be administered towards the end of the course.</p>
+					</div>
+				</div>
+			</section>
 		)
 	},
 	{
@@ -2395,12 +2485,64 @@ export const courseDetails = [
 	},
 	{
 		_id: '23',
-		name: 'TGJ20 - Grade 10 Communications Technology 10',
-		course_code: 'TGJ20',
+		name: 'TGJ2O - Grade 10 Communications Technology 10',
+		course_code: 'TGJ2O',
 		category: 'Grade 10',
 		prerequisite: null,
 		description : (
-			<></>
+			<section className="space-y-6 mt-8 text-gray-700">
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">TGJ2O COURSE DESCRIPTION</h2>
+					<div className="mt-2 space-y-2">
+						<p>
+							TGJ2O course introduces students to information and communication technology in a business environment and builds a foundation of digital literacy skills necessary for success in a technologically driven society. Students in TGJ2O will develop word processing, spreadsheet, database, desktop publishing, presentation software, and website design skills. Throughout the TGJ2O course, there is an emphasis on digital literacy, effective electronic research and communication skills, and current issues related to the impact of information and communication technology. 
+						</p>
+						<p>
+							Starting with students entering high school in the 2024–25 school year, all students are required to earn a Grade 9 or 10 Technological Education credit, which is a compulsory graduation requirement for the Ontario Secondary School Diploma. This TGJ2O credit meets the graduation requirement.
+						</p>
+						<p>
+							<a href="https://www.edu.gov.on.ca/eng/curriculum/secondary/teched910curr09.pdf" className="text-blue-600">
+								The Ontario Curriculum, Grade 9 and 10, Technological Education
+							</a>
+						</p>
+						<p>
+							<strong>TGJ2O Prerequisite: </strong> None
+						</p>
+					</div>
+				</div>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
+					<div class="text-gray-700 space-y-4">
+						<p>As summarized in <i>Growing Success 2010,</i> the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
+
+						<p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
+
+						<p>In order to ensure that assessment and evaluation are valid and reliable, and that they lead to the improvement of student learning, teachers must use assessment and evaluation strategies that:</p>
+
+						<ul class="list-disc list-inside space-y-1">
+							<li>Address both what students learn and how well they learn;</li>
+							<li>Are based both on the categories of knowledge and skills and on the achievement level descriptions given in the achievement chart;</li>
+							<li>Are varied in nature, administered over a period of time, and designed to provide opportunities for students to demonstrate the full range of their learning;</li>
+							<li>Are appropriate for the learning activities used, the purposes of instruction, and the needs and experiences of the students;</li>
+							<li>Are fair to all students;</li>
+							<li>Accommodate students with special education needs, consistent with the strategies outlined in their Individual Education Plan;</li>
+							<li>Accommodate the needs of students who are learning the language of instruction;</li>
+							<li>Ensure that each student is given clear directions for improvement;</li>
+							<li>Promote students’ ability to assess their own learning and to set specific goals;</li>
+							<li>Include the use of samples of students’ work that provide evidence of their achievement;</li>
+							<li>Are communicated clearly to students and parents at the beginning of the school year and at other appropriate points throughout the school year.</li>
+						</ul>
+
+						<p>The achievement chart for mathematics outlines four categories of knowledge and skills. They include; knowledge and understanding, thinking, communication and application. Teachers will ensure that student work is assessed and/or evaluated in a balanced manner with respect to the four categories, and that achievement of particular expectations is considered within the appropriate categories.</p>
+
+						<p>A final grade is recorded for this course, and a credit is granted and recorded for this course if the student’s grade is 50% or higher. The final grade for this MCR 3U course will be determined as follows:</p>
+
+						<p>❑ 70% of the grade will be based on evaluations conducted throughout the MCR3U course. This portion of the grade should reflect the student’s most consistent level of achievement throughout the course, although special consideration should be given to more recent evidence of achievement. The seventy percent will be distributed in the following achievement chart categories: 25% Knowledge and understanding, 25% application, 25% communication and 25% thinking.</p>
+
+						<p>❑ 30% Thirty percent of the grade will be based on a final evaluation in the form of an examination administered towards the end of the course and a summative project which students can work on throughout the course.</p>
+					</div>
+				</div>
+			</section>
 		)
 	},
 	{
@@ -2410,7 +2552,56 @@ export const courseDetails = [
 		category: 'Grade 10',
 		prerequisite: null,
 		description : (
-			<></>
+			<section className="space-y-6 mt-8 text-gray-700">
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">SNC2D COURSE DESCRIPTION</h2>
+					<div className="mt-2 space-y-2">
+						<p>
+							SNC2D enables students to enhance their understanding of concepts in biology, chemistry, earth and space science, and physics, and of the interrelationships between science, technology, society, and the environment. Students in SNC2D are also given opportunities to further develop their scientific investigation skills. Additionally, SNC2D will help students plan and conduct investigations and develop their understanding of scientific theories related to the connections between cells and systems in animals and plants; chemical reactions, with a particular focus on acid/base reactions; forces that affect climate and climate change; and the interaction of light and matter. 
+						</p>
+						<p>
+							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/science910_2008.pdf" className="text-blue-600">
+								Ministry of Education Curriculum: Science
+							</a>
+						</p>
+						<p>
+							<strong>SNC2D Prerequisite: </strong> SNC1W, Science, 9
+						</p>
+					</div>
+				</div>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
+					<div class="text-gray-700 space-y-4">
+						<p>As summarized in <i>Growing Success 2010,</i> the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
+
+						<p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
+
+						<p>In order to ensure that assessment and evaluation are valid and reliable, and that they lead to the improvement of student learning, teachers must use assessment and evaluation strategies that:</p>
+
+						<ul class="list-disc list-inside space-y-1">
+							<li>Address both what students learn and how well they learn;</li>
+							<li>Are based both on the categories of knowledge and skills and on the achievement level descriptions given in the achievement chart;</li>
+							<li>Are varied in nature, administered over a period of time, and designed to provide opportunities for students to demonstrate the full range of their learning;</li>
+							<li>Are appropriate for the learning activities used, the purposes of instruction, and the needs and experiences of the students;</li>
+							<li>Are fair to all students;</li>
+							<li>Accommodate students with special education needs, consistent with the strategies outlined in their Individual Education Plan;</li>
+							<li>Accommodate the needs of students who are learning the language of instruction;</li>
+							<li>Ensure that each student is given clear directions for improvement;</li>
+							<li>Promote students’ ability to assess their own learning and to set specific goals;</li>
+							<li>Include the use of samples of students’ work that provide evidence of their achievement;</li>
+							<li>Are communicated clearly to students and parents at the beginning of the school year and at other appropriate points throughout the school year.</li>
+						</ul>
+
+						<p>The achievement chart for mathematics outlines four categories of knowledge and skills. They include; knowledge and understanding, thinking, communication and application. Teachers will ensure that student work is assessed and/or evaluated in a balanced manner with respect to the four categories, and that achievement of particular expectations is considered within the appropriate categories.</p>
+
+						<p>A final grade is recorded for this course, and a credit is granted and recorded for this course if the student’s grade is 50% or higher. The final grade for this MCR 3U course will be determined as follows:</p>
+
+						<p>❑ 70% of the grade will be based on evaluations conducted throughout the MCR3U course. This portion of the grade should reflect the student’s most consistent level of achievement throughout the course, although special consideration should be given to more recent evidence of achievement. The seventy percent will be distributed in the following achievement chart categories: 25% Knowledge and understanding, 25% application, 25% communication and 25% thinking.</p>
+
+						<p>❑ 30% Thirty percent of the grade will be based on a final evaluation in the form of an examination administered towards the end of the course and a summative project which students can work on throughout the course.</p>
+					</div>
+				</div>
+			</section>
 		)
 	},
 	{
@@ -2440,7 +2631,56 @@ export const courseDetails = [
 		category: 'Grade 9',
 		prerequisite: null,
 		description : (
-			<></>
+			<section className="space-y-6 mt-8 text-gray-700">
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">SNC1W COURSE DESCRIPTION</h2>
+					<div className="mt-2 space-y-2">
+						<p>
+							SNC1W online course enables students to develop their understanding of concepts related to biology, chemistry, physics, and Earth and space science, and to relate science to technology, society, and the environment. Throughout the SNC1W course, students will develop and refine their STEM skills as they use scientific research, scientific experimentation, and engineering design processes to investigate concepts and apply their SNC1W knowledge in situations that are relevant to their lives and communities. SNC1W students will continue to develop transferable skills as they become scientifically literate global citizens.
+						</p>
+						<p>
+							<a href="https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-science/courses/snc1w">
+								The Ontario Curriculum, Science (2022)
+							</a>
+						</p>
+						<p>
+							<strong>SNC1W Prerequisite: </strong> None
+						</p>
+					</div>
+				</div>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
+					<div class="text-gray-700 space-y-4">
+						<p>As summarized in <i>Growing Success 2010,</i> the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
+
+						<p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
+
+						<p>In order to ensure that assessment and evaluation are valid and reliable, and that they lead to the improvement of student learning, teachers must use assessment and evaluation strategies that:</p>
+
+						<ul class="list-disc list-inside space-y-1">
+							<li>Address both what students learn and how well they learn;</li>
+							<li>Are based both on the categories of knowledge and skills and on the achievement level descriptions given in the achievement chart;</li>
+							<li>Are varied in nature, administered over a period of time, and designed to provide opportunities for students to demonstrate the full range of their learning;</li>
+							<li>Are appropriate for the learning activities used, the purposes of instruction, and the needs and experiences of the students;</li>
+							<li>Are fair to all students;</li>
+							<li>Accommodate students with special education needs, consistent with the strategies outlined in their Individual Education Plan;</li>
+							<li>Accommodate the needs of students who are learning the language of instruction;</li>
+							<li>Ensure that each student is given clear directions for improvement;</li>
+							<li>Promote students’ ability to assess their own learning and to set specific goals;</li>
+							<li>Include the use of samples of students’ work that provide evidence of their achievement;</li>
+							<li>Are communicated clearly to students and parents at the beginning of the school year and at other appropriate points throughout the school year.</li>
+						</ul>
+
+						<p>The achievement chart for mathematics outlines four categories of knowledge and skills. They include; knowledge and understanding, thinking, communication and application. Teachers will ensure that student work is assessed and/or evaluated in a balanced manner with respect to the four categories, and that achievement of particular expectations is considered within the appropriate categories.</p>
+
+						<p>A final grade is recorded for this course, and a credit is granted and recorded for this course if the student’s grade is 50% or higher. The final grade for this MCR 3U course will be determined as follows:</p>
+
+						<p>❑ 70% of the grade will be based on evaluations conducted throughout the MCR3U course. This portion of the grade should reflect the student’s most consistent level of achievement throughout the course, although special consideration should be given to more recent evidence of achievement. The seventy percent will be distributed in the following achievement chart categories: 25% Knowledge and understanding, 25% application, 25% communication and 25% thinking.</p>
+
+						<p>❑ 30% Thirty percent of the grade will be based on a final evaluation in the form of an examination administered towards the end of the course and a summative project which students can work on throughout the course.</p>
+					</div>
+				</div>
+			</section>
 		)
 	},
 	{
@@ -2450,7 +2690,56 @@ export const courseDetails = [
 		category: 'Grade 9',
 		prerequisite: null,
 		description : (
-			<></>
+			<section className="space-y-6 mt-8 text-gray-700">
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">ENL1W COURSE DESCRIPTION</h2>
+					<div className="mt-2 space-y-2">
+						<p>
+							This course ENL1W enables students to continue to develop and consolidate the foundational knowledge and skills that they need for reading, writing, and oral and visual communication. Throughout the ENL1W course, students will continue to enhance their media literacy and critical literacy skills, and to develop and apply transferable skills, including digital literacy. Students in ENL1W will also make connections to their lived experiences and to society and increase their understanding of the importance of language and literacy across the curriculum.
+						</p>
+						<p>
+							<a href="https://www.dcp.edu.gov.on.ca/en/curriculum/secondary-english/courses/enl1w">
+								Ministry of Education Curriculum: English
+							</a>
+						</p>
+						<p>
+							<strong>ENL1W Prerequisite: </strong> None
+						</p>
+					</div>
+				</div>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
+					<div class="text-gray-700 space-y-4">
+						<p>As summarized in <i>Growing Success 2010,</i> the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
+
+						<p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
+
+						<p>In order to ensure that assessment and evaluation are valid and reliable, and that they lead to the improvement of student learning, teachers must use assessment and evaluation strategies that:</p>
+
+						<ul class="list-disc list-inside space-y-1">
+							<li>Address both what students learn and how well they learn;</li>
+							<li>Are based both on the categories of knowledge and skills and on the achievement level descriptions given in the achievement chart;</li>
+							<li>Are varied in nature, administered over a period of time, and designed to provide opportunities for students to demonstrate the full range of their learning;</li>
+							<li>Are appropriate for the learning activities used, the purposes of instruction, and the needs and experiences of the students;</li>
+							<li>Are fair to all students;</li>
+							<li>Accommodate students with special education needs, consistent with the strategies outlined in their Individual Education Plan;</li>
+							<li>Accommodate the needs of students who are learning the language of instruction;</li>
+							<li>Ensure that each student is given clear directions for improvement;</li>
+							<li>Promote students’ ability to assess their own learning and to set specific goals;</li>
+							<li>Include the use of samples of students’ work that provide evidence of their achievement;</li>
+							<li>Are communicated clearly to students and parents at the beginning of the school year and at other appropriate points throughout the school year.</li>
+						</ul>
+
+						<p>The achievement chart for mathematics outlines four categories of knowledge and skills. They include; knowledge and understanding, thinking, communication and application. Teachers will ensure that student work is assessed and/or evaluated in a balanced manner with respect to the four categories, and that achievement of particular expectations is considered within the appropriate categories.</p>
+
+						<p>A final grade is recorded for this course, and a credit is granted and recorded for this course if the student’s grade is 50% or higher. The final grade for this MCR 3U course will be determined as follows:</p>
+
+						<p>❑ 70% of the grade will be based on evaluations conducted throughout the MCR3U course. This portion of the grade should reflect the student’s most consistent level of achievement throughout the course, although special consideration should be given to more recent evidence of achievement. The seventy percent will be distributed in the following achievement chart categories: 25% Knowledge and understanding, 25% application, 25% communication and 25% thinking.</p>
+
+						<p>❑ 30% Thirty percent of the grade will be based on a final evaluation in the form of an examination administered towards the end of the course and a summative project which students can work on throughout the course.</p>
+					</div>
+				</div>
+			</section>
 		)
 	},
 	{
