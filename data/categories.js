@@ -462,228 +462,226 @@ export const courseDetails = [
 		prerequisite: null,
     description: (
 			<section className="space-y-4 mt-8">
-  <div>
-    <h2 className="text-xl font-semibold text-gray-800">MCV4U COURSE DETAILS</h2>
-    <ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
-      <li><strong>Course Type:</strong> University Preparation</li>
-      <li><strong>Credit:</strong> 1.0</li>
-      <li>
-        <strong>Ontario Curriculum:</strong>
-        <a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/math1112currb.pdf" className="text-blue-600">
-          Grade 12 Mathematics – Calculus & Vectors
-        </a>
-      </li>
-      <li>
-        <strong>MCV4U Prerequisite:</strong>
-        The <a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MHF4U-Grade12AdvancedFunction" className="text-blue-600">Advanced Functions course MHF4U</a> must be taken prior to or concurrently with Calculus and Vectors MCV4U.
-      </li>
-      <li>
-        <a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" className="text-blue-600">NCAA Approved Course</a>
-      </li>
-    </ul>
-  </div>
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">MCV4U COURSE DETAILS</h2>
+					<ul className="list-disc list-inside text-gray-700 mt-2 space-y-1">
+						<li><strong>Course Type:</strong> University Preparation</li>
+						<li><strong>Credit:</strong> 1.0</li>
+						<li>
+							<strong>Ontario Curriculum: </strong>
+							<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/math1112currb.pdf" className="text-blue-600">
+								Grade 12 Mathematics – Calculus & Vectors
+							</a>
+						</li>
+						<li>
+							<strong>MCV4U Prerequisite: </strong>
+							The <a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MHF4U-Grade12AdvancedFunction" className="text-blue-600">Advanced Functions course MHF4U</a> must be taken prior to or concurrently with Calculus and Vectors MCV4U.
+						</li>
+						<li>
+							<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" className="text-blue-600">NCAA Approved Course</a>
+						</li>
+					</ul>
+				</div>
 
-  <div>
-    <h2 className="text-xl font-semibold text-gray-800">COURSE DESCRIPTION FOR MCV4U</h2>
-    <p className="text-gray-700 mt-2">
-      MCV4U – Calculus and Vectors Grade 12 course builds on students’ previous experience with functions and their developing understanding of rates of change. Students in MCV4U will solve problems involving geometric and algebraic representations of vectors and representations of lines and planes in three-dimensional space; broaden their understanding of rates of change to include the derivatives of polynomial, sinusoidal, exponential, rational, and radical functions; and apply these concepts and skills to the modelling of real-world relationships. Students will also refine their use of the mathematical processes necessary for success in senior mathematics. This MCV4U course is intended for students who choose to pursue careers in fields such as science, engineering, economics, and some areas of business, including those students who will be required to take a university-level calculus, linear algebra, or physics course.
-    </p>
-  </div>
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">COURSE DESCRIPTION FOR MCV4U</h2>
+					<p className="text-gray-700 mt-2">
+						MCV4U – Calculus and Vectors Grade 12 course builds on students’ previous experience with functions and their developing understanding of rates of change. Students in MCV4U will solve problems involving geometric and algebraic representations of vectors and representations of lines and planes in three-dimensional space; broaden their understanding of rates of change to include the derivatives of polynomial, sinusoidal, exponential, rational, and radical functions; and apply these concepts and skills to the modelling of real-world relationships. Students will also refine their use of the mathematical processes necessary for success in senior mathematics. This MCV4U course is intended for students who choose to pursue careers in fields such as science, engineering, economics, and some areas of business, including those students who will be required to take a university-level calculus, linear algebra, or physics course.
+					</p>
+				</div>
 
-  <div>
-    <h2 className="text-xl font-semibold text-gray-800">MCV4U UNIT DESCRIPTIONS</h2>
-    <table className="table-auto text-gray-700 mt-2 w-full border border-gray-300">
-      <thead>
-        <tr className="bg-gray-100">
-          <th className="border px-4 py-2 text-left">Unit</th>
-          <th className="border px-4 py-2 text-left">Length</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr><td className="border px-4 py-2">Unit 1: Rate of Change and Limits</td><td className="border px-4 py-2">10 hours</td></tr>
-        <tr><td className="border px-4 py-2">Unit 2: Derivatives and their Applications</td><td className="border px-4 py-2">20 hours</td></tr>
-        <tr><td className="border px-4 py-2">Unit 3: Curve Sketching and Optimization</td><td className="border px-4 py-2">20 hours</td></tr>
-        <tr><td className="border px-4 py-2">Unit 4: Derivatives of Expo and Trigs</td><td className="border px-4 py-2">14 hours</td></tr>
-        <tr><td className="border px-4 py-2">Unit 5: Geometry and Algebra of Vectors</td><td className="border px-4 py-2">20 hours</td></tr>
-        <tr><td className="border px-4 py-2">Unit 6: Equations of Lines and Planes</td><td className="border px-4 py-2">20 hours</td></tr>
-        <tr><td className="border px-4 py-2">Culminating Project and Final Exam</td><td className="border px-4 py-2">6 hours</td></tr>
-      </tbody>
-      <tfoot>
-        <tr className="bg-gray-100">
-          <td className="border px-4 py-2 font-semibold">Total</td>
-          <td className="border px-4 py-2 font-semibold">110 hours</td>
-        </tr>
-      </tfoot>
-    </table>
+				<div>
+					<h2 className="text-xl font-semibold text-gray-800">MCV4U UNIT DESCRIPTIONS</h2>
+					<table className="table-auto text-gray-700 mt-2 w-full border border-gray-300">
+						<thead>
+							<tr className="bg-gray-100">
+								<th className="border px-4 py-2 text-left">Unit</th>
+								<th className="border px-4 py-2 text-left">Length</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr><td className="border px-4 py-2">Unit 1: Rate of Change and Limits</td><td className="border px-4 py-2">10 hours</td></tr>
+							<tr><td className="border px-4 py-2">Unit 2: Derivatives and their Applications</td><td className="border px-4 py-2">20 hours</td></tr>
+							<tr><td className="border px-4 py-2">Unit 3: Curve Sketching and Optimization</td><td className="border px-4 py-2">20 hours</td></tr>
+							<tr><td className="border px-4 py-2">Unit 4: Derivatives of Expo and Trigs</td><td className="border px-4 py-2">14 hours</td></tr>
+							<tr><td className="border px-4 py-2">Unit 5: Geometry and Algebra of Vectors</td><td className="border px-4 py-2">20 hours</td></tr>
+							<tr><td className="border px-4 py-2">Unit 6: Equations of Lines and Planes</td><td className="border px-4 py-2">20 hours</td></tr>
+							<tr><td className="border px-4 py-2">Culminating Project and Final Exam</td><td className="border px-4 py-2">6 hours</td></tr>
+						</tbody>
+						<tfoot>
+							<tr className="bg-gray-100">
+								<td className="border px-4 py-2 font-semibold">Total</td>
+								<td className="border px-4 py-2 font-semibold">110 hours</td>
+							</tr>
+						</tfoot>
+					</table>
 
-    <div className="text-gray-700 mt-4 space-y-2">
-      <p><strong>Unit 1 – Rate of Change:</strong> Students will demonstrate an understanding of rate of change by making connections between average rate of change over an interval and instantaneous rate of change at a point, using the slopes of secants and tangents and the concept of the limit. Students will learn about limit properties and continuous and discontinuous functions.</p>
-      
-      <p><strong>Unit 2 – Derivatives and their Applications:</strong> Students will graph the derivatives of polynomial functions and make connections between the numeric, graphical, and algebraic representations of a function and its derivative. Students will verify graphically and algebraically the rules for determining derivatives. They will further apply these rules to determine the derivatives of polynomial, rational and radical functions, and simple combinations of functions. Students will solve related problems.</p>
-      
-      <p><strong>Unit 3 – Curve Sketching and Optimization:</strong> Students will make connections, graphically and algebraically, between the key features of a function and its first and second derivatives and use the connections in curve sketching. Students will solve problems, including optimization problems, that require the use of the concepts and procedures associated with the derivative, including problems arising from real-world applications and involving the development of mathematical models.</p>
-      
-      <p><strong>Unit 4 – Derivatives of Exponential and Trigonometric Functions:</strong> Students will graph the derivatives of sinusoidal and exponential functions, and make connections between the numeric, graphical, and algebraic representations of a function and its derivative. Students will verify graphically and algebraically the rules for determining derivatives and apply these rules to determine the derivatives of sinusoidal and exponential functions, and simple combinations of functions. In addition, they will solve related problems.</p>
-      
-      <p><strong>Unit 5 – Geometry and Algebra of Vectors:</strong> Students will demonstrate an understanding of vectors in two-space and three-space by representing them algebraically and geometrically and by recognizing their applications in real world scenarios. In addition, students will perform operations on vectors in two-space and three-space and use the properties of these operations to solve problems, including those arising from real-world applications. Students will distinguish between the geometric representations of a single linear equation or a system of two linear equations in two-space and three-space and determine different geometric configurations of lines and planes in three-space. In addition, students will represent lines and planes using scalar, vector, and parametric equations, and solve problems involving distances and intersections of lines and planes.</p>
-    </div>
-  </div>
-			<section class="space-y-8 mt-8">
+					<div className="text-gray-700 mt-4 space-y-2">
+						<p><strong>Unit 1 – Rate of Change:</strong> Students will demonstrate an understanding of rate of change by making connections between average rate of change over an interval and instantaneous rate of change at a point, using the slopes of secants and tangents and the concept of the limit. Students will learn about limit properties and continuous and discontinuous functions.</p>
+						
+						<p><strong>Unit 2 – Derivatives and their Applications:</strong> Students will graph the derivatives of polynomial functions and make connections between the numeric, graphical, and algebraic representations of a function and its derivative. Students will verify graphically and algebraically the rules for determining derivatives. They will further apply these rules to determine the derivatives of polynomial, rational and radical functions, and simple combinations of functions. Students will solve related problems.</p>
+						
+						<p><strong>Unit 3 – Curve Sketching and Optimization:</strong> Students will make connections, graphically and algebraically, between the key features of a function and its first and second derivatives and use the connections in curve sketching. Students will solve problems, including optimization problems, that require the use of the concepts and procedures associated with the derivative, including problems arising from real-world applications and involving the development of mathematical models.</p>
+						
+						<p><strong>Unit 4 – Derivatives of Exponential and Trigonometric Functions:</strong> Students will graph the derivatives of sinusoidal and exponential functions, and make connections between the numeric, graphical, and algebraic representations of a function and its derivative. Students will verify graphically and algebraically the rules for determining derivatives and apply these rules to determine the derivatives of sinusoidal and exponential functions, and simple combinations of functions. In addition, they will solve related problems.</p>
+						
+						<p><strong>Unit 5 – Geometry and Algebra of Vectors:</strong> Students will demonstrate an understanding of vectors in two-space and three-space by representing them algebraically and geometrically and by recognizing their applications in real world scenarios. In addition, students will perform operations on vectors in two-space and three-space and use the properties of these operations to solve problems, including those arising from real-world applications. Students will distinguish between the geometric representations of a single linear equation or a system of two linear equations in two-space and three-space and determine different geometric configurations of lines and planes in three-space. In addition, students will represent lines and planes using scalar, vector, and parametric equations, and solve problems involving distances and intersections of lines and planes.</p>
+					</div>
+				</div>
+						<section class="space-y-8 mt-8">
 
-  <div>
-    <h4 class="text-lg font-semibold text-gray-800 mb-4">OVERALL CURRICULUM EXPECTATIONS</h4>
-    <div class="text-gray-700 space-y-4">
-      <p><strong>A. Rate of Change</strong><br />
-      By the end of this course, students will:<br />
-      ● Demonstrate an understanding of rate of change by making connections between average rate of change over<br />
-      an interval and instantaneous rate of change at a point, using the slopes of secants and tangents and the<br />
-      concept of the limit;<br />
-      ● Graph the derivatives of polynomial, sinusoidal, and exponential functions, and make connections between<br />
-      the numeric, graphical, and algebraic representations of a function and its derivative;<br />
-      ● Verify graphically and algebraically the rules for determining derivatives; apply these rules to determine the<br />
-      derivatives of polynomial, sinusoidal, exponential, rational, and radical functions, and simple combinations of<br />
-      functions; and solve related problems.</p>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 mb-4">OVERALL CURRICULUM EXPECTATIONS</h4>
+					<div class="text-gray-700 space-y-4">
+						<p><strong>A. Rate of Change</strong><br />
+						By the end of this course, students will:<br />
+						● Demonstrate an understanding of rate of change by making connections between average rate of change over<br />
+						an interval and instantaneous rate of change at a point, using the slopes of secants and tangents and the<br />
+						concept of the limit;<br />
+						● Graph the derivatives of polynomial, sinusoidal, and exponential functions, and make connections between<br />
+						the numeric, graphical, and algebraic representations of a function and its derivative;<br />
+						● Verify graphically and algebraically the rules for determining derivatives; apply these rules to determine the<br />
+						derivatives of polynomial, sinusoidal, exponential, rational, and radical functions, and simple combinations of<br />
+						functions; and solve related problems.</p>
 
-      <p><strong>B. Derivatives and Their Applications</strong><br />
-      By the end of this course, students will:<br />
-      ● Make connections, graphically and algebraically, between the key features of a function and its first and<br />
-      second derivatives, and use the connections in curve sketching;<br />
-      ● Solve problems, including optimization problems, that require the use of the concepts and procedures<br />
-      associated with the derivative, including problems arising from real-world applications and involving the<br />
-      development of mathematical models.</p>
+						<p><strong>B. Derivatives and Their Applications</strong><br />
+						By the end of this course, students will:<br />
+						● Make connections, graphically and algebraically, between the key features of a function and its first and<br />
+						second derivatives, and use the connections in curve sketching;<br />
+						● Solve problems, including optimization problems, that require the use of the concepts and procedures<br />
+						associated with the derivative, including problems arising from real-world applications and involving the<br />
+						development of mathematical models.</p>
 
-      <p><strong>C. Geometry and Algebra of Vectors</strong><br />
-      By the end of this course, students will:<br />
-      ● Demonstrate an understanding of vectors in two-space and three-space by representing them algebraically<br />
-      and geometrically and by recognizing their applications;<br />
-      ● Perform operations on vectors in two-space and three-space, and use the properties of these operations to<br />
-      solve problems, including those arising from real-world applications;<br />
-      ● Distinguish between the geometric representations of a single linear equation or a system of two linear<br />
-      equations in two-space and three-space, and determine different geometric configurations of lines and planes<br />
-      in three-space;<br />
-      ● Represent lines and planes using scalar, vector, and parametric equations, and solve problems involving<br />
-      distances and intersections.</p>
-    </div>
-  </div>
+						<p><strong>C. Geometry and Algebra of Vectors</strong><br />
+						By the end of this course, students will:<br />
+						● Demonstrate an understanding of vectors in two-space and three-space by representing them algebraically<br />
+						and geometrically and by recognizing their applications;<br />
+						● Perform operations on vectors in two-space and three-space, and use the properties of these operations to<br />
+						solve problems, including those arising from real-world applications;<br />
+						● Distinguish between the geometric representations of a single linear equation or a system of two linear<br />
+						equations in two-space and three-space, and determine different geometric configurations of lines and planes<br />
+						in three-space;<br />
+						● Represent lines and planes using scalar, vector, and parametric equations, and solve problems involving<br />
+						distances and intersections.</p>
+					</div>
+				</div>
 
-  <div>
-    <h4 class="text-lg font-semibold text-gray-800 my-2 mt-6">LEARNING &amp; TEACHING STRATEGIES FOR MCV4U</h4>
-    <div class="text-gray-700 space-y-4">
-      <p><strong>In this course, students will experience the following activities.</strong></p>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 my-2 mt-6">LEARNING &amp; TEACHING STRATEGIES FOR MCV4U</h4>
+					<div class="text-gray-700 space-y-4">
+						<p><strong>In this course, students will experience the following activities.</strong></p>
 
-      <p><strong>General:</strong></p>
+						<p><strong>General:</strong></p>
 
-      <p><strong>Presentations with embedded videos</strong> are utilized to outline concepts, explain theory with the use of<br />
-      examples and practice questions, and incorporate multi-media opportunities for students to learn more<br />
-      (e.g. online simulations, quizzes, etc.).</p>
+						<p><strong>Presentations with embedded videos</strong> are utilized to outline concepts, explain theory with the use of<br />
+						examples and practice questions, and incorporate multi-media opportunities for students to learn more<br />
+						(e.g. online simulations, quizzes, etc.).</p>
 
-      <p><strong>Reflection</strong> is an opportunity for students to look back at concepts and theories with new eyes, to relate<br />
-      theory to practice, and to align learning with their own values and beliefs.</p>
+						<p><strong>Reflection</strong> is an opportunity for students to look back at concepts and theories with new eyes, to relate<br />
+						theory to practice, and to align learning with their own values and beliefs.</p>
 
-      <p><strong>Discussions with the instructor</strong> are facilitated through video conferencing, discussing the concepts and<br />
-      skills being studied. This enables two-way communication between the student and the instructor, to share ideas and ask questions in dialogue. This also helps to build a relationship between the student and<br />
-      instructor.</p>
+						<p><strong>Discussions with the instructor</strong> are facilitated through video conferencing, discussing the concepts and<br />
+						skills being studied. This enables two-way communication between the student and the instructor, to share ideas and ask questions in dialogue. This also helps to build a relationship between the student and<br />
+						instructor.</p>
 
-      <p><strong>Instructor demonstrations</strong> (research skills, etc.) are opportunities for the instructor to lead a student<br />
-      through a concept or skill through video conferencing, videos, or emailing with the student.</p>
+						<p><strong>Instructor demonstrations</strong> (research skills, etc.) are opportunities for the instructor to lead a student<br />
+						through a concept or skill through video conferencing, videos, or emailing with the student.</p>
 
-      <p><strong>Discussion forums</strong> are an opportunity for students to summarize and share their ideas and perspectives<br />
-      with their peers, which deepens understanding through expression. It also provides an opportunity for<br />
-      peer-to-peer feedback.</p>
+						<p><strong>Discussion forums</strong> are an opportunity for students to summarize and share their ideas and perspectives<br />
+						with their peers, which deepens understanding through expression. It also provides an opportunity for<br />
+						peer-to-peer feedback.</p>
 
-      <p><strong>Practical extension and application</strong> of knowledge are integrated throughout the course. The goal is to help<br />
-      students make connections between what they learn in the classroom and how they understand and relate<br />
-      to the world around them and their own lives. Learning becomes a dynamic opportunity for students to be<br />
-      more aware that their learning is all around them and enable them to create more meaning in their lives.</p>
+						<p><strong>Practical extension and application</strong> of knowledge are integrated throughout the course. The goal is to help<br />
+						students make connections between what they learn in the classroom and how they understand and relate<br />
+						to the world around them and their own lives. Learning becomes a dynamic opportunity for students to be<br />
+						more aware that their learning is all around them and enable them to create more meaning in their lives.</p>
 
-      <p><strong>Individual activities/assignments</strong> assessments are completed individually at a student’s own pace and are<br />
-      intended to expand and consolidate the learning in each lesson. Individual activities allow the teacher to<br />
-      accommodate interests and needs and to assess the progress of individual students. For this reason,<br />
-      students are encouraged to discuss IEPs (Individual Education Plans) with their teacher and to ask to modify<br />
-      assessments if they have a unique interest that they feel could be pursued in the assessment. The teacher<br />
-      plays an important role in supporting these activities by providing ongoing feedback to students, both orally<br />
-      and in writing.</p>
+						<p><strong>Individual activities/assignments</strong> assessments are completed individually at a student’s own pace and are<br />
+						intended to expand and consolidate the learning in each lesson. Individual activities allow the teacher to<br />
+						accommodate interests and needs and to assess the progress of individual students. For this reason,<br />
+						students are encouraged to discuss IEPs (Individual Education Plans) with their teacher and to ask to modify<br />
+						assessments if they have a unique interest that they feel could be pursued in the assessment. The teacher<br />
+						plays an important role in supporting these activities by providing ongoing feedback to students, both orally<br />
+						and in writing.</p>
 
-      <p><strong>STEM:</strong></p>
+						<p><strong>STEM:</strong></p>
 
-      <p><strong>Virtual simulations</strong> are interactive websites that provide students with an opportunity to ask questions,<br />
-      explore hypotheses, relate variables, examine relationships, and make connections between theory and<br />
-      application in a safe environment that promotes intellectual risk taking and curiosity.</p>
+						<p><strong>Virtual simulations</strong> are interactive websites that provide students with an opportunity to ask questions,<br />
+						explore hypotheses, relate variables, examine relationships, and make connections between theory and<br />
+						application in a safe environment that promotes intellectual risk taking and curiosity.</p>
 
-      <p><strong>Virtual labs</strong> are interactive websites that provide students with an opportunity to follow a procedure to test<br />
-      hypotheses using scientific apparatus, gather and record observations, analyze observations using formula<br />
-      and relevant theory/concepts, and then formulate conclusions that relate hypotheses to analysis.</p>
+						<p><strong>Virtual labs</strong> are interactive websites that provide students with an opportunity to follow a procedure to test<br />
+						hypotheses using scientific apparatus, gather and record observations, analyze observations using formula<br />
+						and relevant theory/concepts, and then formulate conclusions that relate hypotheses to analysis.</p>
 
-      <p><strong>Diagrams</strong> are visual representations of scientific ideas and concepts. They provide another perspective to<br />
-      organize ideas. Visuals are thought to promote cognitive plasticity – meaning, they can help us change our<br />
-      minds or help us to remember an idea.</p>
+						<p><strong>Diagrams</strong> are visual representations of scientific ideas and concepts. They provide another perspective to<br />
+						organize ideas. Visuals are thought to promote cognitive plasticity – meaning, they can help us change our<br />
+						minds or help us to remember an idea.</p>
 
-      <p><strong>Graphics/images</strong> are visual representations of ideas/concepts. Visuals are thought to promote cognitive<br />
-      plasticity – meaning, they can help us change our minds or help us to remember an idea.</p>
+						<p><strong>Graphics/images</strong> are visual representations of ideas/concepts. Visuals are thought to promote cognitive<br />
+						plasticity – meaning, they can help us change our minds or help us to remember an idea.</p>
 
-      <p><strong>Charts</strong> are visual representations of scientific ideas and concepts using math that support analysis.</p>
+						<p><strong>Charts</strong> are visual representations of scientific ideas and concepts using math that support analysis.</p>
 
-      <p><strong>Tables</strong> involve organizing information in terms of categories (rows and columns). This helps us to<br />
-      understand the relationships between ideas and data, as well as highlight trends.</p>
+						<p><strong>Tables</strong> involve organizing information in terms of categories (rows and columns). This helps us to<br />
+						understand the relationships between ideas and data, as well as highlight trends.</p>
 
-      <p><strong>Practice problems</strong> provide students with a scenario/problem to solve by applying concepts and skills<br />
-      learned in a context. This helps students to understand the relevance of their learning.</p>
+						<p><strong>Practice problems</strong> provide students with a scenario/problem to solve by applying concepts and skills<br />
+						learned in a context. This helps students to understand the relevance of their learning.</p>
 
-      <p><strong>Design projects</strong> are an opportunity for students to put their learning to the test in a real-world scenario, to<br />
-      address a design problem with a direct connection to people, the environment, economics, etc. Students<br />
-      collect information, apply problem solving, and use critical thinking to develop practical solutions that<br />
-      directly address their design problems.</p>
-    </div>
-  </div>
+						<p><strong>Design projects</strong> are an opportunity for students to put their learning to the test in a real-world scenario, to<br />
+						address a design problem with a direct connection to people, the environment, economics, etc. Students<br />
+						collect information, apply problem solving, and use critical thinking to develop practical solutions that<br />
+						directly address their design problems.</p>
+					</div>
+				</div>
 
-  <div>
-    <h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
-    <div class="text-gray-700 space-y-4">
-      <p>As summarized in <i><a href="https://www.edu.gov.on.ca/eng/policyfunding/growsuccess.pdf" class="text-blue-600" target="_blank" rel="noopener noreferrer">Growing Success</a> 2010</i>, the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
+				<div>
+					<h4 class="text-lg font-semibold text-gray-800 mb-2 mt-6">ASSESSMENT &amp; EVALUATION FOR STUDENT ACHIEVEMENT</h4>
+					<div class="text-gray-700 space-y-4">
+						<p>As summarized in <i><a href="https://www.edu.gov.on.ca/eng/policyfunding/growsuccess.pdf" class="text-blue-600" target="_blank" rel="noopener noreferrer">Growing Success</a> 2010</i>, the primary purpose of assessment and evaluation is to improve student learning. Information gathered through assessment helps teachers to determine students’ strengths and weaknesses in their achievement of the curriculum expectations in each course. This information also serves to guide teachers in adapting curriculum and instructional approaches to students’ needs and in assessing the overall effectiveness of programs and classroom practices. As part of assessment, teachers provide students with descriptive feedback that guides their efforts towards improvement.</p>
 
-      <p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
+						<p>Evaluation refers to the process of judging the quality of student work on the basis of established criteria, and assigning a value to represent that quality. All curriculum expectations must be accounted for in instruction, but evaluation focuses on students’ achievement of the overall expectations. A students’ achievement of the overall expectations is evaluated on the basis of his or her achievement of related specific expectations. Teachers will use their professional judgement to determine which specific expectations should be used to evaluate achievement of overall expectations, and which ones will be covered in instruction and assessment but not necessarily evaluated.</p>
 
-      <p>In order to ensure that assessment and evaluation are valid and reliable, and that they lead to the improvement of student learning, teachers must use assessment and evaluation strategies that:</p>
+						<p>In order to ensure that assessment and evaluation are valid and reliable, and that they lead to the improvement of student learning, teachers must use assessment and evaluation strategies that:</p>
 
-      <ul class="list-disc list-inside space-y-1">
-        <li>Address both what students learn and how well they learn;</li>
-        <li>Are based both on the categories of knowledge and skills and on the achievement level descriptions given in the achievement chart;</li>
-        <li>Are varied in nature, administered over a period of time, and designed to provide opportunities for students to demonstrate the full range of their learning;</li>
-        <li>Are appropriate for the learning activities used, the purposes of instruction, and the needs and experiences of the students;</li>
-        <li>Are fair to all students;</li>
-        <li>Accommodate students with special education needs, consistent with the strategies outlined in their Individual Education Plan;</li>
-        <li>Accommodate the needs of students who are learning the language of instruction;</li>
-        <li>Ensure that each student is given clear directions for improvement;</li>
-        <li>Promote students’ ability to assess their own learning and to set specific goals;</li>
-        <li>Include the use of samples of students’ work that provide evidence of their achievement;</li>
-        <li>Are communicated clearly to students and parents at the beginning of the school year and at other appropriate points throughout the school year.</li>
-      </ul>
+						<ul class="list-disc list-inside space-y-1">
+							<li>Address both what students learn and how well they learn;</li>
+							<li>Are based both on the categories of knowledge and skills and on the achievement level descriptions given in the achievement chart;</li>
+							<li>Are varied in nature, administered over a period of time, and designed to provide opportunities for students to demonstrate the full range of their learning;</li>
+							<li>Are appropriate for the learning activities used, the purposes of instruction, and the needs and experiences of the students;</li>
+							<li>Are fair to all students;</li>
+							<li>Accommodate students with special education needs, consistent with the strategies outlined in their Individual Education Plan;</li>
+							<li>Accommodate the needs of students who are learning the language of instruction;</li>
+							<li>Ensure that each student is given clear directions for improvement;</li>
+							<li>Promote students’ ability to assess their own learning and to set specific goals;</li>
+							<li>Include the use of samples of students’ work that provide evidence of their achievement;</li>
+							<li>Are communicated clearly to students and parents at the beginning of the school year and at other appropriate points throughout the school year.</li>
+						</ul>
 
-      <p>The final grade will be determined as follows:</p>
+						<p>The final grade will be determined as follows:</p>
 
-      <p>❑ 70% of the grade will be based on evaluation conducted throughout the course. This<br />
-      portion of the grade should reflect the student’s most consistent level of achievement<br />
-      throughout the course, although special consideration will be given to more recent<br />
-      evidence of achievement.</p>
+						<p>❑ 70% of the grade will be based on evaluation conducted throughout the course. This<br />
+						portion of the grade should reflect the student’s most consistent level of achievement<br />
+						throughout the course, although special consideration will be given to more recent<br />
+						evidence of achievement.</p>
 
-      <p>❑ 30% of the grade will be based on a final evaluation administered at or towards the end of<br />
-      the course. This evaluation will be based on evidence from one or a combination of the<br />
-      following: an examination, a performance, and/or another method of evaluation suitable to<br />
-      the course content. The final evaluation allows the student an opportunity to demonstrate<br />
-      comprehensive achievement of the overall expectations for the course.</p>
+						<p>❑ 30% of the grade will be based on a final evaluation administered at or towards the end of<br />
+						the course. This evaluation will be based on evidence from one or a combination of the<br />
+						following: an examination, a performance, and/or another method of evaluation suitable to<br />
+						the course content. The final evaluation allows the student an opportunity to demonstrate<br />
+						comprehensive achievement of the overall expectations for the course.</p>
 
-      <p>(<a href="https://www.edu.gov.on.ca/eng/policyfunding/growsuccess.pdf" class="text-blue-600" target="_blank" rel="noopener noreferrer">Growing Success: Assessment, Evaluation and Reporting in Ontario Schools</a>. Ontario<br />
-      Ministry of Education Publication, 2010 p.41)</p>
-    </div>
-  </div>
-
+						<p>(<a href="https://www.edu.gov.on.ca/eng/policyfunding/growsuccess.pdf" class="text-blue-600" target="_blank" rel="noopener noreferrer">Growing Success: Assessment, Evaluation and Reporting in Ontario Schools</a>. Ontario<br />
+						Ministry of Education Publication, 2010 p.41)</p>
+					</div>
+				</div>
 </section>
 
 			
 
 
-</section>
-
+			</section>
     ),
   },
 	{
@@ -853,9 +851,9 @@ export const courseDetails = [
 						<a href="http://www.edu.gov.on.ca/eng/curriculum/secondary/math1112currb.pdf" class="text-blue-600">Grade 12 Mathematics – Data Management</a>
 					</li>
 					<li>
-						<strong>MDM4U Prerequisite:</strong>
-						<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MCR3U-Grade11Function" class="text-blue-600">MCR3U – Grade 11 Functions</a> or
-						<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MCF3M-Grade11FunctionsandApplications" class="text-blue-600">MCF3M – Grade 11 Functions and Applications</a>
+						<strong>MDM4U Prerequisite: </strong>
+						<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MCR3U-Grade11Function" class="text-blue-600">MCR3U – Grade 11 Functions </a> or 
+						<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MCF3M-Grade11FunctionsandApplications" class="text-blue-600"> MCF3M – Grade 11 Functions and Applications</a>
 					</li>
 					<li>
 						<a href="https://s3.amazonaws.com/fs.ncaa.org/Docs/eligibility_center/International_Information/Guide/Countries/CanadaOntario.pdf" class="text-blue-600">NCAA Approved Course</a>
@@ -1005,7 +1003,7 @@ export const courseDetails = [
 					Ministry of Education Publication, 2010 p.41)</p>
 				</div>
 			</div>
-		</section>
+			</section>
 
     ),
   },
@@ -1478,7 +1476,7 @@ export const courseDetails = [
 							</a>
 						</p>
 						<p>
-							<strong>SBI4U Prerequisite:</strong> 
+							<strong>SBI4U Prerequisite: </strong> 
 							<a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/SBI3U-Grade11Biology" className="text-blue-600">SBI3U &#8211; Grade 11 Biology</a>
 						</p>
 						<p>
@@ -2252,7 +2250,9 @@ export const courseDetails = [
 							</a>
 						</p>
 						<p>
-							<strong>BMI3C Prerequisite: </strong> Grade 10 English, Academic
+							<strong>ENG3U Prerequisite: </strong> <a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/ENG2D-Grade10English" className="text-blue-600">
+								Grade 10 English, Academic
+							</a>
 						</p>
 					</div>
 				</div>
@@ -2311,7 +2311,7 @@ export const courseDetails = [
 							</a>
 						</p>
 						<p>
-							<strong>BAF3M Prerequisite: </strong> Principles of Mathematics, Grade 10
+							<strong>MCF3M Prerequisite: </strong> Principles of Mathematics, Grade 10
 						</p>
 					</div>
 				</div>
@@ -2430,7 +2430,9 @@ export const courseDetails = [
 							</a>
 						</p>
 						<p>
-							<strong>MPM2D Prerequisite: </strong> MTH1W, Mathematics, Grade 9, De-Streamed
+							<strong>MPM2D Prerequisite: </strong> <a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/MTH1W-Grade9Math" className="text-blue-600">
+								MiMTH1W, Mathematics, Grade 9, De-Streamed
+							</a>
 						</p>
 					</div>
 				</div>
@@ -2489,7 +2491,9 @@ export const courseDetails = [
 							</a>
 						</p>
 						<p>
-							<strong>ENG2D Prerequisite: </strong> ENL1W, English, Grade 9
+							<strong>ENG2D Prerequisite: </strong> <a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/ENL1W-Grade9English" className="text-blue-600">
+								ENL1W, English, Grade 9
+							</a>
 						</p>
 					</div>
 				</div>
@@ -2620,7 +2624,9 @@ export const courseDetails = [
 							</a>
 						</p>
 						<p>
-							<strong>SNC2D Prerequisite: </strong> SNC1W, Science, 9
+							<strong>SNC2D Prerequisite: </strong> <a href="https://www.academyofsinc.ca/credit-course-ossd/available-courses/SNC1W-Grade9Science" className="text-blue-600">
+								SNC1W, Science, 9
+							</a>
 						</p>
 					</div>
 				</div>
@@ -2819,7 +2825,7 @@ export const courseDetails = [
 					<h2 className="text-xl font-semibold text-gray-800">BEM10 COURSE DESCRIPTION</h2>
 					<div className="mt-2 space-y-2">
 						<p>
-							BEM1O course introduces students to information and communication technology in a business environment and builds a foundation of digital literacy skills necessary for success in a technologically driven society. Students in BEM1O will develop word processing, spreadsheet, database, desktop publishing, presentation software, and website design skills. Throughout the BEM1O course, there is an emphasis on digital literacy, effective electronic research and communication skills, and current issues related to the impact of information and communication technology.
+							BEM10 course introduces students to information and communication technology in a business environment and builds a foundation of digital literacy skills necessary for success in a technologically driven society. Students in BEM10 will develop word processing, spreadsheet, database, desktop publishing, presentation software, and website design skills. Throughout the BEM10 course, there is an emphasis on digital literacy, effective electronic research and communication skills, and current issues related to the impact of information and communication technology.
 						</p>
 						<p>
 							This credit will fulfil the compulsory <a href="https://www.ontario.ca/page/high-school-graduation-requirements" className="text-blue-600">STEM–related course group</a> requirement for students entering Grade 9 in 2024 for the Ontario Secondary School Diploma.
