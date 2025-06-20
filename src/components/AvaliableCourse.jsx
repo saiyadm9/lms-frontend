@@ -1,5 +1,5 @@
 'use client'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -7,6 +7,8 @@ import { getCourses } from '@/redux/slices/courseSlice'
 
 const AvaliableCourse = () => {
   const dispatch = useDispatch()
+	const [categoryFilter, setCategoryFilter] = useState('') // '' means All
+	const categories = ['All', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'];
   const {
     data: courses,
     loading,
@@ -19,8 +21,32 @@ const AvaliableCourse = () => {
     }
   }, [dispatch, courses])
 
+	const filteredCourses =
+    categoryFilter === ''
+      ? courses
+      : courses.filter((course) => course.category === categoryFilter)
+
   return (
-    <div>
+    <div className='space-y-6'>
+			<div className='flex flex-wrap justify-center gap-3'>
+				{categories.map((category) => {
+					const isActive = categoryFilter === category || (category === 'All' && categoryFilter === '');
+					return (
+						<button
+							key={category}
+							onClick={() => setCategoryFilter(category === 'All' ? '' : category)}
+							className={`px-4 py-2 rounded-md border font-semibold transition-all ${
+								isActive
+									? 'bg-blue-600 text-white'
+									: 'bg-white text-gray-800 hover:bg-blue-100'
+							}`}
+						>
+							{category}
+						</button>
+					);
+				})}
+			</div>
+
       {loading ? (
         <p className='text-center text-gray-600'>Loading courses...</p>
       ) : error ? (
@@ -31,7 +57,7 @@ const AvaliableCourse = () => {
         </p>
       ) : (
         <div className='grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6'>
-          {courses.map((course) => (
+          {filteredCourses.map((course) => (
             <div
               key={course._id}
               className='bg-white shadow-lg rounded-xl overflow-hidden hover:shadow-xl transition-transform transform hover:scale-[1.03] h-full flex flex-col'

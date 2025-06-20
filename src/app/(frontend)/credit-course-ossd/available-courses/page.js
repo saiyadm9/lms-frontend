@@ -10,8 +10,8 @@ const AvailableCourses = () => {
     <div>
       <section className='bg-[#fcfcfc]  px-10'>
         <div className='container mx-auto'>
-          <h1 className='text-4xl font-bold my-6 text-center py-12 '>
-            Available All Courses
+          <h1 className='text-4xl font-bold text-center py-12'>
+            All Available Courses
           </h1>
           <AvaliableCourse />
         </div>

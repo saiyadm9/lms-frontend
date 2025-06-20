@@ -1,3 +1,82 @@
+const renderMenuItems = (items, isMobile = false, depth = 0) => {
+	return items.map((item) => (
+		<MenuItem
+			key={item.href}
+			item={item}
+			isMobile={isMobile}
+			depth={depth}
+		/>
+	));
+};
+
+// Separate MenuItem component to handle hover state
+const MenuItem = ({ item, isMobile, depth }) => {
+	const [isOpen, setIsOpen] = useState(false);
+
+	if (isMobile) {
+		return (
+			<li key={item.href}>
+				<Link
+					href={item.href}
+					className="hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f]"
+					onClick={() => {
+						setIsOpen(false); // close dropdown on click
+					}}
+				>
+					{item.name}
+				</Link>
+				{item.subItems && (
+					<ul className="p-2">
+						{renderMenuItems(item.subItems, isMobile, depth + 1)}
+					</ul>
+				)}
+			</li>
+		);
+	}
+
+	return (
+		<li
+			className="relative group"
+			onMouseEnter={() => setIsOpen(true)}
+			onMouseLeave={() => setIsOpen(false)}
+		>
+			<Link
+				href={item.href}
+				className={`flex items-center gap-1 px-3 py-2 hover:text-red-500 focus:text-red-500 focus:bg-[#f8f8f81f] ${
+					depth > 0 ? "justify-between w-full" : ""
+				}`}
+			>
+				{item.name}
+				{item.subItems && (
+					<FaAngleDown
+						className={`transition-transform duration-300 ${
+							isOpen ? "rotate-180" : ""
+						}`}
+					/>
+				)}
+			</Link>
+
+			{item.subItems && (
+				<ul
+					className={`absolute z-50 min-w-[11rem] bg-white shadow-lg rounded-md text-black p-2 transition-all duration-200 ${
+						isOpen ? "block" : "hidden"
+					} ${depth === 0 ? "top-full left-0" : "top-0 left-full ml-0"}`}
+				>
+					{renderMenuItems(item.subItems, false, depth + 1)}
+				</ul>
+			)}
+		</li>
+	);
+};
+
+
+
+
+
+
+
+
+
 {/* Default Content (Assessment & Evaluation) */}
 				// <section className='space-y-4 mt-8'>
         //   <h2 className='text-2xl font-semibold'>
