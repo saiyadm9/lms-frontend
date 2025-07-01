@@ -148,14 +148,14 @@ const localCourses = [
 	},
 	{
 		_id: '22',
-		name: 'MHM2P - Grade 10 Foundations of Mathematics',
-		course_code: 'MHM2P',
+		name: 'MFM2P - Grade 10 Foundations of Mathematics',
+		course_code: 'MFM2P',
 		category: 'Grade 10',
 		imgUrl: '/images/mathematical-functions-equations-graphing.jpg',
 	},
 	{
 		_id: '23',
-		name: 'TGJ2O - Grade 10 Communications Technology 10',
+		name: 'TGJ2O - Grade 10 Communications Technology',
 		course_code: 'TGJ2O',
 		category: 'Grade 10',
 		imgUrl: '/images/communications-technology-media.jpg',
@@ -169,8 +169,8 @@ const localCourses = [
 	},
 	{
 		_id: '25',
-		name: 'GLS20 - Grade 10 Learning Strategies 2',
-		course_code: 'GLS20',
+		name: 'GLC20 - Grade 10 Career Studies',
+		course_code: 'GLC20',
 		category: 'Grade 10',
 		imgUrl: '/images/teaching-student.jpg',
 	},
@@ -197,8 +197,8 @@ const localCourses = [
 	},
 	{
 		_id: '29',
-		name: 'BBI101 - Grade 9 Introduction to Business',
-		course_code: 'BBI101',
+		name: 'BBI10 - Grade 9 Introduction to Business',
+		course_code: 'BBI10',
 		category: 'Grade 9',
 		imgUrl: '/images/studying-together.jpg',
 	},
@@ -218,7 +218,7 @@ const localCourses = [
 	},
 	{
 		_id: '32',
-		name: 'TAS10 - Grade 9 Computer Technology',
+		name: 'TAS10 - Grade 9 Technology and the Skilled Trades',
 		course_code: 'TAS10',
 		category: 'Grade 9',
 		imgUrl: '/images/Computer-Technology2.jpg',
@@ -232,7 +232,7 @@ const localCourses = [
 	},
 	{
 		_id: '34',
-		name: 'TGJ10 - Grade 9 Communications Technology 9',
+		name: 'TGJ10 - Grade 9 Communications Technology',
 		course_code: 'TGJ10',
 		category: 'Grade 9',
 		imgUrl: '/images/communications-technology-media.jpg',

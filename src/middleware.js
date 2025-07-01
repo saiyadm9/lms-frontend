@@ -6,7 +6,7 @@ const logoutProtectedRoutes = ["/profile"];
 const adminRoutes = ["/admin"];
 
 export async function middleware(req) {
-  const cookieStore = cookies();
+  const cookieStore = await cookies();
   const token = cookieStore.get("access_token")?.value;
   const path = req.nextUrl.pathname;
 
