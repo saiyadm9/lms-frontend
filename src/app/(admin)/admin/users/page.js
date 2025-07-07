@@ -1,5 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
+import { Pencil, Save, X, UserPlus } from "lucide-react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import Head from "next/head";
@@ -10,31 +11,29 @@ export default function UsersPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [courses, setCourses] = useState([]);
-  const [assignedCourses, setAssignedCourses] = useState([]);
   const [selectedUser, setSelectedUser] = useState(null);
   const [selectedUserCourses, setSelectedUserCourses] = useState([]);
-  const [selectedUserLinks, setSelectedUserLinks] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isLinkModalOpen, setIsLinkModalOpen] = useState(false);
-  const [searchTerm, setSearchTerm] = useState("");
+
+  const [newStudentModalOpen, setNewStudentModalOpen] = useState(false);
+  const [newStudent, setNewStudent] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    address: "",
+  });
+  const [adding, setAdding] = useState(false);
 
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const usersRes = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/users`,
-          { withCredentials: true }
-        );
+        const usersRes = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/users`, { withCredentials: true });
         setUsers(usersRes.data);
 
-        const assignedRes = await axios.get(
-          `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/getassigned-courses`,
-          { withCredentials: true }
-        );
-        setAssignedCourses(assignedRes.data.assignedCourses);
+        const coursesRes = await axios.get(`${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/getcourses`, { withCredentials: true });
+        setCourses(coursesRes.data);
       } catch (err) {
-        console.error(err);
-        setError("Failed to load users or assigned courses");
+        setError("Failed to load users or courses");
       } finally {
         setLoading(false);
       }
@@ -43,329 +42,332 @@ export default function UsersPage() {
     fetchData();
   }, []);
 
-  const openCourseModal = async (user) => {
-    setSelectedUser(user);
-    const userAssigned = assignedCourses.find(
-      (item) => item.user._id === user._id
-    );
-    setSelectedUserCourses(
-      userAssigned ? userAssigned.courses.map((c) => c._id) : []
-    );
-    setIsModalOpen(true);
-
+  const handleAddStudent = async () => {
     try {
-      const res = await axios.get(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/getcourses`,
+      setAdding(true);
+      const { data } = await axios.post(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/auth/register`,
+        { ...newStudent },
         { withCredentials: true }
       );
-      setCourses(res.data);
+
+      setUsers(prev => [...prev, data.user || data]); // Adjust based on your backend return
+      toast.success("Student added");
+      setNewStudent({ name: "", email: "", phone: "", address: "" });
+      setNewStudentModalOpen(false);
     } catch (err) {
-      toast.error("Failed to load courses");
+      toast.error(err?.response?.data?.message || "Failed to add student");
+    } finally {
+      setAdding(false);
     }
   };
 
-  const openClassroomModal = (user) => {
-    setSelectedUser(user);
-    setSelectedUserLinks(user.classroomLinks || []);
-    setIsLinkModalOpen(true);
+  const openEditModal = (user) => {
+    setSelectedUser({ ...user, editingPhone: false, editingAddress: false });
+    setSelectedUserCourses(user.courses || []);
+    setIsModalOpen(true);
   };
 
-  const handleCourseSelection = (courseId) => {
-    setSelectedUserCourses((prevCourses) =>
-      prevCourses.includes(courseId)
-        ? prevCourses.filter((id) => id !== courseId)
-        : [...prevCourses, courseId]
-    );
+  const handleCourseChange = (index, field, value) => {
+    const updated = [...selectedUserCourses];
+    updated[index][field] = value;
+    setSelectedUserCourses(updated);
   };
 
-  const handleSaveCourses = async () => {
+  const handleLinkChange = (courseIndex, linkIndex, value) => {
+    const updated = [...selectedUserCourses];
+    updated[courseIndex].links[linkIndex] = value;
+    setSelectedUserCourses(updated);
+  };
+
+  const addCourse = () => {
+    setSelectedUserCourses([...selectedUserCourses, { courseId: "", courseName: "", links: [] }]);
+  };
+
+  const removeCourse = (index) => {
+    const updated = [...selectedUserCourses];
+    updated.splice(index, 1);
+    setSelectedUserCourses(updated);
+  };
+
+  const addLink = (index) => {
+    const updated = [...selectedUserCourses];
+    updated[index].links.push("");
+    setSelectedUserCourses(updated);
+  };
+
+  const removeLink = (courseIndex, linkIndex) => {
+    const updated = [...selectedUserCourses];
+    updated[courseIndex].links.splice(linkIndex, 1);
+    setSelectedUserCourses(updated);
+  };
+
+  const handleSave = async () => {
     try {
-      await axios.put(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/users/${selectedUser._id}/courses`,
-        { courses: selectedUserCourses },
-        { withCredentials: true }
-      );
+      await axios.put(`${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/users/${selectedUser._id}`, {
+        courses: selectedUserCourses,
+        phone: selectedUser.phone,
+        address: selectedUser.address,
+      }, { withCredentials: true });
 
-      const updatedCourses = courses.filter((course) =>
-        selectedUserCourses.includes(course._id)
+      toast.success("User updated successfully");
+      const updatedUsers = users.map((user) =>
+        user._id === selectedUser._id
+          ? { ...user, courses: selectedUserCourses, phone: selectedUser.phone, address: selectedUser.address }
+          : user
       );
-
-      setAssignedCourses((prev) =>
-        prev.map((item) =>
-          item.user._id === selectedUser._id
-            ? { ...item, courses: updatedCourses }
-            : item
-        )
-      );
-
-      toast.success("Courses updated successfully");
+      setUsers(updatedUsers);
       setIsModalOpen(false);
     } catch (err) {
-      toast.error("Failed to update courses");
+      toast.error("Failed to update user");
     }
   };
-
-  const handleSaveLinks = async () => {
-    try {
-      await axios.put(
-        `${process.env.NEXT_PUBLIC_API_BASE_URL}/admin/users/${selectedUser._id}/classroom-links`,
-        { links: selectedUserLinks },
-        { withCredentials: true }
-      );
-
-      setUsers((prev) =>
-        prev.map((u) =>
-          u._id === selectedUser._id
-            ? { ...u, classroomLinks: selectedUserLinks }
-            : u
-        )
-      );
-
-      toast.success("Classroom links updated");
-      setIsLinkModalOpen(false);
-    } catch (err) {
-      toast.error("Failed to update links");
-    }
-  };
-
-  const handleLinkChange = (index, value) => {
-    const updated = [...selectedUserLinks];
-    updated[index] = value;
-    setSelectedUserLinks(updated);
-  };
-
-  const addNewLinkField = () => {
-    setSelectedUserLinks([...selectedUserLinks, ""]);
-  };
-
-  const removeLinkField = (index) => {
-    const updated = [...selectedUserLinks];
-    updated.splice(index, 1);
-    setSelectedUserLinks(updated);
-  };
-
-  const filteredCourses = courses.filter(
-    (course) =>
-      course.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-      course.category.toLowerCase().includes(searchTerm.toLowerCase())
-  );
 
   if (loading) return <p className="text-center mt-5">Loading users...</p>;
   if (error) return <p className="text-red-500 text-center">{error}</p>;
 
   return (
     <>
-      <Head>
-        <meta name="robots" content="noindex, nofollow" />
-      </Head>
+      <Head><meta name="robots" content="noindex, nofollow" /></Head>
       <div className="p-6">
         <Toaster position="top-right" />
         <div className="bg-white shadow-lg rounded-lg p-6">
           <div className="flex justify-between items-center mb-4">
-            <h1 className="text-2xl font-semibold">
-              Users and Course Management
-            </h1>
-            <Link href="/admin/register" className="btn btn-warning px-5">
-              Add new Student
-            </Link>
+            <h1 className="text-2xl font-semibold">Users and Course Management</h1>
+            <button onClick={() => setNewStudentModalOpen(true)} className="btn btn-warning flex gap-2 items-center">
+              <UserPlus size={18} /> Add new Student
+            </button>
           </div>
-          <div className="overflow-x-auto">
-            <table className="table w-full border rounded-lg">
-              <thead className="bg-gray-200">
-                <tr>
-                  <th className="p-3">Name</th>
-                  <th className="p-3">Email</th>
-                  <th className="p-3">Role</th>
-                  <th className="p-3">Course Count</th>
-                  <th className="p-3">Assigned Courses</th>
-                  <th className="p-3">Classroom Links</th>
+
+          <table className="table w-full border rounded-lg">
+            <thead className="bg-gray-200">
+              <tr>
+                <th className="p-3 text-left">Name</th>
+                <th className="p-3 text-left">Assigned Courses</th>
+                <th className="p-3 text-left">Edit</th>
+              </tr>
+            </thead>
+            <tbody>
+              {users.map((user) => (
+                <tr key={user._id} className="hover align-top">
+                  <td className="p-3">{user.name}</td>
+                  <td className="p-3">
+                    {user.courses?.length > 0 ? (
+                      <div className="flex flex-wrap gap-2">
+                        {user.courses.map((course, idx) => (
+                          <span key={idx} className="bg-gray-100 text-gray-800 px-2 py-1 rounded text-sm">
+                            {course.courseName}
+                          </span>
+                        ))}
+                      </div>
+                    ) : (
+                      <span className="text-gray-500">No courses assigned</span>
+                    )}
+                  </td>
+                  <td className="p-3">
+                    <button className="btn btn-sm btn-info" onClick={() => openEditModal(user)}>
+                      Edit
+                    </button>
+                  </td>
                 </tr>
-              </thead>
-              <tbody>
-                {users.map((user) => {
-                  const userAssigned = assignedCourses.find(
-                    (item) => item.user._id === user._id
-                  );
-                  return (
-                    <tr key={user._id} className="hover">
-                      <td className="p-3">{user.name}</td>
-                      <td
-                        className="p-3 text-blue-600 hover:underline cursor-pointer"
-                        onClick={() => openClassroomModal(user)}
-                      >
-                        {user.email}
-                      </td>
-                      <td className="p-3">{user.role}</td>
-                      <td className="p-3">
-                        {user.role === "admin" ? null : (
-                          <button
-                            onClick={() => openCourseModal(user)}
-                            className="btn btn-sm btn-outline btn-info"
-                          >
-                            {userAssigned?.courses?.length || 0}
-                          </button>
-                        )}
-                      </td>
-                      <td>
-                        <div className="text-sm space-y-1">
-                          {user.role === "admin" ? null : userAssigned?.courses
-                              ?.length > 0 ? (
-                            userAssigned?.courses.map((course) => (
-                              <span
-                                key={course._id}
-                                className="inline-block bg-gray-100 text-gray-800 px-2 py-1 mx-1 rounded"
-                              >
-                                {course.name}
-                              </span>
-                            ))
-                          ) : (
-                            <span className="text-gray-500">No courses</span>
-                          )}
-                        </div>
-                      </td>
-                      <td>
-                        <div className="text-sm space-y-1">
-                          {user.role === "admin" ? null : user?.classroomLinks
-                              ?.length > 0 ? (
-                            user?.classroomLinks.map((link, idx) => (
-                              <a
-                                key={idx}
-                                href={link}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                className="inline-block text-blue-600 hover:underline bg-gray-100 px-2 py-1 mx-1 rounded"
-                              >
-                                Link {idx + 1}
-                              </a>
-                            ))
-                          ) : (
-                            <span className="text-gray-500">No link found</span>
-                          )}
-                        </div>
-                      </td>
-                    </tr>
-                  );
-                })}
-              </tbody>
-            </table>
-          </div>
+              ))}
+            </tbody>
+          </table>
         </div>
 
-        {/* Course Modal */}
-        {isModalOpen && selectedUser && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4">
-            <div className="bg-white p-6 rounded-lg w-full max-w-lg shadow-xl">
-              <div className="text-center border-b pb-4">
-                <h2 className="text-xl font-semibold">Assign Courses</h2>
-                <p className="text-blue-600 font-medium">{selectedUser.name}</p>
-                <p className="text-gray-600 text-sm">{selectedUser.email}</p>
-              </div>
-              <p className="my-4 text-gray-700">
-                Showing{" "}
-                <span className="text-blue-600 font-semibold">
-                  {filteredCourses.length}
-                </span>{" "}
-                available course{filteredCourses.length !== 1 ? "s" : ""}.
-              </p>
-              <input
-                type="text"
-                placeholder="Search courses..."
-                className="w-full p-2 border rounded-lg mb-4"
-                value={searchTerm}
-                onChange={(e) => setSearchTerm(e.target.value)}
-              />
-              <div className="border-t pt-4 max-h-60 overflow-y-auto space-y-3">
-                {filteredCourses.length > 0 ? (
-                  filteredCourses.map((course) => (
-                    <label
-                      key={course._id}
-                      className="flex items-center space-x-3 bg-gray-50 p-2 rounded-lg hover:bg-gray-100"
-                    >
-                      <input
-                        type="checkbox"
-                        checked={selectedUserCourses.includes(course._id)}
-                        onChange={() => handleCourseSelection(course._id)}
-                      />
-                      <div>
-                        <div className="font-medium">{course.name}</div>
-                        <div className="text-sm text-blue-500">
-                          {course.category}
-                        </div>
-                      </div>
-                    </label>
-                  ))
-                ) : (
-                  <p className="text-center text-gray-500">
-                    No courses available
-                  </p>
-                )}
-              </div>
-              <div className="mt-6 flex justify-end space-x-4">
+        {/* ✅ Add Student Modal */}
+        {newStudentModalOpen && (
+          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4">
+            <div className="bg-white p-6 rounded-lg w-full max-w-md shadow-2xl space-y-4">
+              <h2 className="text-xl font-semibold">Add New Student</h2>
+
+              {["name", "email", "phone", "address"].map((field) => (
+                <div key={field} className="form-control">
+                  <label className="label font-medium capitalize">{field}</label>
+                  <input
+                    type={field === "email" ? "email" : "text"}
+                    value={newStudent[field]}
+                    onChange={(e) => setNewStudent({ ...newStudent, [field]: e.target.value })}
+                    className="input input-bordered"
+                    placeholder={`Enter ${field}`}
+                    required={field === "name" || field === "email"}
+                  />
+                </div>
+              ))}
+
+              <div className="flex justify-end space-x-3 pt-2">
                 <button
-                  onClick={handleSaveCourses}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-                >
-                  Save
-                </button>
-                <button
-                  onClick={() => setIsModalOpen(false)}
-                  className="bg-gray-400 text-white px-4 py-2 rounded-lg hover:bg-gray-500"
+                  onClick={() => setNewStudentModalOpen(false)}
+                  className="btn bg-gray-300 text-black hover:bg-gray-400"
                 >
                   Cancel
+                </button>
+                <button
+                  onClick={handleAddStudent}
+                  disabled={adding}
+                  className="btn bg-blue-600 text-white hover:bg-blue-700"
+                >
+                  {adding ? "Adding..." : "Add Student"}
                 </button>
               </div>
             </div>
           </div>
         )}
 
-        {/* Classroom Link Modal */}
-        {isLinkModalOpen && selectedUser && (
-          <div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4">
-            <div className="bg-white p-6 rounded-lg w-full max-w-lg shadow-xl">
-              <h2 className="text-xl font-semibold text-center mb-4">
-                Update Classroom Links
-              </h2>
-              <div className="space-y-3 max-h-64 overflow-y-auto">
-                {selectedUserLinks.map((link, idx) => (
-                  <div key={idx} className="flex space-x-2 items-center">
-                    <input
-                      type="text"
-                      value={link}
-                      onChange={(e) => handleLinkChange(idx, e.target.value)}
-                      className="w-full p-2 border rounded"
-                    />
-                    <button
-                      onClick={() => removeLinkField(idx)}
-                      className="text-red-500 hover:text-red-700"
-                    >
-                      ✕
-                    </button>
-                  </div>
-                ))}
-              </div>
-              <button
-                onClick={addNewLinkField}
-                className="mt-4 text-blue-600 hover:underline"
-              >
-                + Add another link
-              </button>
-              <div className="mt-6 flex justify-end space-x-4">
-                <button
-                  onClick={handleSaveLinks}
-                  className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700"
-                >
-                  Save
-                </button>
-                <button
-                  onClick={() => setIsLinkModalOpen(false)}
-                  className="bg-gray-400 text-white px-4 py-2 rounded-lg hover:bg-gray-500"
-                >
-                  Cancel
-                </button>
-              </div>
-            </div>
-          </div>
-        )}
+        {/* Existing Edit Modal remains untouched and works fine */}
+				{isModalOpen && selectedUser && (
+					<div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center px-4 z-50">
+						<div className="bg-white p-6 rounded-2xl w-full max-w-xl shadow-2xl max-h-[90vh] overflow-y-auto space-y-6">
+							<h2 className="text-2xl font-bold text-gray-800">Edit Student</h2>
+
+							{/* User Info */}
+							<div className="grid gap-4">
+								<div className="grid grid-cols-3 items-center gap-2">
+									<span className="text-gray-600 font-medium">Name</span>
+									<span className="col-span-2">{selectedUser.name}</span>
+								</div>
+
+								<div className="grid grid-cols-3 items-center gap-2">
+									<span className="text-gray-600 font-medium">Email</span>
+									<span className="col-span-2">{selectedUser.email}</span>
+								</div>
+
+								<div className="grid grid-cols-3 items-center gap-2">
+									<span className="text-gray-600 font-medium">Phone</span>
+									<div className="col-span-2 flex items-center gap-2">
+										{selectedUser.editingPhone ? (
+											<input
+												type="text"
+												value={selectedUser.phone || ""}
+												onChange={(e) => setSelectedUser({ ...selectedUser, phone: e.target.value })}
+												onBlur={() => setSelectedUser({ ...selectedUser, editingPhone: false })}
+												className="input input-sm input-bordered w-full"
+												autoFocus
+											/>
+										) : (
+											<>
+												<span>{selectedUser.phone || "—"}</span>
+												<button
+													onClick={() => setSelectedUser({ ...selectedUser, editingPhone: true })}
+													className="text-blue-600"
+													title="Edit phone"
+												>
+													<Pencil size={16} />
+												</button>
+											</>
+										)}
+									</div>
+								</div>
+
+								<div className="grid grid-cols-3 items-center gap-2">
+									<span className="text-gray-600 font-medium">Address</span>
+									<div className="col-span-2 flex items-center gap-2">
+										{selectedUser.editingAddress ? (
+											<input
+												type="text"
+												value={selectedUser.address || ""}
+												onChange={(e) => setSelectedUser({ ...selectedUser, address: e.target.value })}
+												onBlur={() => setSelectedUser({ ...selectedUser, editingAddress: false })}
+												className="input input-sm input-bordered w-full"
+												autoFocus
+											/>
+										) : (
+											<>
+												<span>{selectedUser.address || "—"}</span>
+												<button
+													onClick={() => setSelectedUser({ ...selectedUser, editingAddress: true })}
+													className="text-blue-600"
+													title="Edit address"
+												>
+													<Pencil size={16} />
+												</button>
+											</>
+										)}
+									</div>
+								</div>
+							</div>
+
+							{/* Course Edit Section */}
+							<div className="space-y-4">
+								{selectedUserCourses.map((course, index) => (
+									<div key={index} className="border rounded-lg p-4 space-y-3 bg-gray-50">
+										<div className="flex justify-between items-center">
+											<select
+												value={course.courseId}
+												onChange={(e) => {
+													const selected = courses.find((c) => c._id === e.target.value);
+													handleCourseChange(index, "courseId", selected._id);
+													handleCourseChange(index, "courseName", selected.name);
+												}}
+												className="input input-bordered w-full"
+											>
+												<option value="">Select Course</option>
+												{courses.map((c) => (
+													<option key={c._id} value={c._id}>{c.name}</option>
+												))}
+											</select>
+											<button onClick={() => removeCourse(index)} className="text-red-600 hover:text-red-800 ml-2" title="Remove course">
+												<X size={18} />
+											</button>
+										</div>
+
+										<div className="space-y-2">
+											{course.links.length > 0 && (
+											<div className="ml-2 mt-2 space-y-2">
+												{course.links.map((link, linkIndex) => (
+													<div key={linkIndex} className="flex gap-2 items-center">
+														<input
+															type="text"
+															value={link}
+															onChange={(e) => handleLinkChange(index, linkIndex, e.target.value)}
+															className="input input-bordered input-sm w-full" // 👈 input-sm reduces height
+															placeholder={`Link #${linkIndex + 1}`}
+														/>
+														<button
+															onClick={() => removeLink(index, linkIndex)}
+															className="text-red-500 text-lg"
+															title="Remove link"
+														>
+															✕
+														</button>
+													</div>
+												))}
+											</div>
+										)}
+
+										<button
+											onClick={() => addLink(index)}
+											className="text-blue-600 hover:underline text-sm font-medium ml-2 mt-2"
+										>
+											+ Add Link
+										</button>
+
+										</div>
+									</div>
+								))}
+								<button onClick={addCourse} className="text-blue-600 hover:underline text-sm font-medium">
+									+ Add Course
+								</button>
+							</div>
+
+							{/* Modal Buttons */}
+							<div className="mt-6 flex justify-end space-x-4">
+								<button
+									onClick={handleSave}
+									className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 flex items-center gap-2"
+								>
+									<Save size={16} /> Save
+								</button>
+								<button
+									onClick={() => setIsModalOpen(false)}
+									className="bg-gray-400 text-white px-4 py-2 rounded-lg hover:bg-gray-500 flex items-center gap-2"
+								>
+									<X size={16} /> Cancel
+								</button>
+							</div>
+						</div>
+					</div>
+				)}
       </div>
     </>
   );
