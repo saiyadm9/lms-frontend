@@ -1,6 +1,6 @@
 "use client";
 import { useEffect, useState } from "react";
-import { Pencil, Save, X, UserPlus } from "lucide-react";
+import { Trash2, CheckCircle, XCircle, ClipboardCheck, X, Pencil, Save, UserPlus } from "lucide-react";
 import axios from "axios";
 import toast, { Toaster } from "react-hot-toast";
 import Head from "next/head";
@@ -11,6 +11,8 @@ export default function UsersPage() {
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [courses, setCourses] = useState([]);
+	const [newLinkValue, setNewLinkValue] = useState("");
+	const [addingLinkIndex, setAddingLinkIndex] = useState(null);
   const [selectedUser, setSelectedUser] = useState(null);
   const [selectedUserCourses, setSelectedUserCourses] = useState([]);
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -91,10 +93,18 @@ export default function UsersPage() {
   };
 
   const addLink = (index) => {
-    const updated = [...selectedUserCourses];
-    updated[index].links.push("");
-    setSelectedUserCourses(updated);
-  };
+		setAddingLinkIndex(index);
+		setNewLinkValue("");
+	};
+
+	const confirmAddLink = () => {
+		if (!newLinkValue.trim()) return toast.error("Link cannot be empty");
+		const updated = [...selectedUserCourses];
+		updated[addingLinkIndex].links.push(newLinkValue.trim());
+		setSelectedUserCourses(updated);
+		setAddingLinkIndex(null);
+		setNewLinkValue("");
+	};
 
   const removeLink = (courseIndex, linkIndex) => {
     const updated = [...selectedUserCourses];
@@ -307,47 +317,73 @@ export default function UsersPage() {
 												))}
 											</select>
 											<button onClick={() => removeCourse(index)} className="text-red-600 hover:text-red-800 ml-2" title="Remove course">
-												<X size={18} />
+												<Trash2 size={18} />
 											</button>
 										</div>
 
 										<div className="space-y-2">
 											{course.links.length > 0 && (
-											<div className="ml-2 mt-2 space-y-2">
-												{course.links.map((link, linkIndex) => (
-													<div key={linkIndex} className="flex gap-2 items-center">
-														<input
-															type="text"
-															value={link}
-															onChange={(e) => handleLinkChange(index, linkIndex, e.target.value)}
-															className="input input-bordered input-sm w-full" // 👈 input-sm reduces height
-															placeholder={`Link #${linkIndex + 1}`}
-														/>
-														<button
-															onClick={() => removeLink(index, linkIndex)}
-															className="text-red-500 text-lg"
-															title="Remove link"
-														>
-															✕
-														</button>
-													</div>
-												))}
-											</div>
-										)}
+												<div className="ml-2 mt-2 space-y-2">
+													{course.links.map((link, linkIndex) => (
+														<div key={linkIndex} className="flex gap-2 items-center">
+															<span
+																onClick={() => {
+																	navigator.clipboard.writeText(link);
+																	toast.success("Link copied to clipboard!");
+																}}
+																className="cursor-pointer text-blue-600 hover:underline truncate w-full"
+																title="Click to copy"
+															>
+																{link}
+															</span>
+															<button
+																onClick={() => removeLink(index, linkIndex)}
+																className="text-red-500 text-lg"
+																title="Remove link"
+															>
+																<XCircle size={20} />
+															</button>
+														</div>
+													))}
+												</div>
+											)}
 
-										<button
-											onClick={() => addLink(index)}
-											className="text-blue-600 hover:underline text-sm font-medium ml-2 mt-2"
-										>
-											+ Add Link
-										</button>
-
+											{addingLinkIndex === index ? (
+												<div className="flex gap-2 items-center mt-2 ml-2">
+													<input
+														type="text"
+														value={newLinkValue}
+														onChange={(e) => setNewLinkValue(e.target.value)}
+														className="input input-sm input-bordered w-full"
+														placeholder="Enter new link"
+													/>
+													<button
+														onClick={confirmAddLink}
+														className="text-green-600 hover:text-green-800"
+														title="Confirm link"
+													>
+														<CheckCircle size={20} />
+													</button>
+													<button
+														onClick={() => setAddingLinkIndex(null)}
+														className="text-red-500 hover:text-red-700"
+														title="Cancel"
+													>
+														<XCircle size={20} />
+													</button>
+												</div>
+											) : (
+												<button
+													onClick={() => addLink(index)}
+													className="text-blue-600 hover:underline text-sm font-medium ml-2 mt-2"
+												>
+													+ Add Link
+												</button>
+											)}
 										</div>
+
 									</div>
 								))}
-								<button onClick={addCourse} className="text-blue-600 hover:underline text-sm font-medium">
-									+ Add Course
-								</button>
 							</div>
 
 							{/* Modal Buttons */}
