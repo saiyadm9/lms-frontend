@@ -384,6 +384,13 @@ export default function UsersPage() {
 
 									</div>
 								))}
+
+								<button
+									onClick={addCourse}
+									className="text-blue-600 hover:underline text-sm font-medium"
+								>
+									+ Add Course
+								</button>
 							</div>
 
 							{/* Modal Buttons */}
